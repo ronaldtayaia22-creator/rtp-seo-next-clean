@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import BeneficiosIAEmpresasNavarra from '@/components/pages/blog\BeneficiosIAEmpresasNavarra';
+import BeneficiosIAEmpresasNavarra from '@/components/pages/blog/BeneficiosIAEmpresasNavarra';
 
 const Page = () => {
   return (

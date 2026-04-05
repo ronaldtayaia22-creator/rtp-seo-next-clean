@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import ComoImplementarIANavarra from '@/components/pages/blog\ComoImplementarIANavarra';
+import ComoImplementarIANavarra from '@/components/pages/blog/ComoImplementarIANavarra';
 
 const Page = () => {
   return (

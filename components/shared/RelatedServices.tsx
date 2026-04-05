@@ -79,7 +79,7 @@ const RelatedServices = ({ language, currentPath, relatedKeys }: RelatedServices
           {related.map((service) => (
             <Link
               key={service.path}
-              to={service.path}
+              href={service.path}
               className="group p-5 rounded-xl border border-border bg-card/50 hover:border-primary/30 hover:bg-primary/5 transition-all space-y-2"
             >
               <h3 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -101,3 +101,4 @@ const RelatedServices = ({ language, currentPath, relatedKeys }: RelatedServices
 };
 
 export default RelatedServices;
+

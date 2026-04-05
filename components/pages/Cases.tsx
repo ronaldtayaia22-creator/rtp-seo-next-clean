@@ -1,3 +1,5 @@
+'use client';
+
 import CaseStorytelling from '@/components/shared/CaseStorytelling';
 
 const Cases = () => {

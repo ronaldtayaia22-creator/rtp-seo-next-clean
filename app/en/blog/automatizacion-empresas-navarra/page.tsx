@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import AutomatizacionEmpresasNavarra from '@/components/pages/blog\AutomatizacionEmpresasNavarra';
+import AutomatizacionEmpresasNavarra from '@/components/pages/blog/AutomatizacionEmpresasNavarra';
 
 const Page = () => {
   return (

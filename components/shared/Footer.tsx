@@ -48,7 +48,7 @@ const Footer = ({ language }: FooterProps) => {
               {serviceLinks.map((link) => (
                 <li key={link.path}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -67,7 +67,7 @@ const Footer = ({ language }: FooterProps) => {
               {sectorLinks.map((link) => (
                 <li key={link.path}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -86,7 +86,7 @@ const Footer = ({ language }: FooterProps) => {
               {companyLinks.map((link) => (
                 <li key={link.path}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -153,3 +153,4 @@ const Footer = ({ language }: FooterProps) => {
 };
 
 export default Footer;
+

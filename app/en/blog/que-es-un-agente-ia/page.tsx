@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import QueEsUnAgenteIA from '@/components/pages/blog\QueEsUnAgenteIA';
+import QueEsUnAgenteIA from '@/components/pages/blog/QueEsUnAgenteIA';
 
 const Page = () => {
   return (

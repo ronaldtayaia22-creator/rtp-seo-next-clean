@@ -1,3 +1,5 @@
+'use client';
+
 import Link from '@/components/shared/LocalizedLink';
 import { ArrowRight, Bot, Workflow, Search, Rocket, Cog, BarChart3, Target, Zap, Network, Layers, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';

@@ -4,7 +4,7 @@ import InteligenciaArtificialNavarra from '@/components/pages/InteligenciaArtifi
 const Page = () => {
   return (
     <PageShell language="es">
-      <InteligenciaArtificialNavarra />
+      <InteligenciaArtificialNavarra language="es" />
     </PageShell>
   );
 };

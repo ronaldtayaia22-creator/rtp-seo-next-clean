@@ -1,3 +1,5 @@
+'use client';
+
 import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 import ContactForm from '@/components/shared/ContactForm';
 

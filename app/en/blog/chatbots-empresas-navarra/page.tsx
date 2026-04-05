@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import ChatbotsEmpresasNavarra from '@/components/pages/blog\ChatbotsEmpresasNavarra';
+import ChatbotsEmpresasNavarra from '@/components/pages/blog/ChatbotsEmpresasNavarra';
 
 const Page = () => {
   return (

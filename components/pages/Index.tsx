@@ -1,3 +1,5 @@
+'use client';
+
 import Hero from '@/components/shared/Hero';
 import AIAssistantShowcase from '@/components/shared/AIAssistantShowcase';
 import CaseShowcase from '@/components/shared/CaseShowcase';

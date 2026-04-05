@@ -1,9 +1,11 @@
+'use client';
+
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { Language } from '@/lib/i18n';
 import { ExternalLink, Code, Database, Calendar, Users, Brain, Mail, Layout, Heart, Bell, Zap, Shield, ShoppingCart, Server, Search, BarChart3, Sparkles, ChevronRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import doixaLogo from '@/public/images/doixa-logo.png';
-import auraLogo from '@/public/images/aura-studio-logo.png';
+const doixaLogo = '/images/doixa-logo.png';
+const auraLogo = '/images/aura-studio-logo.png';
 
 interface CaseStorytellingProps {
   language: Language;
@@ -433,4 +435,5 @@ const CaseStorytelling = ({ language, initialCaseIndex }: CaseStorytellingProps)
 };
 
 export default CaseStorytelling;
+
 

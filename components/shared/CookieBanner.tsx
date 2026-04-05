@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Language, getTranslation } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
@@ -179,3 +181,4 @@ const CookieBanner = ({ language }: CookieBannerProps) => {
 };
 
 export default CookieBanner;
+

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Globe } from 'lucide-react';
 import { Language } from '@/lib/i18n';
@@ -57,3 +59,4 @@ const LanguageSelector = ({ currentLang, onLanguageChange }: LanguageSelectorPro
 };
 
 export default LanguageSelector;
+

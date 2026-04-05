@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import IARestaurantesNavarra from '@/components/pages/blog\IARestaurantesNavarra';
+import IARestaurantesNavarra from '@/components/pages/blog/IARestaurantesNavarra';
 
 const Page = () => {
   return (

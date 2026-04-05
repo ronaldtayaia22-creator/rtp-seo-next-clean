@@ -129,7 +129,7 @@ const CaseShowcase = ({ language }: CaseShowcaseProps) => {
                 </div>
 
                 <Link
-                  to={`${CASES_PAGE_PATH}?case=${c.slug}`}
+                  href={`${CASES_PAGE_PATH}?case=${c.slug}`}
                   className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline underline-offset-2 pt-3 mt-auto"
                 >
                   {isEs ? 'Ver caso' : 'View case'}
@@ -141,7 +141,7 @@ const CaseShowcase = ({ language }: CaseShowcaseProps) => {
 
           <div className="text-center">
             <Link
-              to={CASES_PAGE_PATH}
+              href={CASES_PAGE_PATH}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium text-sm hover:bg-primary/90 transition-colors"
             >
               {isEs ? 'Explorar todos los casos' : 'Explore all cases'}
@@ -155,3 +155,4 @@ const CaseShowcase = ({ language }: CaseShowcaseProps) => {
 };
 
 export default CaseShowcase;
+

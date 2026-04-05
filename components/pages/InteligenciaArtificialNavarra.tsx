@@ -1,3 +1,5 @@
+'use client';
+
 import { Language } from '@/lib/i18n';
 const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
 import { Button } from '@/components/ui/button';

@@ -1,6 +1,6 @@
 import { Sparkles, Zap, Clock, TrendingUp, Link2, BarChart3 } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
-import { Badge } from './ui/badge';
+import { Badge } from '@/components/ui/badge';
 
 interface AIAssistantShowcaseProps {
   language: Language;

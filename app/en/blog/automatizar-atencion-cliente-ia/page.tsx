@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import AutomatizarAtencionClienteIA from '@/components/pages/blog\AutomatizarAtencionClienteIA';
+import AutomatizarAtencionClienteIA from '@/components/pages/blog/AutomatizarAtencionClienteIA';
 
 const Page = () => {
   return (

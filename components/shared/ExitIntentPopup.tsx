@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useCallback } from 'react';
 import { X, ArrowRight, Sparkles } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
@@ -85,3 +87,4 @@ const ExitIntentPopup = ({ language }: ExitIntentPopupProps) => {
 };
 
 export default ExitIntentPopup;
+

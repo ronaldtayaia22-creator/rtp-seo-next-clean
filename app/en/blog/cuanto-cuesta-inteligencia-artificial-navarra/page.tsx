@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import CuantoCuestaIANavarra from '@/components/pages/blog\CuantoCuestaIANavarra';
+import CuantoCuestaIANavarra from '@/components/pages/blog/CuantoCuestaIANavarra';
 
 const Page = () => {
   return (

@@ -1,5 +1,7 @@
+'use client';
+
 import { useEffect, useState } from 'react';
-import logoSplash from '@/public/images/logo-splash.png';
+const logoSplash = '/images/logo-splash.png';
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -149,3 +151,4 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 };
 
 export default SplashScreen;
+
