@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import DesarrolloWebIA from '@/components/pages/services/DesarrolloWebIA';
 
 const Page = () => {
   return (
     <PageShell language="es">
-      <Index />
+      <DesarrolloWebIA />
     </PageShell>
   );
 };

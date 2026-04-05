@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import PrivacyPolicy from '@/components/pages/PrivacyPolicy';
 
 const Page = () => {
   return (
-    <PageShell language="es">
-      <Index />
+    <PageShell language="en">
+      <PrivacyPolicy />
     </PageShell>
   );
 };

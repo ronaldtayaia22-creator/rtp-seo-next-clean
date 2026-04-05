@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import ComoImplementarIANavarra from '@/components/pages/blog/ComoImplementarIANavarra';
 
 const Page = () => {
   return (
     <PageShell language="es">
-      <Index />
+      <ComoImplementarIANavarra />
     </PageShell>
   );
 };

@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import TermsConditions from '@/components/pages/TermsConditions';
 
 const Page = () => {
   return (
-    <PageShell language="es">
-      <Index />
+    <PageShell language="en">
+      <TermsConditions />
     </PageShell>
   );
 };

@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import AutomatizacionProcesos from '@/components/pages/services/AutomatizacionProcesos';
 
 const Page = () => {
   return (
     <PageShell language="es">
-      <Index />
+      <AutomatizacionProcesos />
     </PageShell>
   );
 };

@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import ContactSuccess from '@/components/pages/ContactSuccess';
 
 const Page = () => {
   return (
-    <PageShell language="es">
-      <Index />
+    <PageShell language="en">
+      <ContactSuccess />
     </PageShell>
   );
 };

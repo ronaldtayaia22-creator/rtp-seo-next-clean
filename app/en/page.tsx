@@ -3,7 +3,7 @@ import Index from '@/components/pages/Index';
 
 const Page = () => {
   return (
-    <PageShell language="es">
+    <PageShell language="en">
       <Index />
     </PageShell>
   );

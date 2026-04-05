@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import IAClinicasNavarra from '@/components/pages/blog/IAClinicasNavarra';
 
 const Page = () => {
   return (
     <PageShell language="es">
-      <Index />
+      <IAClinicasNavarra />
     </PageShell>
   );
 };

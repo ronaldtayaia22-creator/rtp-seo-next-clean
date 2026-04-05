@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import Cases from '@/components/pages/Cases';
 
 const Page = () => {
   return (
-    <PageShell language="es">
-      <Index />
+    <PageShell language="en">
+      <Cases />
     </PageShell>
   );
 };

@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import ChatbotVsAgenteIA from '@/components/pages/blog/ChatbotVsAgenteIA';
 
 const Page = () => {
   return (
     <PageShell language="es">
-      <Index />
+      <ChatbotVsAgenteIA />
     </PageShell>
   );
 };

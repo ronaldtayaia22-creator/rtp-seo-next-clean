@@ -1,10 +1,10 @@
 import PageShell from '@/components/PageShell';
-import Index from '@/components/pages/Index';
+import RAGConocimiento from '@/components/pages/services/RAGConocimiento';
 
 const Page = () => {
   return (
     <PageShell language="es">
-      <Index />
+      <RAGConocimiento />
     </PageShell>
   );
 };
