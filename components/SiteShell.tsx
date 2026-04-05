@@ -5,6 +5,7 @@ import { Language } from '@/lib/i18n';
 import { LanguageContext } from '@/lib/language-context';
 import Navigation from '@/components/shared/Navigation';
 import Footer from '@/components/shared/Footer';
+import AIChatCenter from '@/components/shared/AIChatCenter';
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA';
 import ExitIntentPopup from '@/components/shared/ExitIntentPopup';
 import CookieBanner from '@/components/shared/CookieBanner';
@@ -64,6 +65,7 @@ const SiteShell = ({ language, children }: SiteShellProps) => {
         </div>
         <Footer language={language} />
       </div>
+      <AIChatCenter language={language} />
       <StickyMobileCTA language={language} />
       <ExitIntentPopup language={language} />
       <CookieBanner language={language} />

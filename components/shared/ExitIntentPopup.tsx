@@ -70,14 +70,17 @@ const ExitIntentPopup = ({ language }: ExitIntentPopupProps) => {
             {t.cta}
             <ArrowRight className="w-4 h-4" />
           </a>
-          <a
-            href={`${process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app'}/automatizacion-ia-navarra`}
-            onClick={dismiss}
+          <button
+            onClick={() => {
+              dismiss();
+              const chatBar = document.querySelector('[data-chat-trigger]') as HTMLElement;
+              chatBar?.click();
+            }}
             className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-secondary/10 border border-secondary/30 text-secondary rounded-lg font-bold text-sm hover:bg-secondary/20 transition-all"
           >
             <Sparkles className="w-4 h-4" />
             {language === 'es' ? 'Probar Centro Inteligente' : 'Try the AI Center'}
-          </a>
+          </button>
         </div>
 
         <p className="text-xs text-center text-muted-foreground">{t.trust}</p>

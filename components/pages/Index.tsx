@@ -181,13 +181,16 @@ const Index = ({ language }: IndexProps) => {
               <p className="text-muted-foreground text-sm leading-relaxed mt-4">{demos.demo1Text}</p>
               <p className="text-xs text-muted-foreground/70 italic mt-4">{demos.demo1Highlight}</p>
               <div className="mt-auto pt-6 flex justify-center">
-                <a
-                  href={`${LOVABLE}/automatizacion-ia-navarra`}
+                <button
+                  onClick={() => {
+                    const chatBar = document.querySelector('[data-chat-trigger]') as HTMLElement;
+                    chatBar?.click();
+                  }}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary/90 transition-all text-sm"
                 >
                   <Sparkles className="w-4 h-4" />
                   {isEs ? 'Probar Centro Inteligente' : 'Try the AI Center'}
-                </a>
+                </button>
               </div>
             </div>
 

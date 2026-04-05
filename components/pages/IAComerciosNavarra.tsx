@@ -288,11 +288,16 @@ const IAComerciosNavarra = ({ language }: Props) => {
                   {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
-              <a href={`${LOVABLE}/automatizacion-ia-navarra`}>
+              <button
+                onClick={() => {
+                  const chatBar = document.querySelector('[data-chat-trigger]') as HTMLElement;
+                  chatBar?.click();
+                }}
+              >
                 <Button size="sm" variant="outline" className="gap-2 w-full sm:w-auto font-bold border-secondary text-secondary hover:bg-secondary/10">
                   <Sparkles className="w-4 h-4" /> {isEs ? 'Probar Centro Inteligente' : 'Try the AI Center'}
                 </Button>
-              </a>
+              </button>
             </div>
           </section>
 
