@@ -4,9 +4,10 @@ import ChatbotVsAgenteIA from '@/components/pages/blog/ChatbotVsAgenteIA';
 const Page = () => {
   return (
     <PageShell language="en">
-      <ChatbotVsAgenteIA />
+      <ChatbotVsAgenteIA language="en" />
     </PageShell>
   );
 };
 
 export default Page;
+

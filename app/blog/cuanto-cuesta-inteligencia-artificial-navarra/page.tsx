@@ -4,9 +4,10 @@ import CuantoCuestaIANavarra from '@/components/pages/blog/CuantoCuestaIANavarra
 const Page = () => {
   return (
     <PageShell language="es">
-      <CuantoCuestaIANavarra />
+      <CuantoCuestaIANavarra language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

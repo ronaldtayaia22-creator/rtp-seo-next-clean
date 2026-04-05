@@ -2,18 +2,27 @@
 
 import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 import ContactForm from '@/components/shared/ContactForm';
+import { Language } from '@/lib/i18n';
 
-const Contact = () => {
+interface ContactProps {
+  language: Language;
+}
+
+const Contact = ({ language }: ContactProps) => {
+  const isEs = language === 'es';
+
   return (
     <div className="min-h-screen pt-32 pb-32 md:pb-20">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10 space-y-3 animate-fade-in-up">
             <h1 className="text-3xl md:text-5xl font-bold text-glow-primary">
-              Diagnóstico Estratégico de Automatización con IA
+              {isEs ? 'Diagnóstico Estratégico de Automatización con IA' : 'Strategic AI Automation Diagnosis'}
             </h1>
             <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Solicita un diagnóstico estratégico de automatización empresarial con inteligencia artificial. Propuesta orientativa para tu negocio en Navarra. Respuesta en 24h.
+              {isEs
+                ? 'Solicita un diagnóstico estratégico de automatización empresarial con inteligencia artificial. Propuesta orientativa para tu negocio en Navarra. Respuesta en 24h.'
+                : 'Request a strategic business automation diagnosis with artificial intelligence. A tailored proposal for your business in Navarra. Response within 24h.'}
             </p>
           </div>
 
@@ -41,7 +50,7 @@ const Contact = () => {
             </div>
             <p className="text-[11px] text-muted-foreground/40 inline-flex items-center gap-1">
               <Clock className="w-3 h-3" />
-              Lunes a Viernes: 9:00 – 18:00
+              {isEs ? 'Lunes a Viernes: 9:00 - 18:00' : 'Monday to Friday: 9:00 - 18:00'}
             </p>
           </div>
         </div>

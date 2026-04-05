@@ -4,9 +4,10 @@ import Services from '@/components/pages/Services';
 const Page = () => {
   return (
     <PageShell language="es">
-      <Services />
+      <Services language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

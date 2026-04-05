@@ -4,9 +4,10 @@ import QueEsUnAgenteIA from '@/components/pages/blog/QueEsUnAgenteIA';
 const Page = () => {
   return (
     <PageShell language="es">
-      <QueEsUnAgenteIA />
+      <QueEsUnAgenteIA language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

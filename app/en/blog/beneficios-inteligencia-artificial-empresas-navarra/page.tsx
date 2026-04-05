@@ -4,9 +4,10 @@ import BeneficiosIAEmpresasNavarra from '@/components/pages/blog/BeneficiosIAEmp
 const Page = () => {
   return (
     <PageShell language="en">
-      <BeneficiosIAEmpresasNavarra />
+      <BeneficiosIAEmpresasNavarra language="en" />
     </PageShell>
   );
 };
 
 export default Page;
+

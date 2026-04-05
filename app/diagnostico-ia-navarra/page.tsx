@@ -4,7 +4,7 @@ import DiagnosticoIA from '@/components/pages/DiagnosticoIA';
 const Page = () => {
   return (
     <PageShell language="es">
-      <DiagnosticoIA />
+      <DiagnosticoIA language="es" />
     </PageShell>
   );
 };

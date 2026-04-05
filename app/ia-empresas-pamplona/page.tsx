@@ -1,7 +1,13 @@
-import { redirect } from 'next/navigation';
+import PageShell from '@/components/PageShell';
+import IAEmpresasPamplona from '@/components/pages/IAEmpresasPamplona';
 
 const Page = () => {
-  redirect('/ia-empresas-navarra');
+  return (
+    <PageShell language="es">
+      <IAEmpresasPamplona language="es" />
+    </PageShell>
+  );
 };
 
 export default Page;
+

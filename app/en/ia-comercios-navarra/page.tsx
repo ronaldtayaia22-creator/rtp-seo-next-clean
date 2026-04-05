@@ -4,9 +4,10 @@ import IAComerciosNavarra from '@/components/pages/IAComerciosNavarra';
 const Page = () => {
   return (
     <PageShell language="en">
-      <IAComerciosNavarra />
+      <IAComerciosNavarra language="en" />
     </PageShell>
   );
 };
 
 export default Page;
+

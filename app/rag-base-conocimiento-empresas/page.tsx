@@ -4,9 +4,10 @@ import RAGConocimiento from '@/components/pages/services/RAGConocimiento';
 const Page = () => {
   return (
     <PageShell language="es">
-      <RAGConocimiento />
+      <RAGConocimiento language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

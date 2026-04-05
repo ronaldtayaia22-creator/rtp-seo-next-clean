@@ -4,9 +4,10 @@ import AutomatizarAtencionClienteIA from '@/components/pages/blog/AutomatizarAte
 const Page = () => {
   return (
     <PageShell language="en">
-      <AutomatizarAtencionClienteIA />
+      <AutomatizarAtencionClienteIA language="en" />
     </PageShell>
   );
 };
 
 export default Page;
+

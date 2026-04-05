@@ -4,9 +4,10 @@ import AgentesVoz from '@/components/pages/services/AgentesVoz';
 const Page = () => {
   return (
     <PageShell language="es">
-      <AgentesVoz />
+      <AgentesVoz language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

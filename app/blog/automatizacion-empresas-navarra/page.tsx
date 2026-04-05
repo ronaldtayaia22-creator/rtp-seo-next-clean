@@ -4,9 +4,10 @@ import AutomatizacionEmpresasNavarra from '@/components/pages/blog/Automatizacio
 const Page = () => {
   return (
     <PageShell language="es">
-      <AutomatizacionEmpresasNavarra />
+      <AutomatizacionEmpresasNavarra language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

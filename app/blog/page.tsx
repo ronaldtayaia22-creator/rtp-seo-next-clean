@@ -4,9 +4,10 @@ import Blog from '@/components/pages/Blog';
 const Page = () => {
   return (
     <PageShell language="es">
-      <Blog />
+      <Blog language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

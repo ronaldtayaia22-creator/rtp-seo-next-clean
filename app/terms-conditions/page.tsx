@@ -4,7 +4,7 @@ import TermsConditions from '@/components/pages/TermsConditions';
 const Page = () => {
   return (
     <PageShell language="es">
-      <TermsConditions />
+      <TermsConditions language="es" />
     </PageShell>
   );
 };

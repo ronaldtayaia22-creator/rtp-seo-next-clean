@@ -4,9 +4,10 @@ import AgentesIANavarra from '@/components/pages/services/AgentesIANavarra';
 const Page = () => {
   return (
     <PageShell language="en">
-      <AgentesIANavarra />
+      <AgentesIANavarra language="en" />
     </PageShell>
   );
 };
 
 export default Page;
+

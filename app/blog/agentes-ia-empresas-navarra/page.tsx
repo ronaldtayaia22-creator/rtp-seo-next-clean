@@ -4,9 +4,10 @@ import AgentesIAEmpresasNavarra from '@/components/pages/blog/AgentesIAEmpresasN
 const Page = () => {
   return (
     <PageShell language="es">
-      <AgentesIAEmpresasNavarra />
+      <AgentesIAEmpresasNavarra language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

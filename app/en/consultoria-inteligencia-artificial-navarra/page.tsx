@@ -4,9 +4,10 @@ import ConsultoriaIA from '@/components/pages/services/ConsultoriaIA';
 const Page = () => {
   return (
     <PageShell language="en">
-      <ConsultoriaIA />
+      <ConsultoriaIA language="en" />
     </PageShell>
   );
 };
 
 export default Page;
+

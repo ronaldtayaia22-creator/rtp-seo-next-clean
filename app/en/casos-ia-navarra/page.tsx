@@ -4,7 +4,7 @@ import Cases from '@/components/pages/Cases';
 const Page = () => {
   return (
     <PageShell language="en">
-      <Cases />
+      <Cases language="en" />
     </PageShell>
   );
 };

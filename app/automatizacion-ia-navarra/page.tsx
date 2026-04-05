@@ -4,7 +4,7 @@ import Contact from '@/components/pages/Contact';
 const Page = () => {
   return (
     <PageShell language="es">
-      <Contact />
+      <Contact language="es" />
     </PageShell>
   );
 };

@@ -4,7 +4,7 @@ import LegalNotice from '@/components/pages/LegalNotice';
 const Page = () => {
   return (
     <PageShell language="es">
-      <LegalNotice />
+      <LegalNotice language="es" />
     </PageShell>
   );
 };

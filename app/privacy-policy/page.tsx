@@ -4,7 +4,7 @@ import PrivacyPolicy from '@/components/pages/PrivacyPolicy';
 const Page = () => {
   return (
     <PageShell language="es">
-      <PrivacyPolicy />
+      <PrivacyPolicy language="es" />
     </PageShell>
   );
 };

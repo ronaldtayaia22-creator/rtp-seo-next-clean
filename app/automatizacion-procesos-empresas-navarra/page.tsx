@@ -4,9 +4,10 @@ import AutomatizacionProcesos from '@/components/pages/services/AutomatizacionPr
 const Page = () => {
   return (
     <PageShell language="es">
-      <AutomatizacionProcesos />
+      <AutomatizacionProcesos language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

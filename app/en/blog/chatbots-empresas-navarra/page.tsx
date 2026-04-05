@@ -4,9 +4,10 @@ import ChatbotsEmpresasNavarra from '@/components/pages/blog/ChatbotsEmpresasNav
 const Page = () => {
   return (
     <PageShell language="en">
-      <ChatbotsEmpresasNavarra />
+      <ChatbotsEmpresasNavarra language="en" />
     </PageShell>
   );
 };
 
 export default Page;
+

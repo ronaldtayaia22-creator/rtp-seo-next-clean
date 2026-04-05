@@ -4,9 +4,10 @@ import IAClinicasNavarraPage from '@/components/pages/IAClinicasNavarraPage';
 const Page = () => {
   return (
     <PageShell language="es">
-      <IAClinicasNavarraPage />
+      <IAClinicasNavarraPage language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

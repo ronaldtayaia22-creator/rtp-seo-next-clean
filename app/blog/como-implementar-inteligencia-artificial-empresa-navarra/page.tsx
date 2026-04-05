@@ -4,9 +4,10 @@ import ComoImplementarIANavarra from '@/components/pages/blog/ComoImplementarIAN
 const Page = () => {
   return (
     <PageShell language="es">
-      <ComoImplementarIANavarra />
+      <ComoImplementarIANavarra language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+

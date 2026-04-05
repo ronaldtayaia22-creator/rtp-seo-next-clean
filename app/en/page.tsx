@@ -4,7 +4,7 @@ import Index from '@/components/pages/Index';
 const Page = () => {
   return (
     <PageShell language="en">
-      <Index />
+      <Index language="en" />
     </PageShell>
   );
 };

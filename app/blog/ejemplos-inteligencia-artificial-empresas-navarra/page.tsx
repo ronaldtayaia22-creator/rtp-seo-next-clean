@@ -4,9 +4,10 @@ import EjemplosIAEmpresasNavarra from '@/components/pages/blog/EjemplosIAEmpresa
 const Page = () => {
   return (
     <PageShell language="es">
-      <EjemplosIAEmpresasNavarra />
+      <EjemplosIAEmpresasNavarra language="es" />
     </PageShell>
   );
 };
 
 export default Page;
+
