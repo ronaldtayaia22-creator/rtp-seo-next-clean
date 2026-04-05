@@ -6,14 +6,13 @@ import { Language, getTranslation } from '@/lib/i18n';
 
 type Msg = { role: 'user' | 'assistant'; content: string };
 
-const LOVABLE_BASE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
-const OPERATIONAL_CHAT_URL =
+const CHAT_URL =
   process.env.NEXT_PUBLIC_CHAT_ASSISTANT_URL ||
   (process.env.NEXT_PUBLIC_SUPABASE_URL
     ? `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/chat-assistant`
     : '');
-const OPERATIONAL_CHAT_TOKEN =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '';
+const CHAT_AUTH_TOKEN =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
 interface AIChatCenterProps {
   language: Language;
@@ -55,13 +54,6 @@ const AIChatCenter = ({ language }: AIChatCenterProps) => {
     return () => window.removeEventListener('open-ai-chat-center', openChat);
   }, []);
 
-  const fallbackReply = useCallback(() => {
-    if (language === 'es') {
-      return `El Centro Inteligente ya esta visible en esta web, pero esta instancia aun usa un fallback temporal hasta completar la conexion operativa. Puedes continuar ahora en ${LOVABLE_BASE}/automatizacion-ia-navarra`;
-    }
-    return `The AI Center is now visible on this website, but this instance is still using a temporary fallback until operational wiring is completed. You can continue now at ${LOVABLE_BASE}/automatizacion-ia-navarra`;
-  }, [language]);
-
   const sendMessage = useCallback(
     async (text: string) => {
       if (!text.trim() || isLoading) return;
@@ -73,22 +65,20 @@ const AIChatCenter = ({ language }: AIChatCenterProps) => {
       setIsLoading(true);
       setIsConsulting(false);
 
-      if (!OPERATIONAL_CHAT_URL || !OPERATIONAL_CHAT_TOKEN) {
-        setTimeout(() => {
-          setMessages((prev) => [...prev, { role: 'assistant', content: fallbackReply() }]);
-          setIsLoading(false);
-        }, 350);
+      if (!CHAT_URL || !CHAT_AUTH_TOKEN) {
+        setMessages((prev) => [...prev, { role: 'assistant', content: chat.errorGeneric }]);
+        setIsLoading(false);
         return;
       }
 
       let assistantSoFar = '';
 
       try {
-        const resp = await fetch(OPERATIONAL_CHAT_URL, {
+        const resp = await fetch(CHAT_URL, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${OPERATIONAL_CHAT_TOKEN}`,
+            Authorization: `Bearer ${CHAT_AUTH_TOKEN}`,
           },
           body: JSON.stringify({ messages: allMessages, language }),
         });
@@ -101,7 +91,7 @@ const AIChatCenter = ({ language }: AIChatCenterProps) => {
 
         if (!resp.body) {
           const json = await resp.json().catch(() => null);
-          const content = typeof json?.message === 'string' ? json.message : fallbackReply();
+          const content = typeof json?.message === 'string' ? json.message : chat.errorGeneric;
           setMessages((prev) => [...prev, { role: 'assistant', content }]);
           return;
         }
@@ -169,7 +159,7 @@ const AIChatCenter = ({ language }: AIChatCenterProps) => {
         setIsConsulting(false);
       }
     },
-    [chat.error402, chat.error429, chat.errorGeneric, fallbackReply, isLoading, language, messages]
+    [chat.error402, chat.error429, chat.errorGeneric, isLoading, language, messages]
   );
 
   return (
