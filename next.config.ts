@@ -4,23 +4,49 @@ const OPERATIONAL_ORIGIN = process.env.OPERATIONAL_ORIGIN || "https://rtp-ai-orb
 
 const nextConfig: NextConfig = {
   async rewrites() {
-    const operationalRoutes = [
-      "/automatizacion-ia-navarra",
-      "/en/automatizacion-ia-navarra",
-      "/contact-success",
-      "/en/contact-success",
-      "/reservar",
-      "/en/reservar",
-      "/admin/login",
-      "/admin/leads",
-      "/admin/appointments",
-    ];
-
     return {
-      beforeFiles: operationalRoutes.map((source) => ({
-        source,
-        destination: `${OPERATIONAL_ORIGIN}${source}`,
-      })),
+      beforeFiles: [
+        {
+          source: "/automatizacion-ia-navarra",
+          destination: `${OPERATIONAL_ORIGIN}/automatizacion-ia-navarra`,
+        },
+        {
+          source: "/en/automatizacion-ia-navarra",
+          destination: `${OPERATIONAL_ORIGIN}/en/automatizacion-ia-navarra`,
+        },
+        {
+          source: "/contact-success",
+          destination: `${OPERATIONAL_ORIGIN}/contact-success`,
+        },
+        {
+          source: "/en/contact-success",
+          destination: `${OPERATIONAL_ORIGIN}/en/contact-success`,
+        },
+        {
+          source: "/reservar",
+          destination: `${OPERATIONAL_ORIGIN}/reservar`,
+        },
+        {
+          source: "/en/reservar",
+          destination: `${OPERATIONAL_ORIGIN}/en/reservar`,
+        },
+        {
+          source: "/admin",
+          destination: `${OPERATIONAL_ORIGIN}/admin/login`,
+        },
+        {
+          source: "/admin/:path*",
+          destination: `${OPERATIONAL_ORIGIN}/admin/:path*`,
+        },
+        {
+          source: "/assets/:path*",
+          destination: `${OPERATIONAL_ORIGIN}/assets/:path*`,
+        },
+        {
+          source: "/~flock.js",
+          destination: `${OPERATIONAL_ORIGIN}/~flock.js`,
+        },
+      ],
       afterFiles: [],
       fallback: [],
     };
