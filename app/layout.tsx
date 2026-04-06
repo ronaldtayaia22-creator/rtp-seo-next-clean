@@ -26,6 +26,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "RTP Digital Solutions | Agentes de IA en Navarra",
   description: "Diseñamos e implementamos agentes de inteligencia artificial para empresas en Navarra. Automatiza procesos, integra sistemas y mejora la eficiencia.",
+  icons: {
+    icon: "/favicon.png",
+    },
 };
 
 export default function RootLayout({
