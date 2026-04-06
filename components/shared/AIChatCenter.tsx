@@ -10,7 +10,7 @@ const CHAT_URL =
   process.env.NEXT_PUBLIC_CHAT_ASSISTANT_URL ||
   (process.env.NEXT_PUBLIC_SUPABASE_URL
     ? `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/chat-assistant`
-    : '');
+    : 'https://afkwdzirmmbumwtrctjl.supabase.co/functions/v1/chat-assistant');
 const CHAT_AUTH_TOKEN =
   process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
@@ -65,7 +65,7 @@ const AIChatCenter = ({ language }: AIChatCenterProps) => {
       setIsLoading(true);
       setIsConsulting(false);
 
-      if (!CHAT_URL || !CHAT_AUTH_TOKEN) {
+      if (!CHAT_URL) {
         setMessages((prev) => [...prev, { role: 'assistant', content: chat.errorGeneric }]);
         setIsLoading(false);
         return;
@@ -74,12 +74,18 @@ const AIChatCenter = ({ language }: AIChatCenterProps) => {
       let assistantSoFar = '';
 
       try {
+        const headers: Record<string, string> = {
+          'Content-Type': 'application/json',
+        };
+
+        if (CHAT_AUTH_TOKEN) {
+          headers.Authorization = `Bearer ${CHAT_AUTH_TOKEN}`;
+          headers.apikey = CHAT_AUTH_TOKEN;
+        }
+
         const resp = await fetch(CHAT_URL, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${CHAT_AUTH_TOKEN}`,
-          },
+          headers,
           body: JSON.stringify({ messages: allMessages, language }),
         });
 

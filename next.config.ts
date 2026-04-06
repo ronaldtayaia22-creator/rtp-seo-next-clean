@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
         },
         {
           source: "/admin",
-          destination: `${OPERATIONAL_ORIGIN}/admin/login`,
+          destination: `${OPERATIONAL_ORIGIN}/admin`,
         },
         {
           source: "/admin/:path*",
