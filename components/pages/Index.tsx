@@ -149,7 +149,7 @@ const Index = ({ language }: IndexProps) => {
           </div>
           <div className="flex justify-center pt-2">
             <a
-              href="/diagnostico-ia-navarra#diagnostico-form"
+              href={isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
             >
               {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
@@ -209,7 +209,7 @@ const Index = ({ language }: IndexProps) => {
                     ))}
                   </div>
                   <a
-                    href="/diagnostico-ia-navarra#diagnostico-form"
+                    href={isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
                     className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline underline-offset-2"
                   >
                     {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
@@ -267,7 +267,7 @@ const Index = ({ language }: IndexProps) => {
               <div className="mt-auto pt-6 flex flex-col items-center gap-1">
                 <p className="text-xs text-muted-foreground mb-1">{isEs ? 'Evaluación inicial sin coste' : 'Free initial evaluation'}</p>
                 <a
-                  href="/diagnostico-ia-navarra#diagnostico-form"
+                  href={isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
                   className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
                 >
                   {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}

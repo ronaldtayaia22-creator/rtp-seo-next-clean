@@ -7,12 +7,9 @@ interface ContactFormProps {
   language: Language;
 }
 
-const OPERATIONS_BASE_URL = 'https://rtp-ai-orbiter.lovable.app';
-
 const ContactForm = ({ language }: ContactFormProps) => {
   const t = getTranslation(language).contact;
   const operationsPath = language === 'en' ? '/en/automatizacion-ia-navarra' : '/automatizacion-ia-navarra';
-  const operationsUrl = `${OPERATIONS_BASE_URL}${operationsPath}`;
 
   return (
     <div className="space-y-5 text-center">
@@ -23,9 +20,7 @@ const ContactForm = ({ language }: ContactFormProps) => {
       </p>
 
       <a
-        href={operationsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={operationsPath}
         className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-base hover:shadow-neon transition-all w-full"
       >
         {t.submit}
@@ -34,8 +29,8 @@ const ContactForm = ({ language }: ContactFormProps) => {
 
       <p className="text-xs text-muted-foreground">
         {language === 'es'
-          ? 'Se abrira en una nueva pestana para completar el diagnostico y reservar tu llamada.'
-          : 'This opens in a new tab to complete the diagnosis and book your call.'}
+          ? 'Continua al flujo operativo para completar el diagnostico y reservar tu llamada.'
+          : 'Continue to the operational flow to complete the diagnosis and book your call.'}
       </p>
       <p className="text-xs text-muted-foreground text-center">
         {t.freeDiagnosisDesc} - {t.fastResponseDesc}
