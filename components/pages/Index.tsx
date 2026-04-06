@@ -7,10 +7,9 @@ import SocialCounter from '@/components/shared/SocialCounter';
 import FAQSection from '@/components/shared/FAQSection';
 import MediaPresence from '@/components/shared/MediaPresence';
 import JsonLd from '@/components/shared/JsonLd';
+import Link from '@/components/shared/LocalizedLink';
 import { Language } from '@/lib/i18n';
-import { Bot, Cog, MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
-
-const LOVABLE = '';
+import { Building2, UserCheck, ShoppingCart, MessageCircle, ArrowRight, Sparkles, CheckCircle2, Bot } from 'lucide-react';
 
 interface IndexProps {
   language: Language;
@@ -43,23 +42,83 @@ const Index = ({ language }: IndexProps) => {
         disclaimer: 'These demos are real production systems, not simulations.',
       };
 
-  const pillars = isEs
-    ? {
-        pillar1Title: 'Agentes de Inteligencia Artificial',
-        pillar1Subtitle: 'IA que piensa y conversa',
-        pillar1Desc: 'Agentes IA conectados a tu web, CRM y Shopify con conocimiento estructurado (RAG), voz y capacidades empresariales para automatización empresarial real.',
-        pillar2Title: 'Automatización Inteligente de Procesos',
-        pillar2Subtitle: 'IA que ejecuta y automatiza',
-        pillar2Desc: 'Automatización con n8n: facturación, documentos, integración con CRM, marketing y flujos empresariales con escalabilidad tecnológica garantizada.',
-      }
-    : {
-        pillar1Title: 'Artificial Intelligence Agents',
-        pillar1Subtitle: 'AI that thinks and converses',
-        pillar1Desc: 'AI agents connected to your website, CRM, and Shopify with structured knowledge (RAG), voice, and enterprise capabilities for real business automation.',
-        pillar2Title: 'Intelligent Process Automation',
-        pillar2Subtitle: 'AI that executes and automates',
-        pillar2Desc: 'Automation with n8n: invoicing, documents, CRM integration, marketing, and enterprise workflows with guaranteed scalability.',
-      };
+  const systems = [
+    {
+      icon: Building2,
+      titleEs: 'Sistema 1 — Negocios de servicios',
+      titleEn: 'System 1 — Service businesses',
+      descEs: 'Arquitectura para empresas de servicios que necesitan atención continua, reservas y operación conectada.',
+      descEn: 'Architecture for service businesses that need continuous support, bookings and connected operations.',
+      bulletsEs: [
+        'Reservas y gestión de citas',
+        'Atención automatizada al cliente',
+        'CRM y seguimiento de clientes',
+        'Operación interna conectada',
+        'Mensajería, recordatorios, reputación y campañas',
+      ],
+      bulletsEn: [
+        'Bookings and appointment management',
+        'Automated customer support',
+        'CRM and customer follow-up',
+        'Connected internal operations',
+        'Messaging, reminders, reputation and campaigns',
+      ],
+      links: [
+        { path: '/agentes-ia-atencion-cliente-navarra', labelEs: 'Atención automatizada', labelEn: 'Automated support' },
+        { path: '/automatizacion-procesos-empresas-navarra', labelEs: 'Automatización operativa', labelEn: 'Operational automation' },
+      ],
+    },
+    {
+      icon: UserCheck,
+      titleEs: 'Sistema 2 — Captación y cualificación de leads',
+      titleEn: 'System 2 — Lead generation and qualification',
+      descEs: 'Sistema comercial para captar oportunidades, filtrarlas y moverlas con orden hasta la venta.',
+      descEn: 'Commercial system to capture opportunities, qualify them and move them to sale in an orderly pipeline.',
+      bulletsEs: [
+        'Captación de leads',
+        'Cualificación y filtrado',
+        'Matching comercial',
+        'Gestión de pipeline',
+        'Documentación y seguimiento comercial',
+      ],
+      bulletsEn: [
+        'Lead capture',
+        'Qualification and filtering',
+        'Commercial matching',
+        'Pipeline management',
+        'Document handling and sales follow-up',
+      ],
+      links: [
+        { path: '/ia-empresas-navarra', labelEs: 'Sistema para empresas', labelEn: 'Business system' },
+        { path: '/consultoria-inteligencia-artificial-navarra', labelEs: 'Diseño estratégico', labelEn: 'Strategic design' },
+      ],
+    },
+    {
+      icon: ShoppingCart,
+      titleEs: 'Sistema 3 — Ecommerce y operación digital',
+      titleEn: 'System 3 — Ecommerce and digital operations',
+      descEs: 'Infraestructura para tiendas y canales digitales centrada en conversión, cuentas e integraciones.',
+      descEn: 'Infrastructure for ecommerce and digital channels focused on conversion, accounts and integrations.',
+      bulletsEs: [
+        'Gestión de producto y catálogo',
+        'Checkout y conversión',
+        'Cuentas y experiencia de usuario',
+        'Automatización alrededor de ventas',
+        'Integraciones y procesos de backend',
+      ],
+      bulletsEn: [
+        'Product and catalog management',
+        'Checkout and conversion',
+        'User accounts and experience',
+        'Sales-related automations',
+        'Integrations and backend processes',
+      ],
+      links: [
+        { path: '/desarrollo-web-inteligencia-artificial', labelEs: 'Operación digital', labelEn: 'Digital operations' },
+        { path: '/rag-base-conocimiento-empresas', labelEs: 'Conocimiento e integraciones', labelEn: 'Knowledge and integrations' },
+      ],
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -69,47 +128,34 @@ const Index = ({ language }: IndexProps) => {
       <section className="py-12 container mx-auto px-4">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-xl md:text-2xl font-bold text-foreground text-center">
-            {isEs ? 'Automatización empresarial con agentes IA' : 'Business automation with AI agents'}
+            {isEs ? 'Tres sistemas de IA para empresas en Navarra' : 'Three AI systems for businesses in Navarra'}
           </h2>
           <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed text-center">
             <p>
               {isEs
-                ? 'En RTP Digital Solutions desarrollamos soluciones de inteligencia artificial para empresas que buscan mejorar su operativa, automatizar tareas y optimizar la atención al cliente.'
-                : 'At RTP Digital Solutions, we build artificial intelligence solutions for businesses that want to improve operations, automate tasks, and optimize customer service.'}
+                ? 'Estructuramos nuestras soluciones en 3 sistemas claros: negocios de servicios, captación y cualificación de leads, y ecommerce con operación digital.'
+                : 'We structure our solutions in 3 clear systems: service businesses, lead generation and qualification, and ecommerce with digital operations.'}
             </p>
             <p>
               {isEs
-                ? 'Nuestros agentes IA se integran en tu entorno digital y permiten gestionar consultas, captar oportunidades y ejecutar tareas de forma continua sin intervención manual.'
-                : 'Our AI agents integrate into your digital environment to manage inquiries, capture opportunities, and execute tasks continuously without manual intervention.'}
+                ? 'Cada sistema integra automatización, seguimiento y ejecución para convertir tu operativa en un flujo continuo orientado a resultados.'
+                : 'Each system integrates automation, follow-up and execution to transform your operations into a continuous results-focused flow.'}
             </p>
             <p>
               {isEs
-                ? 'Trabajamos con empresas en Navarra y Pamplona que quieren implementar automatización real con impacto directo en su negocio.'
-                : 'We work with companies in Navarra and Pamplona that want to implement real automation with direct business impact.'}
+                ? 'Partimos de Navarra como foco principal y adaptamos cada sistema al punto exacto de madurez de tu negocio.'
+                : 'We prioritize Navarra as the main target and adapt each system to your business maturity stage.'}
             </p>
           </div>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground max-w-2xl mx-auto">
-            {(isEs
-              ? [
-                  'Agentes IA integrados en páginas web',
-                  'Automatización de atención al cliente',
-                  'Integración con herramientas empresariales',
-                  'Captación y gestión de oportunidades',
-                  'Operativa automatizada 24/7',
-                ]
-              : [
-                  'AI agents integrated into websites',
-                  'Automated customer support',
-                  'Integration with business tools',
-                  'Opportunity capture and management',
-                  '24/7 automated operations',
-                ]).map((item, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <span className="text-primary mt-0.5">•</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="flex justify-center pt-2">
+            <a
+              href="/diagnostico-ia-navarra#diagnostico-form"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
+            >
+              {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -117,44 +163,61 @@ const Index = ({ language }: IndexProps) => {
       <CaseShowcase language={language} />
 
       <section className="py-16 container mx-auto px-4">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-          <div className="p-8 rounded-2xl border border-primary/20 bg-primary/5 space-y-4">
-            <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
-              <Bot className="w-6 h-6 text-primary" />
-            </div>
-            <h2 className="text-xl md:text-2xl font-bold text-foreground">{pillars.pillar1Title}</h2>
-            <p className="text-sm font-medium text-primary">{pillars.pillar1Subtitle}</p>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{pillars.pillar1Desc}</p>
-            <div className="flex flex-wrap gap-3 pt-2">
-                <a href={`${LOVABLE}/agentes-ia-atencion-cliente-navarra`} className="text-xs text-primary font-medium hover:underline underline-offset-2">
-                {isEs ? 'Agentes IA atención al cliente →' : 'AI customer service agents →'}
-              </a>
-              <a href={`${LOVABLE}/agentes-voz-telefonicos-empresas`} className="text-xs text-primary font-medium hover:underline underline-offset-2">
-                {isEs ? 'Agentes de voz →' : 'Voice agents →'}
-              </a>
-              <a href={`${LOVABLE}/rag-base-conocimiento-empresas`} className="text-xs text-primary font-medium hover:underline underline-offset-2">
-                {isEs ? 'RAG y conocimiento →' : 'RAG and knowledge →'}
-              </a>
-            </div>
+        <div className="max-w-6xl mx-auto space-y-6">
+          <div className="text-center space-y-3">
+            <h2 className="text-2xl md:text-4xl font-bold text-glow-primary">
+              {isEs ? 'Modelo de servicios: 3 sistemas reales' : 'Service model: 3 real systems'}
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-sm md:text-base">
+              {isEs
+                ? 'No vendemos paquetes genéricos. Diseñamos uno de estos tres sistemas según tu operación actual y tus objetivos de crecimiento.'
+                : 'We do not sell generic packages. We design one of these three systems according to your current operation and growth goals.'}
+            </p>
           </div>
-          <div className="p-8 rounded-2xl border border-secondary/20 bg-secondary/5 space-y-4">
-            <div className="w-12 h-12 rounded-full bg-secondary/10 border border-secondary/30 flex items-center justify-center">
-              <Cog className="w-6 h-6 text-secondary" />
-            </div>
-            <h2 className="text-xl md:text-2xl font-bold text-foreground">{pillars.pillar2Title}</h2>
-            <p className="text-sm font-medium text-secondary">{pillars.pillar2Subtitle}</p>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{pillars.pillar2Desc}</p>
-            <div className="flex flex-wrap gap-3 pt-2">
-                <a href={`${LOVABLE}/automatizacion-procesos-empresas-navarra`} className="text-xs text-secondary font-medium hover:underline underline-offset-2">
-                {isEs ? 'Automatización de procesos →' : 'Process automation →'}
-              </a>
-              <a href={`${LOVABLE}/consultoria-inteligencia-artificial-navarra`} className="text-xs text-secondary font-medium hover:underline underline-offset-2">
-                {isEs ? 'Consultoría IA →' : 'AI consulting →'}
-              </a>
-              <a href={`${LOVABLE}/desarrollo-web-inteligencia-artificial`} className="text-xs text-secondary font-medium hover:underline underline-offset-2">
-                {isEs ? 'Desarrollo web IA →' : 'AI web development →'}
-              </a>
-            </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {systems.map((system, idx) => {
+              const Icon = system.icon;
+              return (
+                <article key={idx} className="holographic-border rounded-2xl p-6 space-y-4">
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold">
+                    {isEs ? system.titleEs : system.titleEn}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {isEs ? system.descEs : system.descEn}
+                  </p>
+                  <ul className="space-y-2">
+                    {(isEs ? system.bulletsEs : system.bulletsEn).map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="space-y-1">
+                    {system.links.map((link) => (
+                      <Link
+                        key={link.path}
+                        href={link.path}
+                        className="block text-xs text-primary font-medium hover:underline underline-offset-2"
+                      >
+                        {isEs ? link.labelEs : link.labelEn}
+                      </Link>
+                    ))}
+                  </div>
+                  <a
+                    href="/diagnostico-ia-navarra#diagnostico-form"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline underline-offset-2"
+                  >
+                    {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -204,7 +267,7 @@ const Index = ({ language }: IndexProps) => {
               <div className="mt-auto pt-6 flex flex-col items-center gap-1">
                 <p className="text-xs text-muted-foreground mb-1">{isEs ? 'Evaluación inicial sin coste' : 'Free initial evaluation'}</p>
                 <a
-                  href={`${LOVABLE}/diagnostico-ia-navarra`}
+                  href="/diagnostico-ia-navarra#diagnostico-form"
                   className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
                 >
                   {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
