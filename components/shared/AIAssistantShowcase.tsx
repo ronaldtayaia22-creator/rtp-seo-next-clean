@@ -1,4 +1,4 @@
-import { Sparkles, Zap, Clock, TrendingUp, Link2, BarChart3 } from 'lucide-react';
+import { Sparkles, Zap, Building2, UserCheck, ShoppingCart } from 'lucide-react';
 import { Language, getTranslation } from '@/lib/i18n';
 import { Badge } from '@/components/ui/badge';
 
@@ -33,7 +33,7 @@ const AIAssistantShowcase = ({ language }: AIAssistantShowcaseProps) => {
           {/* Service cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-3xl mx-auto pt-2">
             {t.features.map((label, i) => {
-              const Icon = [Clock, TrendingUp][i] || Clock;
+              const Icon = [Building2, UserCheck, ShoppingCart][i] || Building2;
               const desc = (t as any).featureDescs?.[i] || '';
               return (
                 <div

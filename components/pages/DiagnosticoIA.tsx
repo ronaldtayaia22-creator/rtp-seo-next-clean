@@ -1,6 +1,7 @@
 'use client';
 
 import Link from '@/components/shared/LocalizedLink';
+import ContactForm from '@/components/shared/ContactForm';
 import { Language } from '@/lib/i18n';
 import { ArrowRight, Bot, Workflow, Search, Rocket, Cog, BarChart3, Target, Zap, Network, Layers, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -46,10 +47,10 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button asChild size="lg" className="text-lg px-8">
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+                <a href="#diagnostico-form">
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
+                </a>
               </Button>
               <a
                 href="#que-recibiras"
@@ -58,6 +59,33 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
                 {isEs ? 'Ver qué incluye el diagnóstico ↓' : 'See what the diagnosis includes ↓'}
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="diagnostico-form" className="py-20 bg-card/30 scroll-mt-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-3">
+              <h2 className="text-2xl md:text-4xl font-bold text-glow-primary">
+                {isEs ? 'Solicita tu diagnóstico estratégico' : 'Request your strategic diagnosis'}
+              </h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
+                {isEs
+                  ? 'Completa este formulario para activar el flujo real de diagnóstico y recibir la evaluación inicial de tu caso.'
+                  : 'Complete this form to trigger the real diagnosis flow and receive the initial evaluation of your case.'}
+              </p>
+            </div>
+
+            <div className="holographic-border rounded-xl p-6 md:p-8">
+              <ContactForm language={language} />
+            </div>
+
+            <p className="text-xs text-muted-foreground text-center">
+              {isEs
+                ? 'Flujo de captura activo · Respuesta inicial en menos de 24h'
+                : 'Active capture flow · Initial response within 24h'}
+            </p>
           </div>
         </div>
       </section>
@@ -316,10 +344,10 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
                   : 'Discover what to automate, how to do it, and how to turn your business into an efficient system in Navarra and Pamplona.'}
               </p>
               <Button asChild size="lg" className="text-lg px-8">
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+                <a href="#diagnostico-form">
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
+                </a>
               </Button>
               <p className="text-xs text-muted-foreground">
                 {isEs ? 'Evaluación inicial sin coste' : 'Free initial evaluation'}

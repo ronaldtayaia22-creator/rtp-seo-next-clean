@@ -27,7 +27,7 @@ const Contact = ({ language }: ContactProps) => {
           </div>
 
           <div className="holographic-border rounded-xl p-6 md:p-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <ContactForm />
+            <ContactForm language={language} />
           </div>
 
           <div className="mt-8 text-center space-y-1.5 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>

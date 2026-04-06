@@ -20,26 +20,26 @@ const Index = ({ language }: IndexProps) => {
 
   const demos = isEs
     ? {
-        sectionTitle: 'Prueba la tecnología en acción',
-        sectionSubtitle: 'Interactúa con nuestros sistemas en producción para ver cómo funcionan en tiempo real.',
+        sectionTitle: 'Ejemplos reales activos en esta web',
+        sectionSubtitle: 'Estas dos experiencias funcionan en producción dentro de este sitio y muestran cómo operan nuestros sistemas.',
         demo1Title: 'Centro Inteligente',
-        demo1Text: 'Un agente conversacional integrado que resuelve dudas sobre servicios, gestiona citas y explica cómo funciona la automatización empresarial.',
-        demo1Highlight: 'Funciona en producción - sin simulaciones.',
+        demo1Text: 'Asistente conversacional activo en esta web para resolver dudas, orientar sobre servicios y gestionar citas en tiempo real.',
+        demo1Highlight: 'Ejemplo real de soporte automatizado para negocios de servicios.',
         demo2Title: 'Diagnóstico Automatizado',
-        demo2Text: 'Completa un formulario y recibe un informe estratégico personalizado con recomendaciones de automatización para tu negocio.',
-        demo2Highlight: 'Evaluación inicial sin coste.',
-        disclaimer: 'Estas demos son sistemas reales en producción, no simulaciones.',
+        demo2Text: 'Formulario de captura real que activa un diagnóstico estratégico con evaluación inicial para tu empresa.',
+        demo2Highlight: 'Ejemplo real de flujo de captación y cualificación.',
+        disclaimer: 'Son ejemplos operativos del propio sitio: servicio al cliente y flujo de diagnóstico conectados.',
       }
     : {
-        sectionTitle: 'See the technology in action',
-        sectionSubtitle: 'Interact with our production systems to see how they work in real time.',
+        sectionTitle: 'Real examples running on this website',
+        sectionSubtitle: 'These two experiences run in production on this site and show how our systems operate.',
         demo1Title: 'AI Center',
-        demo1Text: 'An integrated conversational agent that answers service questions, manages appointments, and explains how business automation works.',
-        demo1Highlight: 'Running in production - no simulations.',
+        demo1Text: 'Live conversational assistant on this website to resolve questions, guide services and manage appointments in real time.',
+        demo1Highlight: 'Real example of automated support for service businesses.',
         demo2Title: 'Automated Diagnosis',
-        demo2Text: 'Complete a form and receive a personalized strategic report with automation recommendations for your business.',
-        demo2Highlight: 'Free initial evaluation.',
-        disclaimer: 'These demos are real production systems, not simulations.',
+        demo2Text: 'Real capture form that triggers a strategic diagnosis flow with an initial evaluation for your business.',
+        demo2Highlight: 'Real example of lead capture and qualification flow.',
+        disclaimer: 'These are operational website examples: customer support and diagnosis flow connected.',
       };
 
   const systems = [
