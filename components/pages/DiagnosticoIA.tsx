@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const LOVABLE = '';
+const OPERATIONS_BASE_URL = 'https://rtp-ai-orbiter.lovable.app';
 
 interface DiagnosticoIAProps {
   language: Language;
@@ -15,6 +16,8 @@ interface DiagnosticoIAProps {
 
 const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
   const isEs = language === 'es';
+  const operationsPath = isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra';
+  const operationsUrl = `${OPERATIONS_BASE_URL}${operationsPath}`;
 
   return (
     <div className="min-h-screen">
@@ -47,7 +50,7 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button asChild size="lg" className="text-lg px-8">
-                <a href="#diagnostico-form">
+                <a href={operationsUrl} target="_blank" rel="noopener noreferrer">
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
@@ -72,8 +75,8 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
                 {isEs
-                  ? 'Completa este formulario para activar el flujo real de diagnóstico y recibir la evaluación inicial de tu caso.'
-                  : 'Complete this form to trigger the real diagnosis flow and receive the initial evaluation of your case.'}
+                  ? 'Activa el flujo real de diagnostico desde el entorno operativo para recibir la evaluacion inicial de tu caso.'
+                  : 'Trigger the real diagnosis flow from the operational environment to receive your initial case evaluation.'}
               </p>
             </div>
 
@@ -83,8 +86,8 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
 
             <p className="text-xs text-muted-foreground text-center">
               {isEs
-                ? 'Flujo de captura activo · Respuesta inicial en menos de 24h'
-                : 'Active capture flow · Initial response within 24h'}
+                ? 'Flujo de captura activo - Respuesta inicial en menos de 24h'
+                : 'Active capture flow - Initial response within 24h'}
             </p>
           </div>
         </div>
@@ -344,7 +347,7 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
                   : 'Discover what to automate, how to do it, and how to turn your business into an efficient system in Navarra and Pamplona.'}
               </p>
               <Button asChild size="lg" className="text-lg px-8">
-                <a href="#diagnostico-form">
+                <a href={operationsUrl} target="_blank" rel="noopener noreferrer">
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
