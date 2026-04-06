@@ -54,7 +54,7 @@ const TrustBanner = ({ language }: TrustBannerProps) => {
             </div>
             <div className="pt-4">
               <a
-                href={`${process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app'}/casos-ia-navarra`}
+                href={isEs ? '/casos-ia-navarra' : '/en/casos-ia-navarra'}
                 className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
               >
                 {isEs ? 'Ver proyecto' : 'View project'}
@@ -65,7 +65,7 @@ const TrustBanner = ({ language }: TrustBannerProps) => {
 
           <div className="text-center space-y-4">
             <a
-              href={`${process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app'}/automatizacion-ia-navarra`}
+              href={isEs ? '/diagnostico-ia-navarra' : '/en/diagnostico-ia-navarra'}
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
             >
               {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}

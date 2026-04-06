@@ -10,7 +10,7 @@ import JsonLd from '@/components/shared/JsonLd';
 import { Language } from '@/lib/i18n';
 import { Bot, Cog, MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 
-const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
+const LOVABLE = '';
 
 interface IndexProps {
   language: Language;
@@ -204,7 +204,7 @@ const Index = ({ language }: IndexProps) => {
               <div className="mt-auto pt-6 flex flex-col items-center gap-1">
                 <p className="text-xs text-muted-foreground mb-1">{isEs ? 'Evaluación inicial sin coste' : 'Free initial evaluation'}</p>
                 <a
-                  href={`${LOVABLE}/automatizacion-ia-navarra`}
+                  href={`${LOVABLE}/diagnostico-ia-navarra`}
                   className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
                 >
                   {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}

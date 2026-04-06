@@ -1,5 +1,10 @@
+﻿import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadataBuilder';
 import PageShell from '@/components/PageShell';
 import CuantoCuestaIANavarra from '@/components/pages/blog/CuantoCuestaIANavarra';
+
+export const metadata: Metadata = buildPageMetadata('/en/blog/cuanto-cuesta-inteligencia-artificial-navarra', 'en');
+
 
 const Page = () => {
   return (
@@ -10,4 +15,5 @@ const Page = () => {
 };
 
 export default Page;
+
 

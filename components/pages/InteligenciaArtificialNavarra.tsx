@@ -1,7 +1,7 @@
 'use client';
 
 import { Language } from '@/lib/i18n';
-const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
+const LOVABLE = '';
 import { Button } from '@/components/ui/button';
 import {
   Bot, Cog, Phone, BookOpen, Globe, Building2,
@@ -517,7 +517,7 @@ const InteligenciaArtificialNavarra = ({ language }: Props) => {
                 : 'In 15 minutes you\'ll understand exactly what to automate in your business'}
             </p>
             <Button asChild size="lg" className="gap-2">
-              <a href={`${LOVABLE}/automatizacion-ia-navarra`}>
+              <a href={`${LOVABLE}/diagnostico-ia-navarra`}>
                 {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
                 <ArrowRight className="w-4 h-4" />
               </a>

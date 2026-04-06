@@ -6,7 +6,7 @@ import { ArrowRight, Bot, Workflow, Search, Rocket, Cog, BarChart3, Target, Zap,
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
+const LOVABLE = '';
 
 interface DiagnosticoIAProps {
   language: Language;
@@ -46,7 +46,7 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button asChild size="lg" className="text-lg px-8">
-                <Link href={`${LOVABLE}/automatizacion-ia-navarra`}>
+                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -316,7 +316,7 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
                   : 'Discover what to automate, how to do it, and how to turn your business into an efficient system in Navarra and Pamplona.'}
               </p>
               <Button asChild size="lg" className="text-lg px-8">
-                <Link href={`${LOVABLE}/automatizacion-ia-navarra`}>
+                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>

@@ -9,7 +9,7 @@ interface Props {
   language: Language;
 }
 
-const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
+const LOVABLE = '';
 
 const IAEmpresasPamplona = ({ language }: Props) => {
   const isEs = language === 'es';

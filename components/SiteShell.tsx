@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Language } from '@/lib/i18n';
 import { LanguageContext } from '@/lib/language-context';
+import { getLocalizedPath, normalizeBasePath } from '@/lib/routeLocaleMap';
 import Navigation from '@/components/shared/Navigation';
 import Footer from '@/components/shared/Footer';
 import AIChatCenter from '@/components/shared/AIChatCenter';
@@ -40,15 +41,9 @@ const SiteShell = ({ language, children }: SiteShellProps) => {
   const langPrefix = language === 'en' ? '/en' : '';
 
   const handleLanguageChange = (lang: Language) => {
-    const currentPath = langPrefix
-      ? window.location.pathname.slice(langPrefix.length) || '/'
-      : window.location.pathname;
-
-    if (lang === 'en') {
-      window.location.href = `/en${currentPath}`;
-    } else {
-      window.location.href = currentPath;
-    }
+    const currentBasePath = normalizeBasePath(window.location.pathname);
+    const localizedPath = getLocalizedPath(currentBasePath, lang);
+    window.location.href = localizedPath;
   };
 
   if (showSplash) {

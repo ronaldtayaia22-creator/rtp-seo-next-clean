@@ -1,5 +1,10 @@
+﻿import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadataBuilder';
 import PageShell from '@/components/PageShell';
 import PrivacyPolicy from '@/components/pages/PrivacyPolicy';
+
+export const metadata: Metadata = buildPageMetadata('/privacy-policy', 'es');
+
 
 const Page = () => {
   return (
@@ -10,3 +15,4 @@ const Page = () => {
 };
 
 export default Page;
+

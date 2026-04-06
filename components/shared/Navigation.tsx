@@ -20,11 +20,10 @@ const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
 
   const navItems = [
     { path: isEs ? '/servicios' : '/services', label: t.services },
-    { path: '/inteligencia-artificial-navarra', label: isEs ? 'Inteligencia Artificial' : 'Artificial Intelligence' },
+    { path: '/ia-empresas-navarra', label: t.sectores },
     { path: '/casos-ia-navarra', label: t.cases },
     { path: '/blog', label: 'Blog' },
     { path: '/diagnostico-ia-navarra', label: t.diagnostico },
-    { path: '/automatizacion-ia-navarra', label: t.automatizacion },
   ];
 
   const basePath = pathname.startsWith('/en/')

@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       home: 'Inicio',
       services: 'Servicios',
+      sectores: 'Sectores',
       cases: 'Casos',
       diagnostico: 'Diagnóstico',
       automatizacion: 'Automatización IA',
@@ -570,6 +571,7 @@ export const translations = {
     nav: {
       home: 'Home',
       services: 'Services',
+      sectores: 'Sectors',
       cases: 'Cases',
       diagnostico: 'Diagnóstico',
       automatizacion: 'AI Automation',

@@ -1,5 +1,10 @@
+﻿import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadataBuilder';
 import PageShell from '@/components/PageShell';
 import IARestaurantesNavarra from '@/components/pages/blog/IARestaurantesNavarra';
+
+export const metadata: Metadata = buildPageMetadata('/blog/ia-para-restaurantes-navarra', 'es');
+
 
 const Page = () => {
   return (
@@ -10,4 +15,5 @@ const Page = () => {
 };
 
 export default Page;
+
 

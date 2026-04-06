@@ -31,7 +31,7 @@ const Footer = ({ language }: FooterProps) => {
 
   const companyLinks = [
     { path: '/casos-ia-navarra', label: isEs ? 'Casos IA' : 'AI Cases' },
-    { path: '/automatizacion-ia-navarra', label: isEs ? 'Automatización IA' : 'AI Automation' },
+    { path: '/diagnostico-ia-navarra', label: isEs ? 'Diagnóstico IA' : 'AI Diagnosis' },
   ];
 
   return (

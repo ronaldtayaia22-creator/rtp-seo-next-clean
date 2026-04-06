@@ -10,7 +10,7 @@ interface Props {
   language: Language;
 }
 
-const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
+const LOVABLE = '';
 
 const blogArticles = [
   { slug: 'que-es-un-agente-ia', title: { es: 'Qué es un agente de IA y cómo puede ayudar a una empresa', en: 'What is an AI agent and how can it help a business' } },

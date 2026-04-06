@@ -1,6 +1,7 @@
 import Link from './LocalizedLink';
 import { ChevronRight, Home } from 'lucide-react';
 import { useLangPrefix } from '@/lib/language-context';
+import { normalizeBasePath } from '@/lib/routeLocaleMap';
 
 interface BreadcrumbItem {
   label: string;
@@ -104,8 +105,9 @@ interface SEOBreadcrumbsProps {
 
 const SEOBreadcrumbs = ({ pathname, language }: SEOBreadcrumbsProps) => {
   const langPrefix = useLangPrefix();
+  const basePath = normalizeBasePath(pathname);
 
-  if (pathname === '/') return null;
+  if (basePath === '/') return null;
 
   const labels = language === 'es' ? ROUTE_LABELS_ES : ROUTE_LABELS_EN;
 
@@ -113,16 +115,16 @@ const SEOBreadcrumbs = ({ pathname, language }: SEOBreadcrumbsProps) => {
     { label: labels['/'] || 'Inicio', path: '/' },
   ];
 
-  if (IA_HUB_CHILDREN.includes(pathname)) {
+  if (IA_HUB_CHILDREN.includes(basePath)) {
     breadcrumbs.push({ label: labels['/inteligencia-artificial-navarra'] || 'Inteligencia Artificial Navarra', path: '/inteligencia-artificial-navarra' });
   }
 
-  if (pathname.startsWith(BLOG_PAGES_PREFIX)) {
+  if (basePath.startsWith(BLOG_PAGES_PREFIX)) {
     breadcrumbs.push({ label: labels['/blog'] || 'Blog', path: '/blog' });
   }
 
-  const currentLabel = labels[pathname] || pathname.replace(/^\//, '').replace(/-/g, ' ');
-  breadcrumbs.push({ label: currentLabel, path: pathname });
+  const currentLabel = labels[basePath] || basePath.replace(/^\//, '').replace(/-/g, ' ');
+  breadcrumbs.push({ label: currentLabel, path: basePath });
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",

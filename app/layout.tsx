@@ -24,7 +24,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "RTP Digital Solutions | Agentes de IA en Navarra",
+  metadataBase: new URL('https://rtpdigitalsolutions.es'),
+  title: {
+    default: 'RTP Digital Solutions | Agentes de IA en Navarra',
+    template: '%s',
+  },
   description: "Diseñamos e implementamos agentes de inteligencia artificial para empresas en Navarra. Automatiza procesos, integra sistemas y mejora la eficiencia.",
   icons: {
     icon: "/favicon.png",

@@ -17,7 +17,7 @@ interface ServicesProps {
   language: Language;
 }
 
-const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
+const LOVABLE = '';
 
 
 
@@ -450,8 +450,8 @@ const Services = ({ language }: ServicesProps) => {
                     {isEs ? 'Ejemplo real activo: ' : 'Live example: '}
                   </span>
                   {isEs
-                    ? <>el botón "<Link href={`${LOVABLE}/automatizacion-ia-navarra`} className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">Solicitar diagnóstico estratégico</Link>" dispara una automatización que recoge tu información y genera un informe personalizado.</>
-                    : <>the "<Link href={`${LOVABLE}/automatizacion-ia-navarra`} className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">Request strategic diagnosis</Link>" button triggers an automation that collects your information and generates a personalized report.</>}
+                    ? <>el botón "<Link href={`${LOVABLE}/diagnostico-ia-navarra`} className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">Solicitar diagnóstico estratégico</Link>" dispara una automatización que recoge tu información y genera un informe personalizado.</>
+                    : <>the "<Link href={`${LOVABLE}/diagnostico-ia-navarra`} className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">Request strategic diagnosis</Link>" button triggers an automation that collects your information and generates a personalized report.</>}
                 </p>
               </div>
 
@@ -477,7 +477,7 @@ const Services = ({ language }: ServicesProps) => {
               {/* CTA – only diagnosis */}
               <div className="flex flex-col items-center gap-3">
                 <Link
-                  href={`${LOVABLE}/automatizacion-ia-navarra`}
+                  href={`${LOVABLE}/diagnostico-ia-navarra`}
                   className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
                 >
                   {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}

@@ -1,5 +1,10 @@
+﻿import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadataBuilder';
 import PageShell from '@/components/PageShell';
 import Cases from '@/components/pages/Cases';
+
+export const metadata: Metadata = buildPageMetadata('/en/casos-ia-navarra', 'en');
+
 
 const Page = () => {
   return (
@@ -10,3 +15,4 @@ const Page = () => {
 };
 
 export default Page;
+

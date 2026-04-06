@@ -9,7 +9,7 @@ interface Props {
   language: Language;
 }
 
-const LOVABLE = process.env.NEXT_PUBLIC_LOVABLE_URL || 'https://rtpdigitalsolutions.lovable.app';
+const LOVABLE = '';
 
 const IAComerciosNavarra = ({ language }: Props) => {
   const isEs = language === 'es';
@@ -328,7 +328,7 @@ const IAComerciosNavarra = ({ language }: Props) => {
                 ? 'No es una web. Es un sistema adaptado a cómo funciona tu negocio.'
                 : 'It\'s not a website. It\'s a system adapted to how your business works.'}
             </p>
-            <Link href={`${LOVABLE}/automatizacion-ia-navarra`}>
+            <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
               <Button size="lg" className="gap-2 w-full sm:w-auto">
                 {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Button>
