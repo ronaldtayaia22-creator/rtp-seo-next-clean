@@ -1,8 +1,11 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import generatedRouteLastmod from '@/lib/seo/generated-route-lastmod.json';
 
 const BASE_URL = 'https://rtpdigitalsolutions.es';
 const APP_DIR = path.join(process.cwd(), 'app');
+const COMPONENTS_DIR = path.join(process.cwd(), 'components');
+const LIB_DIR = path.join(process.cwd(), 'lib');
 
 const EXCLUDED_ROUTES = new Set([
   '/automatizacion-ia-navarra',
@@ -33,6 +36,8 @@ type RouteFile = {
   route: string;
   filePath: string;
 };
+
+const IMPORT_RE = /import\s+[^'"\n]+?from\s+['"]([^'"]+)['"]/g;
 
 const routeGroupsPattern = /^\(.*\)$/;
 
@@ -148,6 +153,8 @@ const PROJECT_FALLBACK_LASTMOD =
   parseEnvDate(process.env.VERCEL_DEPLOYMENT_CREATED_AT) ||
   formatIsoDate(new Date());
 
+const GENERATED_ROUTE_LASTMOD: Record<string, string> = generatedRouteLastmod?.routes || {};
+
 const isTrustworthyLastmod = (date: Date): boolean => {
   if (Number.isNaN(date.getTime())) return false;
   if (formatIsoDate(date) === KNOWN_INVALID_LASTMOD) return false;
@@ -157,12 +164,144 @@ const isTrustworthyLastmod = (date: Date): boolean => {
   return year >= MIN_TRUSTED_LASTMOD_YEAR && year <= currentYear + 1;
 };
 
-const resolveLastModified = async (filePath: string): Promise<string> => {
-  const stats = await fs.stat(filePath);
-  const mtime = stats.mtime;
+const isInsideSeoSourceDirs = (filePath: string): boolean => {
+  const normalized = path.normalize(filePath);
+  return (
+    normalized.startsWith(path.normalize(APP_DIR + path.sep)) ||
+    normalized.startsWith(path.normalize(COMPONENTS_DIR + path.sep)) ||
+    normalized.startsWith(path.normalize(LIB_DIR + path.sep))
+  );
+};
 
-  if (isTrustworthyLastmod(mtime)) {
-    return formatIsoDate(mtime);
+const withCandidateExtensions = (basePath: string): string[] => {
+  const candidates = [
+    basePath,
+    `${basePath}.ts`,
+    `${basePath}.tsx`,
+    `${basePath}.js`,
+    `${basePath}.jsx`,
+    path.join(basePath, 'index.ts'),
+    path.join(basePath, 'index.tsx'),
+    path.join(basePath, 'index.js'),
+    path.join(basePath, 'index.jsx'),
+  ];
+
+  return [...new Set(candidates)];
+};
+
+const resolveImportFile = async (importPath: string, baseDir: string): Promise<string | null> => {
+  if (!importPath.startsWith('@/') && !importPath.startsWith('.')) {
+    return null;
+  }
+
+  const absoluteBase = importPath.startsWith('@/')
+    ? path.join(process.cwd(), importPath.slice(2))
+    : path.resolve(baseDir, importPath);
+
+  const candidates = withCandidateExtensions(absoluteBase);
+
+  for (const candidate of candidates) {
+    try {
+      const stat = await fs.stat(candidate);
+      if (stat.isFile() && isInsideSeoSourceDirs(candidate)) {
+        return candidate;
+      }
+    } catch {
+      // Ignore non-existing candidates
+    }
+  }
+
+  return null;
+};
+
+const parseImports = (source: string): string[] => {
+  const imports: string[] = [];
+  for (const match of source.matchAll(IMPORT_RE)) {
+    const value = match[1];
+    if (value) imports.push(value);
+  }
+  return imports;
+};
+
+const collectRouteSourceCandidates = async (entryFilePath: string): Promise<Set<string>> => {
+  const visited = new Set<string>();
+  const queue: Array<{ filePath: string; depth: number }> = [{ filePath: entryFilePath, depth: 0 }];
+  const maxDepth = 2;
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    if (!current) continue;
+    if (visited.has(current.filePath)) continue;
+
+    visited.add(current.filePath);
+
+    if (current.depth >= maxDepth) {
+      continue;
+    }
+
+    let source = '';
+    try {
+      source = await fs.readFile(current.filePath, 'utf8');
+    } catch {
+      continue;
+    }
+
+    const imports = parseImports(source);
+    for (const importPath of imports) {
+      const resolved = await resolveImportFile(importPath, path.dirname(current.filePath));
+      if (resolved && !visited.has(resolved)) {
+        queue.push({ filePath: resolved, depth: current.depth + 1 });
+      }
+    }
+  }
+
+  return visited;
+};
+
+const routeToCompiledPagePath = (route: string): string => {
+  const routePath = route === '/' ? '' : route.replace(/^\//, '');
+  return path.join(process.cwd(), '.next', 'server', 'app', routePath, 'page.js');
+};
+
+const getLatestTrustworthyMtime = async (filePaths: Iterable<string>): Promise<string | null> => {
+  let latest: Date | null = null;
+
+  for (const filePath of filePaths) {
+    try {
+      const stats = await fs.stat(filePath);
+      const date = stats.mtime;
+      if (!isTrustworthyLastmod(date)) continue;
+
+      if (!latest || date > latest) {
+        latest = date;
+      }
+    } catch {
+      // Ignore missing files
+    }
+  }
+
+  return latest ? formatIsoDate(latest) : null;
+};
+
+const resolveLastModified = async (route: string, filePath: string): Promise<string> => {
+  const generatedLastmod = GENERATED_ROUTE_LASTMOD[route];
+  if (generatedLastmod) {
+    const parsedGenerated = new Date(generatedLastmod);
+    if (isTrustworthyLastmod(parsedGenerated)) {
+      return formatIsoDate(parsedGenerated);
+    }
+  }
+
+  const sourceCandidates = await collectRouteSourceCandidates(filePath);
+  const fromSources = await getLatestTrustworthyMtime(sourceCandidates);
+  if (fromSources) {
+    return fromSources;
+  }
+
+  const compiledPath = routeToCompiledPagePath(route);
+  const fromCompiled = await getLatestTrustworthyMtime([compiledPath]);
+  if (fromCompiled) {
+    return fromCompiled;
   }
 
   return PROJECT_FALLBACK_LASTMOD;
@@ -189,7 +328,7 @@ export const getSeoSitemapEntries = async (): Promise<SeoSitemapEntry[]> => {
   const entries = await Promise.all(
     [...uniqueByRoute.values()].map(async ({ route, filePath }) => {
       const settings = getRouteSettings(route);
-      const lastModified = await resolveLastModified(filePath);
+      const lastModified = await resolveLastModified(route, filePath);
 
       return {
         route,
