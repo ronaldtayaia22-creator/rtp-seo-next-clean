@@ -46,7 +46,7 @@ const nextConfig: NextConfig = {
         },
         {
           source: "/en/ai-automation-navarra",
-          destination: `${OPERATIONAL_ORIGIN}/en/automatizacion-ia-navarra`,
+          destination: `${OPERATIONAL_ORIGIN}/en/ai-automation-navarra`,
         },
         {
           source: "/contact-success",
