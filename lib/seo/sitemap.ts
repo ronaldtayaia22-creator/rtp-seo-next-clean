@@ -18,6 +18,9 @@ const EXCLUDED_ROUTES = new Set([
 
 const EXCLUDED_PREFIXES = ['/admin/', '/en/admin/', '/api/'];
 
+const MIN_TRUSTED_LASTMOD_YEAR = 2020;
+const KNOWN_INVALID_LASTMOD = '2018-10-20T01:46:40.000Z';
+
 export type SeoSitemapEntry = {
   route: string;
   url: string;
@@ -132,6 +135,39 @@ const collectRouteFiles = async (dir: string): Promise<RouteFile[]> => {
 
 const formatIsoDate = (date: Date): string => date.toISOString();
 
+const parseEnvDate = (value: string | undefined): string | null => {
+  if (!value) return null;
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return null;
+  return formatIsoDate(parsed);
+};
+
+const PROJECT_FALLBACK_LASTMOD =
+  parseEnvDate(process.env.SITEMAP_LASTMOD) ||
+  parseEnvDate(process.env.VERCEL_GIT_COMMIT_DATE) ||
+  parseEnvDate(process.env.VERCEL_DEPLOYMENT_CREATED_AT) ||
+  formatIsoDate(new Date());
+
+const isTrustworthyLastmod = (date: Date): boolean => {
+  if (Number.isNaN(date.getTime())) return false;
+  if (formatIsoDate(date) === KNOWN_INVALID_LASTMOD) return false;
+
+  const year = date.getUTCFullYear();
+  const currentYear = new Date().getUTCFullYear();
+  return year >= MIN_TRUSTED_LASTMOD_YEAR && year <= currentYear + 1;
+};
+
+const resolveLastModified = async (filePath: string): Promise<string> => {
+  const stats = await fs.stat(filePath);
+  const mtime = stats.mtime;
+
+  if (isTrustworthyLastmod(mtime)) {
+    return formatIsoDate(mtime);
+  }
+
+  return PROJECT_FALLBACK_LASTMOD;
+};
+
 const escapeXml = (value: string): string =>
   value
     .replace(/&/g, '&amp;')
@@ -152,13 +188,13 @@ export const getSeoSitemapEntries = async (): Promise<SeoSitemapEntry[]> => {
 
   const entries = await Promise.all(
     [...uniqueByRoute.values()].map(async ({ route, filePath }) => {
-      const stats = await fs.stat(filePath);
       const settings = getRouteSettings(route);
+      const lastModified = await resolveLastModified(filePath);
 
       return {
         route,
         url: toPublicUrl(route),
-        lastModified: formatIsoDate(stats.mtime),
+        lastModified,
         changeFrequency: settings.changeFrequency,
         priority: settings.priority,
       } satisfies SeoSitemapEntry;
