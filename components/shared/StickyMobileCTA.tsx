@@ -23,7 +23,7 @@ const StickyMobileCTA = ({ language }: StickyMobileCTAProps) => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-background/95 backdrop-blur-lg border-t border-border p-3">
       <a
-        href={language === 'es' ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
+        href={language === 'es' ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
         className="flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm transition-all w-full"
       >
         {t.cta}

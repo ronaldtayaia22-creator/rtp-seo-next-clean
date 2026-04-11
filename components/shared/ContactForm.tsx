@@ -9,7 +9,7 @@ interface ContactFormProps {
 
 const ContactForm = ({ language }: ContactFormProps) => {
   const t = getTranslation(language).contact;
-  const operationsPath = language === 'en' ? '/en/automatizacion-ia-navarra' : '/automatizacion-ia-navarra';
+  const operationsPath = language === 'en' ? '/en/ai-automation-navarra' : '/automatizacion-ia-navarra';
 
   return (
     <div className="space-y-5 text-center">

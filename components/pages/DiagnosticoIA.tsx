@@ -15,7 +15,7 @@ interface DiagnosticoIAProps {
 
 const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
   const isEs = language === 'es';
-  const operationsPath = isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra';
+  const operationsPath = isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra';
 
   return (
     <div className="min-h-screen">

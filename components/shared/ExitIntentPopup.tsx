@@ -63,7 +63,7 @@ const ExitIntentPopup = ({ language }: ExitIntentPopupProps) => {
 
         <div className="space-y-3">
           <a
-            href={language === 'es' ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
+            href={language === 'es' ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
             onClick={dismiss}
             className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
           >

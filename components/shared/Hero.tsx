@@ -90,7 +90,7 @@ const Hero = ({ language }: HeroProps) => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
             <a
-              href={isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
+              href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
               className="group inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
             >
               {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}

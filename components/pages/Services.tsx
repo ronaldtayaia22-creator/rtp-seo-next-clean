@@ -166,7 +166,7 @@ const Services = ({ language }: ServicesProps) => {
               : 'We define the priority system for your business and connect it to your processes to generate measurable outcomes.'}
           </p>
           <a
-            href={isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
+            href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
           >
             {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
@@ -235,7 +235,7 @@ const Services = ({ language }: ServicesProps) => {
 
                 <div className="pt-2">
                   <a
-                    href={isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
+                    href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
                     className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
                   >
                     {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
@@ -256,7 +256,7 @@ const Services = ({ language }: ServicesProps) => {
                 : 'In the strategic diagnosis we define the right priority and implementation sequence for your business in Navarra.'}
             </p>
             <a
-              href={isEs ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
+              href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
             >
               {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}

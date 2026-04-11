@@ -164,14 +164,14 @@ const ServicePageLayout = ({
               </h2>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8">
                 <a
-                  href={language === 'es' ? '/automatizacion-ia-navarra' : '/en/automatizacion-ia-navarra'}
+                  href={language === 'es' ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
                   className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
                 >
                   {ctaButton}
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href={language === 'es' ? '/casos-ia-navarra' : '/en/casos-ia-navarra'}
+                  href={language === 'es' ? '/casos-ia-navarra' : '/en/ai-cases-navarra'}
                   className="inline-flex items-center gap-2 px-5 py-3 border border-primary/50 text-primary rounded-lg font-bold text-sm hover:bg-primary/10 transition-all whitespace-nowrap"
                 >
                   {casesLink}
