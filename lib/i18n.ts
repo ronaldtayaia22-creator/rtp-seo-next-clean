@@ -575,7 +575,7 @@ export const translations = {
       services: 'Services',
       sectores: 'Sectors',
       cases: 'Cases',
-      diagnostico: 'Diagnóstico',
+      diagnostico: 'Diagnosis',
       automatizacion: 'AI Automation',
       schedule: 'Schedule Call',
     },

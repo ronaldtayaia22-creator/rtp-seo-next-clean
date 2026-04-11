@@ -12,10 +12,16 @@ interface LanguageSelectorProps {
 const LanguageSelector = ({ currentLang, onLanguageChange }: LanguageSelectorProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const languages = [
-    { code: 'es' as Language, name: 'Español', flag: '🇪🇸' },
-    { code: 'en' as Language, name: 'English', flag: '🇬🇧' },
-  ];
+  const languages =
+    currentLang === 'en'
+      ? [
+          { code: 'es' as Language, name: 'Spanish', flag: '🇪🇸' },
+          { code: 'en' as Language, name: 'English', flag: '🇬🇧' },
+        ]
+      : [
+          { code: 'es' as Language, name: 'Español', flag: '🇪🇸' },
+          { code: 'en' as Language, name: 'English', flag: '🇬🇧' },
+        ];
 
   const currentLanguage = languages.find(l => l.code === currentLang);
 

@@ -127,12 +127,12 @@ const SEOBreadcrumbs = ({ pathname, language }: SEOBreadcrumbsProps) => {
   const labels = language === 'es' ? ROUTE_LABELS_ES : ROUTE_LABELS_EN;
 
   const breadcrumbs: BreadcrumbItem[] = [
-    { label: labels['/'] || 'Inicio', path: '/' },
+    { label: labels['/'] || (language === 'en' ? 'Home' : 'Inicio'), path: '/' },
   ];
 
   if (IA_HUB_CHILDREN.includes(basePath)) {
     const iaHubPath = language === 'en' ? '/artificial-intelligence-navarra' : '/inteligencia-artificial-navarra';
-    breadcrumbs.push({ label: labels[iaHubPath] || 'Inteligencia Artificial Navarra', path: iaHubPath });
+    breadcrumbs.push({ label: labels[iaHubPath] || (language === 'en' ? 'Artificial Intelligence Navarra' : 'Inteligencia Artificial Navarra'), path: iaHubPath });
   }
 
   if (basePath.startsWith(BLOG_PAGES_PREFIX)) {
