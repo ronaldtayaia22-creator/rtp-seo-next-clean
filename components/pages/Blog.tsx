@@ -11,6 +11,30 @@ interface BlogProps {
 
 const blogPosts = [
   {
+    slug: 'trabajos-en-riesgo-por-ia-y-como-adaptarte',
+    title: {
+      es: 'Trabajos en riesgo por la IA en 2026 y cómo adaptarte sin quedarte atrás',
+      en: 'Jobs at risk from AI in 2026 and how to adapt without falling behind',
+    },
+    excerpt: {
+      es: 'Qué perfiles están más expuestos, cómo adaptarte con un plan 30-60-90 y cómo convertir el riesgo en ventaja competitiva para tu empresa.',
+      en: 'Which profiles are most exposed, how to adapt with a 30-60-90 plan, and how to turn risk into competitive advantage for your business.',
+    },
+    date: '2026-04-17',
+  },
+  {
+    slug: 'impacto-inteligencia-artificial-empleo-economia-espana',
+    title: {
+      es: 'Impacto de la inteligencia artificial en el empleo, la economía y el futuro del trabajo en España',
+      en: 'Impact of artificial intelligence on employment, the economy, and the future of work in Spain',
+    },
+    excerpt: {
+      es: 'Análisis claro sobre productividad, despidos, regulación y qué deben hacer las empresas para crecer con IA sin perder competitividad.',
+      en: 'A clear analysis on productivity, layoffs, regulation, and what businesses should do to grow with AI without losing competitiveness.',
+    },
+    date: '2026-04-10',
+  },
+  {
     slug: 'ia-2026-empresas-navarra-espana-europa-hoja-ruta',
     title: {
       es: 'Hoja de ruta IA 2026 para empresas en Navarra: de piloto a resultado',

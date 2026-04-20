@@ -38,6 +38,14 @@ const HUMAN_LABELS: Record<string, { es: string; en: string }> = {
   'como-implementar-inteligencia-artificial-empresa-navarra': { es: 'Cómo implementar IA en una empresa en Navarra', en: 'How to implement AI in a Navarra business' },
   'ia-2026-empresas-navarra-espana-europa-contexto': { es: 'IA 2026 en Navarra, España y Europa', en: 'AI 2026 in Navarra, Spain and Europe' },
   'ia-2026-empresas-navarra-espana-europa-hoja-ruta': { es: 'Hoja de ruta IA 2026 para empresas en Navarra', en: 'AI 2026 roadmap for businesses in Navarra' },
+  'impacto-inteligencia-artificial-empleo-economia-espana': {
+    es: 'Impacto de la IA en empleo y economía en España',
+    en: 'Impact of AI on employment and economy in Spain',
+  },
+  'trabajos-en-riesgo-por-ia-y-como-adaptarte': {
+    es: 'Trabajos en riesgo por IA y cómo adaptarte',
+    en: 'Jobs at risk from AI and how to adapt',
+  },
 };
 
 export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
@@ -239,6 +247,26 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
     description: {
       es: 'Guía por fases para pasar de pilotos de IA a resultados de negocio medibles en empresas de Navarra.',
       en: 'Phase-based guide to move from AI pilots to measurable business outcomes in businesses in Navarra.',
+    },
+  },
+  '/blog/impacto-inteligencia-artificial-empleo-economia-espana': {
+    title: {
+      es: 'Impacto de la inteligencia artificial en el empleo y la economía en España',
+      en: 'Impact of artificial intelligence on employment and the economy in Spain',
+    },
+    description: {
+      es: 'Análisis del impacto de la IA en productividad, empleo, regulación y decisiones empresariales para 2026 en España.',
+      en: 'Analysis of AI impact on productivity, employment, regulation, and business decisions for 2026 in Spain.',
+    },
+  },
+  '/blog/trabajos-en-riesgo-por-ia-y-como-adaptarte': {
+    title: {
+      es: 'Trabajos en riesgo por la IA en 2026 y cómo adaptarte',
+      en: 'Jobs at risk from AI in 2026 and how to adapt',
+    },
+    description: {
+      es: 'Guía práctica para identificar puestos en riesgo por IA y aplicar un plan de adaptación profesional y empresarial en 2026.',
+      en: 'Practical guide to identify roles at risk from AI and apply a professional and business adaptation plan in 2026.',
     },
   },
   '/contact-success': {

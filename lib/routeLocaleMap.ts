@@ -34,6 +34,8 @@ const ES_TO_EN_OVERRIDES: Record<string, string> = {
   '/blog/como-implementar-inteligencia-artificial-empresa-navarra': '/blog/how-to-implement-artificial-intelligence-business-navarra',
   '/blog/ia-2026-empresas-navarra-espana-europa-contexto': '/blog/ai-2026-business-navarra-spain-europe-context',
   '/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta': '/blog/ai-2026-business-navarra-spain-europe-roadmap',
+  '/blog/impacto-inteligencia-artificial-empleo-economia-espana': '/blog/impact-artificial-intelligence-employment-economy-spain',
+  '/blog/trabajos-en-riesgo-por-ia-y-como-adaptarte': '/blog/jobs-at-risk-from-ai-and-how-to-adapt',
 };
 
 const EN_TO_ES_OVERRIDES: Record<string, string> = {
@@ -70,6 +72,8 @@ const EN_TO_ES_OVERRIDES: Record<string, string> = {
   '/blog/how-to-implement-artificial-intelligence-business-navarra': '/blog/como-implementar-inteligencia-artificial-empresa-navarra',
   '/blog/ai-2026-business-navarra-spain-europe-context': '/blog/ia-2026-empresas-navarra-espana-europa-contexto',
   '/blog/ai-2026-business-navarra-spain-europe-roadmap': '/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta',
+  '/blog/impact-artificial-intelligence-employment-economy-spain': '/blog/impacto-inteligencia-artificial-empleo-economia-espana',
+  '/blog/jobs-at-risk-from-ai-and-how-to-adapt': '/blog/trabajos-en-riesgo-por-ia-y-como-adaptarte',
 };
 
 export const normalizeBasePath = (pathname: string): string => {
