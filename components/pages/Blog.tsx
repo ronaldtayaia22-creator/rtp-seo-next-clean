@@ -17,7 +17,7 @@ const blogPosts = [
       en: 'AI 2026 roadmap for businesses in Navarra: from pilot to results',
     },
     excerpt: {
-      es: 'Plan practico para pasar de pruebas aisladas de IA a una implantacion real en Navarra, con KPIs, integracion y control de riesgos.',
+      es: 'Plan práctico para pasar de pruebas aisladas de IA a una implantación real en Navarra, con KPIs, integración y control de riesgos.',
       en: 'A practical plan to move from isolated AI tests to real deployment in Navarra, with KPIs, integration, and risk control.',
     },
     date: '2026-04-03',
@@ -25,11 +25,11 @@ const blogPosts = [
   {
     slug: 'ia-2026-empresas-navarra-espana-europa-contexto',
     title: {
-      es: 'IA en 2026 para empresas en Navarra: contexto en Espana y Europa',
+      es: 'IA en 2026 para empresas en Navarra: contexto en España y Europa',
       en: 'AI in 2026 for businesses in Navarra: context in Spain and Europe',
     },
     excerpt: {
-      es: 'Resumen estrategico sobre AI Act, RGPD y decisiones clave para adoptar IA con impacto real en empresas de Navarra y Europa.',
+      es: 'Resumen estratégico sobre AI Act, RGPD y decisiones clave para adoptar IA con impacto real en empresas de Navarra y Europa.',
       en: 'Strategic overview of the AI Act, GDPR, and key decisions to adopt AI with real impact in businesses in Navarra and Europe.',
     },
     date: '2026-03-27',

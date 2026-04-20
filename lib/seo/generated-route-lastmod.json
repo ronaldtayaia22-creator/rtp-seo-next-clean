@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T13:17:57.822Z",
+  "generatedAt": "2026-04-20T13:33:08.585Z",
   "routes": {
     "/": "2026-04-06T15:45:27.000Z",
     "/agentes-ia-atencion-cliente-navarra": "2026-04-06T15:45:27.000Z",
@@ -16,8 +16,8 @@
     "/blog/como-implementar-inteligencia-artificial-empresa-navarra": "2026-04-06T15:45:27.000Z",
     "/blog/cuanto-cuesta-inteligencia-artificial-navarra": "2026-04-06T15:45:27.000Z",
     "/blog/ejemplos-inteligencia-artificial-empresas-navarra": "2026-04-06T15:45:27.000Z",
-    "/blog/ia-2026-empresas-navarra-espana-europa-contexto": "2026-04-20T13:09:45.784Z",
-    "/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta": "2026-04-20T13:09:55.073Z",
+    "/blog/ia-2026-empresas-navarra-espana-europa-contexto": "2026-04-20T13:22:55.000Z",
+    "/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta": "2026-04-20T13:22:55.000Z",
     "/blog/ia-para-clinicas-navarra": "2026-04-06T15:45:27.000Z",
     "/blog/ia-para-comercios-navarra": "2026-04-06T15:45:27.000Z",
     "/blog/ia-para-restaurantes-navarra": "2026-04-06T15:45:27.000Z",
@@ -37,8 +37,8 @@
     "/en/ai-retail-navarra": "2026-04-11T08:49:28.000Z",
     "/en/artificial-intelligence-navarra": "2026-04-11T08:49:28.000Z",
     "/en/blog": "2026-04-06T15:45:27.000Z",
-    "/en/blog/ai-2026-business-navarra-spain-europe-context": "2026-04-20T13:10:04.555Z",
-    "/en/blog/ai-2026-business-navarra-spain-europe-roadmap": "2026-04-20T13:10:14.042Z",
+    "/en/blog/ai-2026-business-navarra-spain-europe-context": "2026-04-20T13:22:55.000Z",
+    "/en/blog/ai-2026-business-navarra-spain-europe-roadmap": "2026-04-20T13:22:55.000Z",
     "/en/blog/ai-agents-business-navarra": "2026-04-11T08:49:28.000Z",
     "/en/blog/ai-agents-for-websites-navarra": "2026-04-11T08:49:28.000Z",
     "/en/blog/ai-for-clinics-navarra": "2026-04-11T08:49:28.000Z",

@@ -27,7 +27,7 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-10 leading-tight">
           {isEs
-            ? 'IA en 2026 para empresas en Navarra: contexto en Espana y Europa'
+            ? 'IA en 2026 para empresas en Navarra: contexto en España y Europa'
             : 'AI in 2026 for businesses in Navarra: context in Spain and Europe'}
         </h1>
 
@@ -35,12 +35,12 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
           <section>
             <p>
               {isEs
-                ? 'La conversacion sobre IA ya no gira solo en torno a modelos y demos. En 2026, para empresas en Navarra, Espana y Europa, el valor real esta en combinar productividad, cumplimiento y control de riesgo.'
+                ? 'La conversación sobre IA ya no gira solo en torno a modelos y demos. En 2026, para empresas en Navarra, España y Europa, el valor real está en combinar productividad, cumplimiento y control de riesgo.'
                 : 'The AI conversation is no longer only about models and demos. In 2026, for companies in Navarra, Spain, and Europe, real value comes from combining productivity, compliance, and risk control.'}
             </p>
             <p className="mt-4">
               {isEs
-                ? 'Esto afecta a pymes y medianas empresas por igual: no basta con probar herramientas sueltas. Hace falta un enfoque operativo que conecte tecnologia con negocio, procesos y datos, como ya aplican las empresas que trabajan con una estrategia de inteligencia artificial bien definida.'
+                ? 'Esto afecta a pymes y medianas empresas por igual: no basta con probar herramientas sueltas. Hace falta un enfoque operativo que conecte tecnología con negocio, procesos y datos, como ya aplican las empresas que trabajan con una estrategia de inteligencia artificial bien definida.'
                 : 'This affects SMBs and mid-sized businesses alike: testing isolated tools is not enough. You need an operational approach that connects technology with business goals, processes, and data, as seen in companies working with a clear AI strategy.'}
             </p>
           </section>
@@ -51,18 +51,18 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
             </h2>
             <p>
               {isEs
-                ? 'Con el despliegue progresivo del AI Act y el marco de proteccion de datos (RGPD), las empresas que trabajan bien gobierno, trazabilidad y seguridad ganan velocidad comercial frente a quienes improvisan.'
+                ? 'Con el despliegue progresivo del AI Act y el marco de protección de datos (RGPD), las empresas que trabajan bien gobierno, trazabilidad y seguridad ganan velocidad comercial frente a quienes improvisan.'
                 : 'With the progressive rollout of the AI Act and GDPR data-protection requirements, companies that establish governance, traceability, and security move faster commercially than those that improvise.'}
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
               <li>{isEs ? 'Inventario de casos de uso y nivel de riesgo.' : 'Inventory of use cases and risk level.'}</li>
               <li>{isEs ? 'Control de datos, acceso y registro de actividad.' : 'Data, access, and activity controls.'}</li>
-              <li>{isEs ? 'Politicas internas para uso responsable de IA.' : 'Internal policies for responsible AI usage.'}</li>
+              <li>{isEs ? 'Políticas internas para uso responsable de IA.' : 'Internal policies for responsible AI usage.'}</li>
             </ul>
             <p className="mt-4">
-              {isEs ? 'Si no tienes este marco definido, una ' : 'If you do not have this framework defined, an '} 
+              {isEs ? 'Si no tienes este marco definido, una ' : 'If you do not have this framework defined, an '}
               <Link href="/consultoria-inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">
-                {isEs ? 'consultoria de inteligencia artificial' : 'AI consulting process'}
+                {isEs ? 'consultoría de inteligencia artificial' : 'AI consulting process'}
               </Link>
               {isEs ? ' te permite ordenar prioridades antes de invertir.' : ' helps you prioritize before investing.'}
             </p>
@@ -74,19 +74,19 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
             </h2>
             <p>
               {isEs
-                ? 'La diferencia entre una iniciativa puntual y una ventaja duradera esta en la integracion. En 2026, las empresas que integran IA en ventas, soporte y operaciones son las que convierten mejor y reducen costes de forma sostenida.'
+                ? 'La diferencia entre una iniciativa puntual y una ventaja duradera está en la integración. En 2026, las empresas que integran IA en ventas, soporte y operaciones son las que convierten mejor y reducen costes de forma sostenida.'
                 : 'The difference between a one-off initiative and durable advantage is integration. In 2026, companies that integrate AI into sales, support, and operations are the ones improving conversion and reducing costs in a sustained way.'}
             </p>
             <p className="mt-4">
               {isEs
-                ? 'Aqui es donde suelen entrar agentes conversacionales, flujos de automatizacion y sistemas conectados al CRM y a la base de conocimiento. Puedes verlo en soluciones de '
+                ? 'Aquí es donde suelen entrar agentes conversacionales, flujos de automatización y sistemas conectados al CRM y a la base de conocimiento. Puedes verlo en soluciones de '
                 : 'This is where conversational agents, automation workflows, and systems connected to CRM and knowledge bases usually come into play. You can see it in '}
               <Link href="/agentes-ia-atencion-cliente-navarra" className="text-primary hover:underline font-medium">
-                {isEs ? 'agentes IA para atencion al cliente' : 'AI customer service agents'}
+                {isEs ? 'agentes IA para atención al cliente' : 'AI customer service agents'}
               </Link>
-              {isEs ? ' y en proyectos de ' : ' and in '} 
+              {isEs ? ' y en proyectos de ' : ' and in '}
               <Link href="/automatizacion-procesos-empresas-navarra" className="text-primary hover:underline font-medium">
-                {isEs ? 'automatizacion de procesos empresariales' : 'business process automation'}
+                {isEs ? 'automatización de procesos empresariales' : 'business process automation'}
               </Link>
               {isEs ? '.' : '.'}
             </p>
@@ -94,34 +94,34 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
 
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">
-              {isEs ? '3) Sectores en Espana con mayor traccion inmediata' : '3) Sectors in Spain with strongest immediate traction'}
+              {isEs ? '3) Sectores en España con mayor tracción inmediata' : '3) Sectors in Spain with strongest immediate traction'}
             </h2>
             <p>
               {isEs
-                ? 'En el mercado espanol, la adopcion practica esta avanzando especialmente en servicios profesionales, salud privada, retail y hosteleria, donde la IA aporta mejoras medibles en tiempos de respuesta y eficiencia operativa.'
+                ? 'En el mercado español, la adopción práctica está avanzando especialmente en servicios profesionales, salud privada, retail y hostelería, donde la IA aporta mejoras medibles en tiempos de respuesta y eficiencia operativa.'
                 : 'In the Spanish market, practical adoption is moving especially fast in professional services, private healthcare, retail, and hospitality, where AI drives measurable improvements in response times and operational efficiency.'}
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
-              <li>{isEs ? 'Atencion al cliente 24/7 con escalado inteligente a humano.' : '24/7 customer support with intelligent human escalation.'}</li>
-              <li>{isEs ? 'Automatizacion de tareas repetitivas de backoffice.' : 'Automation of repetitive back-office tasks.'}</li>
+              <li>{isEs ? 'Atención al cliente 24/7 con escalado inteligente a humano.' : '24/7 customer support with intelligent human escalation.'}</li>
+              <li>{isEs ? 'Automatización de tareas repetitivas de backoffice.' : 'Automation of repetitive back-office tasks.'}</li>
               <li>{isEs ? 'Asistentes internos para equipos comerciales y operativos.' : 'Internal assistants for commercial and operational teams.'}</li>
             </ul>
             <p className="mt-4">
-              {isEs ? 'Sectores como ' : 'Sectors such as '}
-              <Link href="/ia-clinicas-navarra" className="text-primary hover:underline font-medium">
-                {isEs ? 'clinicas' : 'clinics'}
-              </Link>
-              {isEs ? ', ' : ', '}
-              <Link href="/ia-restaurantes-navarra" className="text-primary hover:underline font-medium">
-                {isEs ? 'restauracion' : 'restaurants'}
-              </Link>
-              {isEs ? ' y ' : ', and '}
-              <Link href="/ia-comercios-navarra" className="text-primary hover:underline font-medium">
-                {isEs ? 'comercio' : 'retail'}
-              </Link>
-              {isEs
-                ? ' ya estan capturando este valor con implantaciones enfocadas en operaciones reales.'
-                : ' are already capturing this value with implementations focused on real operations.'}
+                {isEs ? 'Sectores como ' : 'Sectors such as '}
+                <Link href="/ia-clinicas-navarra" className="text-primary hover:underline font-medium">
+                  {isEs ? 'clínicas' : 'clinics'}
+                </Link>
+                {isEs ? ', ' : ', '}
+                <Link href="/ia-restaurantes-navarra" className="text-primary hover:underline font-medium">
+                  {isEs ? 'restauración' : 'restaurants'}
+                </Link>
+                {isEs ? ' y ' : ', and '}
+                <Link href="/ia-comercios-navarra" className="text-primary hover:underline font-medium">
+                  {isEs ? 'comercio' : 'retail'}
+                </Link>
+                {isEs
+                  ? ' ya están capturando este valor con implantaciones enfocadas en operaciones reales.'
+                  : ' are already capturing this value with implementations focused on real operations.'}
             </p>
           </section>
 
@@ -131,17 +131,17 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
             </h2>
             <p>
               {isEs
-                ? 'Antes de escalar, conviene medir impacto real en cuatro frentes: ingresos, coste operativo, tiempo de ciclo y calidad de servicio. Sin este cuadro de mando, es facil invertir sin retorno claro.'
+                ? 'Antes de escalar, conviene medir impacto real en cuatro frentes: ingresos, coste operativo, tiempo de ciclo y calidad de servicio. Sin este cuadro de mando, es fácil invertir sin retorno claro.'
                 : 'Before scaling, it is worth measuring real impact on four fronts: revenue, operating cost, cycle time, and service quality. Without this dashboard, it is easy to invest without clear return.'}
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
-              <li>{isEs ? 'Tiempo medio de respuesta y resolucion.' : 'Average response and resolution time.'}</li>
+                <li>{isEs ? 'Tiempo medio de respuesta y resolución.' : 'Average response and resolution time.'}</li>
               <li>{isEs ? 'Porcentaje de consultas automatizadas sin escalado.' : 'Percentage of automated queries without escalation.'}</li>
-              <li>{isEs ? 'Conversion de lead a oportunidad comercial.' : 'Lead-to-opportunity conversion rate.'}</li>
-              <li>{isEs ? 'Ahorro operativo mensual por area.' : 'Monthly operational savings per area.'}</li>
+              <li>{isEs ? 'Conversión de lead a oportunidad comercial.' : 'Lead-to-opportunity conversion rate.'}</li>
+              <li>{isEs ? 'Ahorro operativo mensual por área.' : 'Monthly operational savings per area.'}</li>
             </ul>
             <p className="mt-4">
-              {isEs ? 'Si quieres pasar a la parte practica, revisa la ' : 'If you want to move to the practical side, review the '}
+              {isEs ? 'Si quieres pasar a la parte práctica, revisa la ' : 'If you want to move to the practical side, review the '}
               <Link href="/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta" className="text-primary hover:underline font-medium">
                 {isEs ? 'hoja de ruta IA 2026 para empresas' : 'AI 2026 business roadmap'}
               </Link>
@@ -157,7 +157,7 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
               <li>
                 <Link href="/blog/como-implementar-inteligencia-artificial-empresa-navarra" className="text-primary hover:underline font-medium">
                   {isEs
-                    ? 'Como implementar inteligencia artificial en una empresa en Navarra'
+                    ? 'Cómo implementar inteligencia artificial en una empresa en Navarra'
                     : 'How to implement artificial intelligence in a business in Navarra'}
                 </Link>
               </li>
@@ -171,7 +171,7 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
               <li>
                 <Link href="/blog/chatbot-vs-agente-ia" className="text-primary hover:underline font-medium">
                   {isEs
-                    ? 'Chatbot vs agente de IA: diferencias y cual elegir'
+                    ? 'Chatbot vs agente de IA: diferencias y cuál elegir'
                     : 'Chatbot vs AI agent: differences and how to choose'}
                 </Link>
               </li>
@@ -188,17 +188,17 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
           <section className="not-prose mt-16 p-4 sm:p-8 rounded-2xl border border-border bg-card text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
               {isEs
-                ? 'Quieres evaluar como aterrizar esta estrategia en tu empresa?'
+                ? '¿Quieres evaluar cómo aterrizar esta estrategia en tu empresa?'
                 : 'Want to evaluate how to apply this strategy in your business?'}
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               {isEs
-                ? 'Solicita un diagnostico estrategico y te ayudamos a priorizar casos de uso, riesgos y plan de implantacion.'
+                ? 'Solicita un diagnóstico estratégico y te ayudamos a priorizar casos de uso, riesgos y plan de implantación.'
                 : 'Request a strategic diagnosis and we will help you prioritize use cases, risks, and an implementation plan.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto px-8">
               <Link href="/diagnostico-ia-navarra">
-                {isEs ? 'Solicitar diagnostico estrategico' : 'Request strategic diagnosis'}
+                {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
               </Link>
             </Button>
           </section>

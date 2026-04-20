@@ -36,7 +36,7 @@ const HUMAN_LABELS: Record<string, { es: string; en: string }> = {
   'ejemplos-inteligencia-artificial-empresas-navarra': { es: 'Ejemplos de IA en empresas de Navarra', en: 'Examples of AI in Navarra businesses' },
   'beneficios-inteligencia-artificial-empresas-navarra': { es: 'Beneficios de IA para empresas en Navarra', en: 'Benefits of AI for businesses in Navarra' },
   'como-implementar-inteligencia-artificial-empresa-navarra': { es: 'Cómo implementar IA en una empresa en Navarra', en: 'How to implement AI in a Navarra business' },
-  'ia-2026-empresas-navarra-espana-europa-contexto': { es: 'IA 2026 en Navarra, Espana y Europa', en: 'AI 2026 in Navarra, Spain and Europe' },
+  'ia-2026-empresas-navarra-espana-europa-contexto': { es: 'IA 2026 en Navarra, España y Europa', en: 'AI 2026 in Navarra, Spain and Europe' },
   'ia-2026-empresas-navarra-espana-europa-hoja-ruta': { es: 'Hoja de ruta IA 2026 para empresas en Navarra', en: 'AI 2026 roadmap for businesses in Navarra' },
 };
 
@@ -223,11 +223,11 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
   },
   '/blog/ia-2026-empresas-navarra-espana-europa-contexto': {
     title: {
-      es: 'IA 2026 para empresas en Navarra: contexto en Espana y Europa',
+      es: 'IA 2026 para empresas en Navarra: contexto en España y Europa',
       en: 'AI 2026 for businesses in Navarra: context in Spain and Europe',
     },
     description: {
-      es: 'Analisis de AI Act, RGPD y decisiones clave para implementar IA en empresas de Navarra, Espana y Europa en 2026.',
+      es: 'Análisis de AI Act, RGPD y decisiones clave para implementar IA en empresas de Navarra, España y Europa en 2026.',
       en: 'Analysis of the AI Act, GDPR, and key decisions to implement AI in businesses in Navarra, Spain and Europe in 2026.',
     },
   },
@@ -237,7 +237,7 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
       en: 'AI 2026 roadmap for businesses in Navarra',
     },
     description: {
-      es: 'Guia por fases para pasar de pilotos de IA a resultados de negocio medibles en empresas de Navarra.',
+      es: 'Guía por fases para pasar de pilotos de IA a resultados de negocio medibles en empresas de Navarra.',
       en: 'Phase-based guide to move from AI pilots to measurable business outcomes in businesses in Navarra.',
     },
   },
