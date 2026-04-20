@@ -32,6 +32,8 @@ const ES_TO_EN_OVERRIDES: Record<string, string> = {
   '/blog/ejemplos-inteligencia-artificial-empresas-navarra': '/blog/artificial-intelligence-examples-business-navarra',
   '/blog/beneficios-inteligencia-artificial-empresas-navarra': '/blog/artificial-intelligence-benefits-business-navarra',
   '/blog/como-implementar-inteligencia-artificial-empresa-navarra': '/blog/how-to-implement-artificial-intelligence-business-navarra',
+  '/blog/ia-2026-empresas-navarra-espana-europa-contexto': '/blog/ai-2026-business-navarra-spain-europe-context',
+  '/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta': '/blog/ai-2026-business-navarra-spain-europe-roadmap',
 };
 
 const EN_TO_ES_OVERRIDES: Record<string, string> = {
@@ -66,6 +68,8 @@ const EN_TO_ES_OVERRIDES: Record<string, string> = {
   '/blog/artificial-intelligence-examples-business-navarra': '/blog/ejemplos-inteligencia-artificial-empresas-navarra',
   '/blog/artificial-intelligence-benefits-business-navarra': '/blog/beneficios-inteligencia-artificial-empresas-navarra',
   '/blog/how-to-implement-artificial-intelligence-business-navarra': '/blog/como-implementar-inteligencia-artificial-empresa-navarra',
+  '/blog/ai-2026-business-navarra-spain-europe-context': '/blog/ia-2026-empresas-navarra-espana-europa-contexto',
+  '/blog/ai-2026-business-navarra-spain-europe-roadmap': '/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta',
 };
 
 export const normalizeBasePath = (pathname: string): string => {

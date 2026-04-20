@@ -34,6 +34,12 @@ const nextConfig: NextConfig = {
       { source: '/en/blog/ejemplos-inteligencia-artificial-empresas-navarra', destination: '/en/blog/artificial-intelligence-examples-business-navarra', permanent: true },
       { source: '/en/blog/beneficios-inteligencia-artificial-empresas-navarra', destination: '/en/blog/artificial-intelligence-benefits-business-navarra', permanent: true },
       { source: '/en/blog/como-implementar-inteligencia-artificial-empresa-navarra', destination: '/en/blog/how-to-implement-artificial-intelligence-business-navarra', permanent: true },
+      { source: '/en/blog/ia-2026-empresas-navarra-espana-europa-contexto', destination: '/en/blog/ai-2026-business-navarra-spain-europe-context', permanent: true },
+      { source: '/en/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta', destination: '/en/blog/ai-2026-business-navarra-spain-europe-roadmap', permanent: true },
+      { source: '/blog/ia-2026-espana-europa-contexto-regulatorio', destination: '/blog/ia-2026-empresas-navarra-espana-europa-contexto', permanent: true },
+      { source: '/blog/ia-2026-espana-europa-hoja-ruta-empresa', destination: '/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta', permanent: true },
+      { source: '/en/blog/ai-2026-spain-europe-regulatory-context', destination: '/en/blog/ai-2026-business-navarra-spain-europe-context', permanent: true },
+      { source: '/en/blog/ai-2026-spain-europe-business-roadmap', destination: '/en/blog/ai-2026-business-navarra-spain-europe-roadmap', permanent: true },
     ];
   },
 
