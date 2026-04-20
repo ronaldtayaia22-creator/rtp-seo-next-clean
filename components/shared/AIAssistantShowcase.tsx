@@ -9,6 +9,7 @@ interface AIAssistantShowcaseProps {
 const AIAssistantShowcase = ({ language }: AIAssistantShowcaseProps) => {
   const translations = getTranslation(language);
   const t = translations.aiShowcase;
+
   return (
     <section className="py-16 container mx-auto px-4">
       <div className="max-w-6xl mx-auto space-y-8">
@@ -34,7 +35,7 @@ const AIAssistantShowcase = ({ language }: AIAssistantShowcaseProps) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-3xl mx-auto pt-2">
             {t.features.map((label, i) => {
               const Icon = [Building2, UserCheck, ShoppingCart][i] || Building2;
-              const desc = (t as any).featureDescs?.[i] || '';
+              const desc = t.featureDescs?.[i] || '';
               return (
                 <div
                   key={i}

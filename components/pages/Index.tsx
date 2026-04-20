@@ -9,7 +9,7 @@ import MediaPresence from '@/components/shared/MediaPresence';
 import JsonLd from '@/components/shared/JsonLd';
 import Link from '@/components/shared/LocalizedLink';
 import { Language } from '@/lib/i18n';
-import { Building2, UserCheck, ShoppingCart, MessageCircle, ArrowRight, Sparkles, CheckCircle2, Bot } from 'lucide-react';
+import { Building2, UserCheck, ShoppingCart, MessageCircle, ArrowRight, Sparkles, CheckCircle2, Bot, ExternalLink } from 'lucide-react';
 
 interface IndexProps {
   language: Language;
@@ -40,6 +40,23 @@ const Index = ({ language }: IndexProps) => {
         demo2Text: 'Real capture form that triggers a strategic diagnosis flow with an initial evaluation for your business.',
         demo2Highlight: 'Real example of lead capture and qualification flow.',
         disclaimer: 'These are operational website examples: customer support and diagnosis flow connected.',
+      };
+
+  const gptPublicUrl =
+    'https://chatgpt.com/g/g-69e5e54d05d48191aaa2f9a54a27134c-ronald-taya-pardo-rtp-digital-solutions';
+
+  const gptSupportBlock = isEs
+    ? {
+        title: '¿Aún no sabes por dónde empezar?',
+        description:
+          'Prueba también mi GPT en ChatGPT. Te ayudará a entender qué tipo de sistema de IA encaja mejor con tu negocio antes de solicitar un diagnóstico.',
+        cta: 'Probar GPT en ChatGPT',
+      }
+    : {
+        title: 'Not sure where to start yet?',
+        description:
+          'Try my GPT on ChatGPT too. It helps you understand which AI system best fits your business before requesting a diagnosis.',
+        cta: 'Try GPT on ChatGPT',
       };
 
   const systems = [
@@ -285,6 +302,28 @@ const Index = ({ language }: IndexProps) => {
 
       <MediaPresence language={language} />
       <FAQSection language={language} />
+
+      <section className="pb-6 container mx-auto px-4">
+        <div className="max-w-3xl mx-auto rounded-2xl border border-border/80 bg-muted/25 p-5 md:p-6">
+          <div className="space-y-3">
+            <h3 className="text-base md:text-lg font-semibold text-foreground">
+              {gptSupportBlock.title}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {gptSupportBlock.description}
+            </p>
+            <a
+              href={gptPublicUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-primary/40 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
+            >
+              {gptSupportBlock.cta}
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="py-8 container mx-auto px-4">
         <p className="text-sm text-muted-foreground text-center max-w-3xl mx-auto">
