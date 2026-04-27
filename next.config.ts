@@ -40,6 +40,8 @@ const nextConfig: NextConfig = {
       { source: '/blog/ia-2026-espana-europa-hoja-ruta-empresa', destination: '/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta', permanent: true },
       { source: '/en/blog/ai-2026-spain-europe-regulatory-context', destination: '/en/blog/ai-2026-business-navarra-spain-europe-context', permanent: true },
       { source: '/en/blog/ai-2026-spain-europe-business-roadmap', destination: '/en/blog/ai-2026-business-navarra-spain-europe-roadmap', permanent: true },
+      { source: '/category/ia-negocios', destination: '/inteligencia-artificial-navarra', permanent: true },
+      { source: '/category/ia-negocios/', destination: '/inteligencia-artificial-navarra', permanent: true },
     ];
   },
 
