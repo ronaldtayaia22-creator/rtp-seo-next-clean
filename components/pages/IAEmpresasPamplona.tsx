@@ -41,6 +41,12 @@ const IAEmpresasPamplona = ({ language }: Props) => {
 
           <p className="text-muted-foreground leading-relaxed mb-16">
             {isEs
+              ? 'En la practica, no se trata solo de aplicar herramientas sueltas como automatizaciones o chatbots. Para que tenga impacto real en una empresa en Pamplona, es necesario implantar un sistema completo que conecte procesos, clientes y operaciones.'
+              : 'In practice, it is not only about applying isolated tools such as automations or chatbots. For it to have real impact in a company in Pamplona, it is necessary to implement a complete system that connects processes, customers and operations.'}
+          </p>
+
+          <p className="text-muted-foreground leading-relaxed mb-16">
+            {isEs
               ? <>Si buscas implementar ya, revisa la <Link href="/servicios" className="text-primary hover:underline font-medium">pagina de servicios de IA para empresas en Navarra</Link>, donde explicamos alcance, metodologia y siguientes pasos.</>
               : <>If you are ready to implement now, review the <Link href="/servicios" className="text-primary hover:underline font-medium">AI services page for businesses in Navarra</Link>, where we explain scope, methodology and next steps.</>}
           </p>

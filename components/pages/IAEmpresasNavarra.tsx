@@ -73,6 +73,12 @@ const IAEmpresasNavarra = ({ language }: Props) => {
               ? <>Si buscas una vision completa de contratacion, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios de IA para empresas</Link>. Si ya tienes claro el objetivo, podemos empezar por una <Link href="/servicios" className="text-primary hover:underline font-medium">automatizacion con inteligencia artificial</Link> concreta y escalar despues.</>
               : <>If you need the complete hiring view, check our <Link href="/servicios" className="text-primary hover:underline font-medium">AI services for businesses</Link>. If your objective is clear, we can start with a specific <Link href="/servicios" className="text-primary hover:underline font-medium">artificial intelligence automation</Link> and scale later.</>}
           </p>
+
+          <p className="text-muted-foreground leading-relaxed">
+            {isEs
+              ? 'Muchas empresas en Navarra prueban herramientas de inteligencia artificial de forma aislada. El problema es que eso no cambia realmente el negocio. Lo que funciona es implantar un sistema completo que conecte captacion, operaciones y seguimiento, adaptado a como trabaja tu empresa.'
+              : 'Many companies in Navarra try artificial intelligence tools in isolation. The problem is that this does not really change the business. What works is implementing a complete system that connects lead capture, operations and follow-up, adapted to how your company works.'}
+          </p>
         </header>
 
         <section className="mb-14 animate-fade-in-up" style={{ animationDelay: '0.08s' }}>
