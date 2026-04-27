@@ -156,6 +156,14 @@ const TrabajosRiesgoIAYAdaptacion = ({ language }: ArticleProps) => {
             </p>
           </section>
 
+          <section>
+            <p>
+              {isEs
+                ? <>Para definir una transición realista, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la estrategia de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y empieza por un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>To define a realistic transition, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> strategy, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
+            </p>
+          </section>
+
           <section className="not-prose mt-16 p-4 sm:p-8 rounded-2xl border border-border bg-card text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
               {isEs

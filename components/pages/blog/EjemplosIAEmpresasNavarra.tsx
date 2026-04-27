@@ -8,9 +8,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const EjemplosIAEmpresasNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -171,6 +168,14 @@ const EjemplosIAEmpresasNavarra = ({ language }: ArticleProps) => {
               </p>
             </section>
 
+            <section>
+              <p>
+                {isEs
+                  ? <>Si quieres aplicar estos casos en tu empresa, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la estrategia de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y activa primero un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                  : <>If you want to apply these use cases to your business, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> strategy, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
+              </p>
+            </section>
+
             {/* CTA */}
             <section className="not-prose mt-16 p-4 sm:p-8 rounded-2xl border border-border bg-card text-center">
               <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -182,7 +187,7 @@ const EjemplosIAEmpresasNavarra = ({ language }: ArticleProps) => {
                   : 'If you want to implement something similar in your business, request a personalized strategic diagnosis.'}
               </p>
               <Button asChild size="lg" className="w-full sm:w-auto px-8 gap-2">
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+                <Link href="/diagnostico-ia-navarra">
                   {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

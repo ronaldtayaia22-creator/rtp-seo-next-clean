@@ -8,9 +8,6 @@ import { ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const AutomatizarAtencionClienteIA = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -152,7 +149,15 @@ const AutomatizarAtencionClienteIA = ({ language }: ArticleProps) => {
             <p className="text-muted-foreground leading-relaxed">
               {isEs
                 ? <>Automatizar la atenciÃ³n al cliente es uno de los primeros pasos para cualquier empresa que quiera <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">implementar inteligencia artificial en Navarra</Link>. Es donde se consigue el mayor impacto con la menor inversiÃ³n inicial.</>
-                : <>Automating customer service is one of the first steps for any business looking to <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">implement artificial intelligence in Navarra</Link>. It's where you achieve the greatest impact with the lowest initial investment.</>}
+                : <>Automating customer service is one of the first steps for any business looking to <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">implement artificial intelligence in Navarra</Link>. It&apos;s where you achieve the greatest impact with the lowest initial investment.</>}
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <p className="text-muted-foreground leading-relaxed">
+              {isEs
+                ? <>Para desplegar un sistema sólido, consulta nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la página de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y valida primero un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>To deploy a robust system, check our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> page, and validate a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link> first.</>}
             </p>
           </section>
 
@@ -167,7 +172,7 @@ const AutomatizarAtencionClienteIA = ({ language }: ArticleProps) => {
                 : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto gap-2">
-              <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+              <Link href="/diagnostico-ia-navarra">
                 {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>

@@ -8,9 +8,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const BeneficiosIAEmpresasNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -107,9 +104,9 @@ const BeneficiosIAEmpresasNavarra = ({ language }: ArticleProps) => {
                   : 'Not implementing artificial intelligence doesn\'t mean staying the same. It means falling back while the competition moves forward:'}
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-3">
-                <li>{isEs ? <><strong>Competencia mÃ¡s rÃ¡pida:</strong> las empresas que automatizan responden antes, convierten mÃ¡s y fidelizan mejor. Si tÃº no lo haces, tus clientes irÃ¡n a quien sÃ­ lo haga.</> : <><strong>Faster competition:</strong> businesses that automate respond faster, convert more and retain better. If you don't, your customers will go to those who do.</>}</li>
+                <li>{isEs ? <><strong>Competencia mÃ¡s rÃ¡pida:</strong> las empresas que automatizan responden antes, convierten mÃ¡s y fidelizan mejor. Si tÃº no lo haces, tus clientes irÃ¡n a quien sÃ­ lo haga.</> : <><strong>Faster competition:</strong> businesses that automate respond faster, convert more and retain better. If you don&apos;t, your customers will go to those who do.</>}</li>
                 <li>{isEs ? <><strong>Peor atenciÃ³n al cliente:</strong> sin IA, cada consulta depende de la disponibilidad del equipo. Fuera de horario o en momentos de pico, el servicio se resiente.</> : <><strong>Worse customer service:</strong> without AI, every inquiry depends on team availability. Outside business hours or during peak times, service suffers.</>}</li>
-                <li>{isEs ? <><strong>Menor eficiencia:</strong> los procesos manuales consumen tiempo, generan errores y limitan la capacidad de crecimiento de la empresa.</> : <><strong>Lower efficiency:</strong> manual processes consume time, generate errors and limit the company's growth capacity.</>}</li>
+                <li>{isEs ? <><strong>Menor eficiencia:</strong> los procesos manuales consumen tiempo, generan errores y limitan la capacidad de crecimiento de la empresa.</> : <><strong>Lower efficiency:</strong> manual processes consume time, generate errors and limit the company&apos;s growth capacity.</>}</li>
               </ul>
             </section>
 
@@ -119,6 +116,14 @@ const BeneficiosIAEmpresasNavarra = ({ language }: ArticleProps) => {
                 {isEs
                   ? <>Si quieres aprovechar estos beneficios en tu negocio, el primer paso es conocer quÃ© opciones existen. Explora nuestras <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial en Navarra</Link> y descubre cÃ³mo adaptarlas a tu empresa.</>
                   : <>If you want to take advantage of these benefits in your business, the first step is to know what options exist. Explore our <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions in Navarra</Link> and discover how to adapt them to your business.</>}
+              </p>
+            </section>
+
+            <section>
+              <p>
+                {isEs
+                  ? <>Para pasar de teoría a resultados, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la página de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y solicita un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link> adaptado a tu caso.</>
+                  : <>To move from theory to outcomes, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> page, and request a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link> for your case.</>}
               </p>
             </section>
 
@@ -133,7 +138,7 @@ const BeneficiosIAEmpresasNavarra = ({ language }: ArticleProps) => {
                   : 'If you want to take advantage of these benefits in your business, request a personalized strategic diagnosis.'}
               </p>
               <Button asChild size="lg" className="w-full sm:w-auto px-8 gap-2">
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+                <Link href="/diagnostico-ia-navarra">
                   {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

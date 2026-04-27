@@ -8,9 +8,6 @@ import { ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const IAComerciosNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -103,7 +100,7 @@ const IAComerciosNavarra = ({ language }: ArticleProps) => {
             </p>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
               <li>{isEs ? <><strong>AtenciÃ³n al cliente 24/7:</strong> los clientes pueden consultar informaciÃ³n sobre productos, precios y disponibilidad en cualquier momento, incluso fuera del horario comercial.</> : <><strong>24/7 customer service:</strong> customers can check product information, prices and availability at any time, even outside business hours.</>}</li>
-              <li>{isEs ? <><strong>Respuestas automÃ¡ticas a preguntas frecuentes:</strong> el agente resuelve al instante las dudas mÃ¡s comunes, reduciendo la carga del equipo de ventas.</> : <><strong>Automatic answers to FAQs:</strong> the agent instantly resolves the most common questions, reducing the sales team's workload.</>}</li>
+              <li>{isEs ? <><strong>Respuestas automÃ¡ticas a preguntas frecuentes:</strong> el agente resuelve al instante las dudas mÃ¡s comunes, reduciendo la carga del equipo de ventas.</> : <><strong>Automatic answers to FAQs:</strong> the agent instantly resolves the most common questions, reducing the sales team&apos;s workload.</>}</li>
               <li>{isEs ? <><strong>GeneraciÃ³n de leads:</strong> el agente puede recoger datos de contacto de clientes interesados, cualificarlos y enviarlos al equipo comercial de forma automÃ¡tica.</> : <><strong>Lead generation:</strong> the agent can collect contact data from interested customers, qualify them and send them to the sales team automatically.</>}</li>
               <li>{isEs ? <><strong>Mejora de la experiencia de compra:</strong> recomendaciones personalizadas, asistencia inmediata y navegaciÃ³n guiada que aumentan la satisfacciÃ³n y las ventas.</> : <><strong>Better shopping experience:</strong> personalized recommendations, immediate assistance and guided navigation that increase satisfaction and sales.</>}</li>
             </ul>
@@ -120,7 +117,7 @@ const IAComerciosNavarra = ({ language }: ArticleProps) => {
                 : 'Artificial intelligence adapts to all types of retail, from neighborhood shops to e-commerce:'}
             </p>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
-              <li>{isEs ? <><strong>Asistentes en pÃ¡ginas web:</strong> un agente de IA integrado en la web del comercio que ayuda a los clientes a encontrar lo que buscan, responde preguntas y facilita la compra.</> : <><strong>Website assistants:</strong> an AI agent integrated into the retail website that helps customers find what they're looking for, answers questions and facilitates purchases.</>}</li>
+              <li>{isEs ? <><strong>Asistentes en pÃ¡ginas web:</strong> un agente de IA integrado en la web del comercio que ayuda a los clientes a encontrar lo que buscan, responde preguntas y facilita la compra.</> : <><strong>Website assistants:</strong> an AI agent integrated into the retail website that helps customers find what they&apos;re looking for, answers questions and facilitates purchases.</>}</li>
               <li>{isEs ? <><strong>AutomatizaciÃ³n de consultas sobre productos:</strong> informaciÃ³n sobre stock, caracterÃ­sticas, comparativas y alternativas disponibles de forma instantÃ¡nea.</> : <><strong>Product inquiry automation:</strong> information about stock, features, comparisons and available alternatives instantly.</>}</li>
               <li>{isEs ? <><strong>Respuestas automÃ¡ticas a clientes:</strong> gestiÃ³n de consultas por la web sobre envÃ­os, devoluciones, garantÃ­as y mÃ©todos de pago sin intervenciÃ³n del equipo.</> : <><strong>Automatic customer responses:</strong> handling web inquiries about shipping, returns, warranties and payment methods without team intervention.</>}</li>
             </ul>
@@ -141,7 +138,7 @@ const IAComerciosNavarra = ({ language }: ArticleProps) => {
               <li>{isEs ? <><strong>Configurar el agente:</strong> entrenar al agente de IA con informaciÃ³n sobre productos, servicios, precios, horarios y polÃ­ticas del comercio.</> : <><strong>Configure the agent:</strong> train the AI agent with information about products, services, prices, hours and store policies.</>}</li>
               <li>{isEs ? <><strong>Integrar en la web:</strong> implementar el agente en la pÃ¡gina web del comercio para que los clientes puedan interactuar con Ã©l de forma natural.</> : <><strong>Integrate on the website:</strong> implement the agent on the retail website so customers can interact with it naturally.</>}</li>
               <li>{isEs ? <><strong>Probar y ajustar:</strong> validar el funcionamiento con clientes reales y ajustar las respuestas segÃºn los resultados y el feedback recibido.</> : <><strong>Test and adjust:</strong> validate operation with real customers and adjust responses based on results and feedback received.</>}</li>
-              <li>{isEs ? <><strong>Escalar:</strong> una vez validado, ampliar las capacidades del agente a nuevas Ã¡reas como gestiÃ³n de pedidos, seguimiento de envÃ­os o promociones personalizadas.</> : <><strong>Scale:</strong> once validated, expand the agent's capabilities to new areas such as order management, shipment tracking or personalized promotions.</>}</li>
+              <li>{isEs ? <><strong>Escalar:</strong> una vez validado, ampliar las capacidades del agente a nuevas Ã¡reas como gestiÃ³n de pedidos, seguimiento de envÃ­os o promociones personalizadas.</> : <><strong>Scale:</strong> once validated, expand the agent&apos;s capabilities to new areas such as order management, shipment tracking or personalized promotions.</>}</li>
             </ol>
           </section>
 
@@ -151,6 +148,14 @@ const IAComerciosNavarra = ({ language }: ArticleProps) => {
               {isEs
                 ? <>El comercio en Navarra tiene una gran oportunidad con la <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">inteligencia artificial en Navarra</Link>. Automatizar la atenciÃ³n, gestionar pedidos y personalizar la experiencia de compra son solo el principio.</>
                 : <>Retail in Navarra has a great opportunity with <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence in Navarra</Link>. Automating service, managing orders and personalizing the shopping experience are just the beginning.</>}
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <p className="text-muted-foreground leading-relaxed">
+              {isEs
+                ? <>Si quieres implantarlo por fases, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la hoja principal de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y arranca con un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>If you want to deploy it in phases, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the main <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> page, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
             </p>
           </section>
 
@@ -165,7 +170,7 @@ const IAComerciosNavarra = ({ language }: ArticleProps) => {
                 : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto gap-2">
-              <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+              <Link href="/diagnostico-ia-navarra">
                 {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>

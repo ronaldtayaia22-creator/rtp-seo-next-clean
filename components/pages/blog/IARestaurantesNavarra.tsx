@@ -8,9 +8,6 @@ import { ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const IARestaurantesNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -82,12 +79,12 @@ const IARestaurantesNavarra = ({ language }: ArticleProps) => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               {isEs
                 ? <>Integrar un <Link href="/blog/agentes-ia-para-paginas-web-navarra" className="text-primary hover:underline font-medium">agente de IA en la pÃ¡gina web de un restaurante</Link> transforma la web en un canal de atenciÃ³n activo. En lugar de ser un sitio estÃ¡tico con informaciÃ³n, la web se convierte en un asistente que interactÃºa con los clientes y resuelve sus necesidades al instante.</>
-                : <>Integrating an <Link href="/blog/agentes-ia-para-paginas-web-navarra" className="text-primary hover:underline font-medium">AI agent on a restaurant's website</Link> transforms the site into an active service channel. Instead of being a static site with information, the website becomes an assistant that interacts with customers and resolves their needs instantly.</>}
+                : <>Integrating an <Link href="/blog/agentes-ia-para-paginas-web-navarra" className="text-primary hover:underline font-medium">AI agent on a restaurant&apos;s website</Link> transforms the site into an active service channel. Instead of being a static site with information, the website becomes an assistant that interacts with customers and resolves their needs instantly.</>}
             </p>
             <p className="text-muted-foreground leading-relaxed">
               {isEs
                 ? <>El agente puede integrarse con el sistema de reservas existente y conectarse a la informaciÃ³n del restaurante mediante <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">desarrollo web con inteligencia artificial</Link>, ofreciendo una experiencia fluida y profesional.</>
-                : <>The agent can integrate with the existing reservation system and connect to the restaurant's information through <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">web development with artificial intelligence</Link>, offering a smooth and professional experience.</>}
+                : <>The agent can integrate with the existing reservation system and connect to the restaurant&apos;s information through <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">web development with artificial intelligence</Link>, offering a smooth and professional experience.</>}
             </p>
           </section>
 
@@ -123,7 +120,7 @@ const IARestaurantesNavarra = ({ language }: ArticleProps) => {
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
               <li>{isEs ? <><strong>GestiÃ³n automÃ¡tica de reservas:</strong> el agente recibe solicitudes, comprueba disponibilidad y confirma la reserva de forma instantÃ¡nea, incluyendo opciones para grupos grandes o eventos especiales.</> : <><strong>Automatic reservation management:</strong> the agent receives requests, checks availability and confirms the booking instantly, including options for large groups or special events.</>}</li>
               <li>{isEs ? <><strong>Respuestas automÃ¡ticas en la web:</strong> informaciÃ³n sobre el menÃº, alÃ©rgenos, horarios, ubicaciÃ³n y opciones de parking, disponible al instante para cada visitante.</> : <><strong>Automatic website responses:</strong> information about the menu, allergens, hours, location and parking options, instantly available to every visitor.</>}</li>
-              <li>{isEs ? <><strong>Asistente para preguntas frecuentes:</strong> el agente resuelve las dudas mÃ¡s comunes como si hay terraza, si admiten mascotas, si ofrecen menÃº infantil o si disponen de opciones vegetarianas.</> : <><strong>FAQ assistant:</strong> the agent resolves the most common questions such as whether there's a terrace, if pets are allowed, if they offer a children's menu or if vegetarian options are available.</>}</li>
+              <li>{isEs ? <><strong>Asistente para preguntas frecuentes:</strong> el agente resuelve las dudas mÃ¡s comunes como si hay terraza, si admiten mascotas, si ofrecen menÃº infantil o si disponen de opciones vegetarianas.</> : <><strong>FAQ assistant:</strong> the agent resolves the most common questions such as whether there&apos;s a terrace, if pets are allowed, if they offer a children&apos;s menu or if vegetarian options are available.</>}</li>
             </ul>
           </section>
 
@@ -140,8 +137,8 @@ const IARestaurantesNavarra = ({ language }: ArticleProps) => {
             <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
               <li>{isEs ? <><strong>AnÃ¡lisis de necesidades:</strong> identificar quÃ© tareas consumen mÃ¡s tiempo del equipo, como atender llamadas para reservas o responder preguntas repetitivas.</> : <><strong>Needs analysis:</strong> identify which tasks consume the most team time, such as answering reservation calls or responding to repetitive questions.</>}</li>
               <li>{isEs ? <><strong>DiseÃ±o del agente:</strong> configurar el agente de IA con la informaciÃ³n del restaurante: menÃº, horarios, polÃ­tica de reservas, servicios especiales y preguntas frecuentes.</> : <><strong>Agent design:</strong> configure the AI agent with restaurant information: menu, hours, reservation policy, special services and frequently asked questions.</>}</li>
-              <li>{isEs ? <><strong>IntegraciÃ³n en la web:</strong> implementar el agente en la pÃ¡gina web del restaurante para que los clientes puedan interactuar con Ã©l de forma natural.</> : <><strong>Website integration:</strong> implement the agent on the restaurant's website so customers can interact with it naturally.</>}</li>
-              <li>{isEs ? <><strong>Pruebas con clientes reales:</strong> validar el funcionamiento del agente con situaciones reales y ajustar las respuestas segÃºn el feedback recibido.</> : <><strong>Testing with real customers:</strong> validate the agent's operation with real situations and adjust responses based on feedback received.</>}</li>
+              <li>{isEs ? <><strong>IntegraciÃ³n en la web:</strong> implementar el agente en la pÃ¡gina web del restaurante para que los clientes puedan interactuar con Ã©l de forma natural.</> : <><strong>Website integration:</strong> implement the agent on the restaurant&apos;s website so customers can interact with it naturally.</>}</li>
+              <li>{isEs ? <><strong>Pruebas con clientes reales:</strong> validar el funcionamiento del agente con situaciones reales y ajustar las respuestas segÃºn el feedback recibido.</> : <><strong>Testing with real customers:</strong> validate the agent&apos;s operation with real situations and adjust responses based on feedback received.</>}</li>
               <li>{isEs ? <><strong>OptimizaciÃ³n continua:</strong> mejorar el agente con el tiempo, aÃ±adiendo nuevas capacidades como gestiÃ³n de eventos, promociones o encuestas de satisfacciÃ³n.</> : <><strong>Continuous optimization:</strong> improve the agent over time, adding new capabilities such as event management, promotions or satisfaction surveys.</>}</li>
             </ol>
           </section>
@@ -152,6 +149,14 @@ const IARestaurantesNavarra = ({ language }: ArticleProps) => {
               {isEs
                 ? <>La hostelerÃ­a es uno de los sectores con mayor potencial para <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">implementar inteligencia artificial en Navarra</Link>. Automatizar reservas, atenciÃ³n al cliente y gestiÃ³n interna permite a los restaurantes centrarse en lo que mejor saben hacer.</>
                 : <>Hospitality is one of the sectors with the greatest potential to <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">implement artificial intelligence in Navarra</Link>. Automating reservations, customer service and internal management allows restaurants to focus on what they do best.</>}
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <p className="text-muted-foreground leading-relaxed">
+              {isEs
+                ? <>Para implementarlo de forma rentable, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la estrategia de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y comienza con un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>To implement it profitably, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> strategy, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
             </p>
           </section>
 
@@ -166,7 +171,7 @@ const IARestaurantesNavarra = ({ language }: ArticleProps) => {
                 : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto gap-2">
-              <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+              <Link href="/diagnostico-ia-navarra">
                 {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>

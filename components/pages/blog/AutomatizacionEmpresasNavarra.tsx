@@ -8,9 +8,6 @@ import { ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const AutomatizacionEmpresasNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -168,8 +165,8 @@ const AutomatizacionEmpresasNavarra = ({ language }: ArticleProps) => {
             </p>
             <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
               <li>{isEs ? <><strong>DiagnÃ³stico inicial:</strong> identificar quÃ© procesos consumen mÃ¡s tiempo y recursos para priorizar la automatizaciÃ³n.</> : <><strong>Initial diagnosis:</strong> identify which processes consume the most time and resources to prioritize automation.</>}</li>
-              <li>{isEs ? <><strong>DiseÃ±o de la soluciÃ³n:</strong> definir quÃ© tecnologÃ­a y herramientas de IA se ajustan mejor a las necesidades de la empresa.</> : <><strong>Solution design:</strong> define which AI technology and tools best fit the company's needs.</>}</li>
-              <li>{isEs ? <><strong>Desarrollo e integraciÃ³n:</strong> construir los flujos automatizados e integrarlos con los sistemas existentes de la empresa.</> : <><strong>Development and integration:</strong> build automated workflows and integrate them with the company's existing systems.</>}</li>
+              <li>{isEs ? <><strong>DiseÃ±o de la soluciÃ³n:</strong> definir quÃ© tecnologÃ­a y herramientas de IA se ajustan mejor a las necesidades de la empresa.</> : <><strong>Solution design:</strong> define which AI technology and tools best fit the company&apos;s needs.</>}</li>
+              <li>{isEs ? <><strong>Desarrollo e integraciÃ³n:</strong> construir los flujos automatizados e integrarlos con los sistemas existentes de la empresa.</> : <><strong>Development and integration:</strong> build automated workflows and integrate them with the company&apos;s existing systems.</>}</li>
               <li>{isEs ? <><strong>Pruebas y ajustes:</strong> validar el funcionamiento en escenarios reales y ajustar los parÃ¡metros segÃºn los resultados.</> : <><strong>Testing and adjustments:</strong> validate operation in real scenarios and adjust parameters based on results.</>}</li>
               <li>{isEs ? <><strong>Escalado:</strong> una vez validado, extender la automatizaciÃ³n a otros procesos de la empresa.</> : <><strong>Scaling:</strong> once validated, extend automation to other business processes.</>}</li>
             </ol>
@@ -184,6 +181,14 @@ const AutomatizacionEmpresasNavarra = ({ language }: ArticleProps) => {
             </p>
           </section>
 
+          <section className="mb-12">
+            <p className="text-muted-foreground leading-relaxed">
+              {isEs
+                ? <>Si quieres priorizar bien, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la propuesta completa de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y arranca con un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>If you want to prioritize correctly, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the full <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> approach, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
+            </p>
+          </section>
+
           {/* CTA Section */}
           <section className="mt-16 p-4 sm:p-8 md:p-12 rounded-2xl border border-primary/20 bg-primary/5 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
@@ -195,7 +200,7 @@ const AutomatizacionEmpresasNavarra = ({ language }: ArticleProps) => {
                 : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto gap-2">
-              <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+              <Link href="/diagnostico-ia-navarra">
                 {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>

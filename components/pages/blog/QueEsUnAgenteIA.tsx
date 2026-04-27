@@ -8,9 +8,6 @@ import { ArrowLeft } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const QueEsUnAgenteIA = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -64,7 +61,7 @@ const QueEsUnAgenteIA = ({ language }: ArticleProps) => {
               </p>
               <p className="mt-4">
                 En el contexto empresarial, un agente de IA puede atender clientes, gestionar reservas, responder preguntas sobre productos o servicios y conectar con sistemas internos como CRM o bases de datos, todo sin intervenciÃ³n humana directa. Empresas de Navarra y toda EspaÃ±a ya estÃ¡n adoptando este tipo de soluciones para mejorar su eficiencia operativa. Si quieres evaluar cÃ³mo aplicar esta tecnologÃ­a en tu negocio, puedes solicitar un{' '}
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`} className="text-primary hover:underline font-medium">
+                <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">
                   diagnÃ³stico estratÃ©gico de IA
                 </Link>.
               </p>
@@ -155,6 +152,14 @@ const QueEsUnAgenteIA = ({ language }: ArticleProps) => {
               </p>
             </section>
 
+            <section>
+              <p>
+                {isEs
+                  ? <>Si quieres pasar de definición a implementación, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la página de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y empieza por un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                  : <>If you want to move from definition to implementation, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> page, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
+              </p>
+            </section>
+
             {/* CTA Section */}
             <section className="not-prose mt-16 p-4 sm:p-8 rounded-2xl border border-border bg-card text-center">
               <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -166,7 +171,7 @@ const QueEsUnAgenteIA = ({ language }: ArticleProps) => {
                   : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
               </p>
               <Button asChild size="lg" className="w-full sm:w-auto px-8">
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+                <Link href="/diagnostico-ia-navarra">
                   {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'}
                 </Link>
               </Button>

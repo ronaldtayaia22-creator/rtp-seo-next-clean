@@ -8,9 +8,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const ComoImplementarIANavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -172,9 +169,9 @@ const ComoImplementarIANavarra = ({ language }: ArticleProps) => {
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>{isEs ? <><strong>Empezar sin diagnÃ³stico:</strong> implementar herramientas sin haber analizado antes quÃ© problemas resolver.</> : <><strong>Starting without a diagnosis:</strong> implementing tools without first analyzing which problems to solve.</>}</li>
-                <li>{isEs ? <><strong>Elegir la herramienta mÃ¡s cara:</strong> la mejor soluciÃ³n no siempre es la mÃ¡s compleja. A veces, una automatizaciÃ³n sencilla genera mÃ¡s impacto que un sistema avanzado.</> : <><strong>Choosing the most expensive tool:</strong> the best solution isn't always the most complex. Sometimes a simple automation generates more impact than an advanced system.</>}</li>
+                <li>{isEs ? <><strong>Elegir la herramienta mÃ¡s cara:</strong> la mejor soluciÃ³n no siempre es la mÃ¡s compleja. A veces, una automatizaciÃ³n sencilla genera mÃ¡s impacto que un sistema avanzado.</> : <><strong>Choosing the most expensive tool:</strong> the best solution isn&apos;t always the most complex. Sometimes a simple automation generates more impact than an advanced system.</>}</li>
                 <li>{isEs ? <><strong>No integrar con los sistemas existentes:</strong> una soluciÃ³n de IA aislada pierde gran parte de su valor.</> : <><strong>Not integrating with existing systems:</strong> an isolated AI solution loses much of its value.</>}</li>
-                <li>{isEs ? <><strong>No medir resultados:</strong> sin datos, es imposible saber si el sistema funciona o si necesita ajustes.</> : <><strong>Not measuring results:</strong> without data, it's impossible to know if the system works or needs adjustments.</>}</li>
+                <li>{isEs ? <><strong>No medir resultados:</strong> sin datos, es imposible saber si el sistema funciona o si necesita ajustes.</> : <><strong>Not measuring results:</strong> without data, it&apos;s impossible to know if the system works or needs adjustments.</>}</li>
                 <li>{isEs ? <><strong>Esperar demasiado para empezar:</strong> cada dÃ­a sin automatizaciÃ³n son clientes y oportunidades que se pierden frente a la competencia.</> : <><strong>Waiting too long to start:</strong> every day without automation means customers and opportunities lost to the competition.</>}</li>
               </ul>
             </section>
@@ -185,6 +182,14 @@ const ComoImplementarIANavarra = ({ language }: ArticleProps) => {
                 {isEs
                   ? <>Si quieres ver quÃ© opciones existen y cÃ³mo se adaptan a tu negocio, explora nuestras <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial en Navarra</Link> y descubre el sistema que mejor encaja con tu empresa.</>
                   : <>If you want to see what options exist and how they adapt to your business, explore our <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions in Navarra</Link> and discover the system that best fits your business.</>}
+              </p>
+            </section>
+
+            <section>
+              <p>
+                {isEs
+                  ? <>Además, puedes revisar nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la página principal de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y arrancar con un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link> antes de implementar.</>
+                  : <>You can also review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the main <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> page, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link> before implementation.</>}
               </p>
             </section>
 
@@ -199,7 +204,7 @@ const ComoImplementarIANavarra = ({ language }: ArticleProps) => {
                   : 'Request a strategic diagnosis to learn how to implement AI in your business.'}
               </p>
               <Button asChild size="lg" className="w-full sm:w-auto px-8 gap-2">
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+                <Link href="/diagnostico-ia-navarra">
                   {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

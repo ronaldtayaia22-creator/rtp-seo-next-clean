@@ -8,9 +8,6 @@ import { ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const AgentesIAWebNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -89,7 +86,7 @@ const AgentesIAWebNavarra = ({ language }: ArticleProps) => {
               <li>{isEs ? <><strong>Respuestas automÃ¡ticas e inmediatas:</strong> los visitantes obtienen respuestas al instante sin tiempos de espera.</> : <><strong>Instant automatic responses:</strong> visitors get answers instantly without waiting times.</>}</li>
               <li>{isEs ? <><strong>GeneraciÃ³n de leads:</strong> el agente puede recoger datos de contacto y cualificar potenciales clientes de forma automÃ¡tica.</> : <><strong>Lead generation:</strong> the agent can collect contact data and qualify potential customers automatically.</>}</li>
               <li>{isEs ? <><strong>AutomatizaciÃ³n de consultas frecuentes:</strong> las preguntas mÃ¡s comunes se resuelven sin intervenciÃ³n humana, liberando al equipo para tareas de mayor valor.</> : <><strong>FAQ automation:</strong> the most common questions are resolved without human intervention, freeing the team for higher-value tasks.</>}</li>
-              <li>{isEs ? <><strong>Experiencia personalizada:</strong> cada interacciÃ³n se adapta al contexto y las necesidades del visitante.</> : <><strong>Personalized experience:</strong> each interaction adapts to the visitor's context and needs.</>}</li>
+              <li>{isEs ? <><strong>Experiencia personalizada:</strong> cada interacciÃ³n se adapta al contexto y las necesidades del visitante.</> : <><strong>Personalized experience:</strong> each interaction adapts to the visitor&apos;s context and needs.</>}</li>
             </ul>
           </section>
 
@@ -162,6 +159,14 @@ const AgentesIAWebNavarra = ({ language }: ArticleProps) => {
             </p>
           </section>
 
+          <section className="mb-12">
+            <p className="text-muted-foreground leading-relaxed">
+              {isEs
+                ? <>Para definir el mejor enfoque para tu web, puedes revisar nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la solución principal de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y comenzar por un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>To define the best approach for your website, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the main <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> solution, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
+            </p>
+          </section>
+
           {/* CTA Section */}
           <section className="mt-16 p-4 sm:p-8 md:p-12 rounded-2xl border border-primary/20 bg-primary/5 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
@@ -173,7 +178,7 @@ const AgentesIAWebNavarra = ({ language }: ArticleProps) => {
                 : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto gap-2">
-              <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+              <Link href="/diagnostico-ia-navarra">
                 {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>

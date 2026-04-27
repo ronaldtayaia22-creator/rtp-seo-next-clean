@@ -8,9 +8,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const CuantoCuestaIANavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -157,7 +154,7 @@ const CuantoCuestaIANavarra = ({ language }: ArticleProps) => {
               <p>
                 {isEs
                   ? <>Si estÃ¡s valorando la inversiÃ³n, lo primero es entender quÃ© tipo de sistema necesita tu empresa. Descubre todas las <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial para empresas en Navarra</Link> y cÃ³mo se adaptan a cada sector y tamaÃ±o de negocio.</>
-                  : <>If you're evaluating the investment, the first step is understanding what type of system your business needs. Discover all the <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions for businesses in Navarra</Link> and how they adapt to each sector and business size.</>}
+                  : <>If you&apos;re evaluating the investment, the first step is understanding what type of system your business needs. Discover all the <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions for businesses in Navarra</Link> and how they adapt to each sector and business size.</>}
               </p>
             </section>
 
@@ -166,12 +163,20 @@ const CuantoCuestaIANavarra = ({ language }: ArticleProps) => {
               <p>
                 {isEs
                   ? <>Antes de implementar cualquier soluciÃ³n, es importante entender cÃ³mo aplicar correctamente la inteligencia artificial en tu empresa. Si quieres ver cÃ³mo funcionan este tipo de soluciones en Navarra y quÃ© sistemas se pueden adaptar a tu negocio, puedes explorar nuestras soluciones de <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">inteligencia artificial en Navarra</Link>.</>
-                  : <>Before implementing any solution, it's important to understand how to correctly apply artificial intelligence in your business. If you want to see how these types of solutions work in Navarra and what systems can be adapted to your business, you can explore our <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions in Navarra</Link>.</>}
+                  : <>Before implementing any solution, it&apos;s important to understand how to correctly apply artificial intelligence in your business. If you want to see how these types of solutions work in Navarra and what systems can be adapted to your business, you can explore our <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions in Navarra</Link>.</>}
               </p>
               <p className="mt-4">
                 {isEs
                   ? 'Cada empresa es diferente. Por eso, el primer paso no es elegir una herramienta, sino definir una estrategia clara.'
-                  : 'Every business is different. That\'s why the first step is not choosing a tool, but defining a clear strategy.'}
+                  : 'Every business is different. That&apos;s why the first step is not choosing a tool, but defining a clear strategy.'}
+              </p>
+            </section>
+
+            <section>
+              <p>
+                {isEs
+                  ? <>Para afinar inversión y retorno, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la página de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y solicita un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link> ajustado a tu contexto.</>
+                  : <>To fine-tune investment and ROI, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> page, and request a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link> tailored to your context.</>}
               </p>
             </section>
 
@@ -186,7 +191,7 @@ const CuantoCuestaIANavarra = ({ language }: ArticleProps) => {
                   : 'If you want to know how much it would cost to implement artificial intelligence in your business, request a personalized strategic diagnosis.'}
               </p>
               <Button asChild size="lg" className="w-full sm:w-auto px-8 gap-2">
-                <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+                <Link href="/diagnostico-ia-navarra">
                   {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

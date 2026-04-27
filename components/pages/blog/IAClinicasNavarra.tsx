@@ -8,9 +8,6 @@ import { ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const IAClinicasNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -82,12 +79,12 @@ const IAClinicasNavarra = ({ language }: ArticleProps) => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               {isEs
                 ? <>Integrar un <Link href="/blog/agentes-ia-para-paginas-web-navarra" className="text-primary hover:underline font-medium">agente de IA en la pÃ¡gina web de una clÃ­nica</Link> permite ofrecer atenciÃ³n inmediata a los visitantes. El agente puede resolver dudas sobre tratamientos, indicar disponibilidad de especialistas y guiar al paciente para reservar su cita directamente desde la web.</>
-                : <>Integrating an <Link href="/blog/agentes-ia-para-paginas-web-navarra" className="text-primary hover:underline font-medium">AI agent on a clinic's website</Link> enables immediate attention to visitors. The agent can answer questions about treatments, show specialist availability and guide patients to book their appointment directly from the website.</>}
+                : <>Integrating an <Link href="/blog/agentes-ia-para-paginas-web-navarra" className="text-primary hover:underline font-medium">AI agent on a clinic&apos;s website</Link> enables immediate attention to visitors. The agent can answer questions about treatments, show specialist availability and guide patients to book their appointment directly from the website.</>}
             </p>
             <p className="text-muted-foreground leading-relaxed">
               {isEs
                 ? <>Estos agentes se conectan a la informaciÃ³n de la clÃ­nica y pueden entrenarse con datos especÃ­ficos del centro mediante <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">desarrollo web con inteligencia artificial</Link>, ofreciendo respuestas precisas y personalizadas.</>
-                : <>These agents connect to the clinic's information and can be trained with center-specific data through <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">web development with artificial intelligence</Link>, providing accurate and personalized responses.</>}
+                : <>These agents connect to the clinic&apos;s information and can be trained with center-specific data through <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">web development with artificial intelligence</Link>, providing accurate and personalized responses.</>}
             </p>
           </section>
 
@@ -141,9 +138,9 @@ const IAClinicasNavarra = ({ language }: ArticleProps) => {
             <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
               <li>{isEs ? <><strong>DiagnÃ³stico inicial:</strong> identificar los procesos que mÃ¡s tiempo consumen y que pueden automatizarse, como la gestiÃ³n de citas o las consultas telefÃ³nicas.</> : <><strong>Initial diagnosis:</strong> identify the most time-consuming processes that can be automated, such as appointment management or phone inquiries.</>}</li>
               <li>{isEs ? <><strong>DefiniciÃ³n de la soluciÃ³n:</strong> diseÃ±ar un agente de IA adaptado a las necesidades especÃ­ficas de la clÃ­nica y sus pacientes.</> : <><strong>Solution definition:</strong> design an AI agent tailored to the specific needs of the clinic and its patients.</>}</li>
-              <li>{isEs ? <><strong>IntegraciÃ³n con la web:</strong> implementar el agente en la pÃ¡gina web de la clÃ­nica para que los pacientes puedan interactuar con Ã©l de forma natural.</> : <><strong>Website integration:</strong> implement the agent on the clinic's website so patients can interact with it naturally.</>}</li>
+              <li>{isEs ? <><strong>IntegraciÃ³n con la web:</strong> implementar el agente en la pÃ¡gina web de la clÃ­nica para que los pacientes puedan interactuar con Ã©l de forma natural.</> : <><strong>Website integration:</strong> implement the agent on the clinic&apos;s website so patients can interact with it naturally.</>}</li>
               <li>{isEs ? <><strong>Entrenamiento con datos reales:</strong> alimentar al agente con informaciÃ³n sobre servicios, horarios, precios y preguntas frecuentes de la clÃ­nica.</> : <><strong>Training with real data:</strong> feed the agent with information about services, schedules, prices and frequently asked questions from the clinic.</>}</li>
-              <li>{isEs ? <><strong>OptimizaciÃ³n continua:</strong> ajustar las respuestas y flujos del agente en funciÃ³n del feedback de los pacientes y los resultados obtenidos.</> : <><strong>Continuous optimization:</strong> adjust the agent's responses and flows based on patient feedback and results obtained.</>}</li>
+              <li>{isEs ? <><strong>OptimizaciÃ³n continua:</strong> ajustar las respuestas y flujos del agente en funciÃ³n del feedback de los pacientes y los resultados obtenidos.</> : <><strong>Continuous optimization:</strong> adjust the agent&apos;s responses and flows based on patient feedback and results obtained.</>}</li>
             </ol>
           </section>
 
@@ -153,6 +150,14 @@ const IAClinicasNavarra = ({ language }: ArticleProps) => {
               {isEs
                 ? <>Las clÃ­nicas en Navarra que adoptan IA estÃ¡n mejorando su operativa y la experiencia de sus pacientes. Descubre todas las <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial para empresas en Navarra</Link> y cÃ³mo pueden aplicarse a tu centro de salud.</>
                 : <>Clinics in Navarra that adopt AI are improving their operations and patient experience. Discover all the <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions for businesses in Navarra</Link> and how they can be applied to your health center.</>}
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <p className="text-muted-foreground leading-relaxed">
+              {isEs
+                ? <>Para implantarlo con seguridad, consulta nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la propuesta global de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y empieza por un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>To deploy it safely, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the global <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> approach, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
             </p>
           </section>
 
@@ -167,7 +172,7 @@ const IAClinicasNavarra = ({ language }: ArticleProps) => {
                 : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto gap-2">
-              <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+              <Link href="/diagnostico-ia-navarra">
                 {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>

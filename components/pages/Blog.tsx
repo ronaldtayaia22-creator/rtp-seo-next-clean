@@ -9,6 +9,8 @@ interface BlogProps {
   language: Language;
 }
 
+type BlogIntent = 'market-context' | 'adoption-strategy' | 'implementation' | 'sector-use-cases';
+
 const blogPosts = [
   {
     slug: 'trabajos-en-riesgo-por-ia-y-como-adaptarte',
@@ -228,8 +230,54 @@ const blogPosts = [
   },
 ];
 
+const getBlogIntent = (slug: string): BlogIntent => {
+  switch (slug) {
+    case 'trabajos-en-riesgo-por-ia-y-como-adaptarte':
+    case 'impacto-inteligencia-artificial-empleo-economia-espana':
+    case 'ia-2026-empresas-navarra-espana-europa-contexto':
+      return 'market-context';
+    case 'ia-2026-empresas-navarra-espana-europa-hoja-ruta':
+    case 'beneficios-inteligencia-artificial-empresas-navarra':
+    case 'cuanto-cuesta-inteligencia-artificial-navarra':
+    case 'que-es-un-agente-ia':
+    case 'chatbot-vs-agente-ia':
+      return 'adoption-strategy';
+    case 'como-implementar-inteligencia-artificial-empresa-navarra':
+    case 'agentes-ia-empresas-navarra':
+    case 'automatizacion-empresas-navarra':
+    case 'agentes-ia-para-paginas-web-navarra':
+    case 'chatbots-empresas-navarra':
+    case 'automatizar-atencion-cliente-ia':
+      return 'implementation';
+    default:
+      return 'sector-use-cases';
+  }
+};
+
 const Blog = ({ language }: BlogProps) => {
   const isEs = language === 'es';
+
+  // Internal intent grouping for editorial strategy (no visual category output).
+  const blogPostsByIntent = blogPosts.reduce<Record<BlogIntent, typeof blogPosts>>(
+    (acc, post) => {
+      const intent = getBlogIntent(post.slug);
+      acc[intent].push(post);
+      return acc;
+    },
+    {
+      'market-context': [],
+      'adoption-strategy': [],
+      implementation: [],
+      'sector-use-cases': [],
+    }
+  );
+
+  const postsToRender = [
+    ...blogPostsByIntent['market-context'],
+    ...blogPostsByIntent['adoption-strategy'],
+    ...blogPostsByIntent.implementation,
+    ...blogPostsByIntent['sector-use-cases'],
+  ].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <section className="pt-32 pb-20 px-4">
@@ -244,7 +292,7 @@ const Blog = ({ language }: BlogProps) => {
           </p>
 
           <div className="grid gap-6">
-            {blogPosts.map((post) => (
+            {postsToRender.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <Card className="group hover:border-primary/50 transition-all duration-300 hover:shadow-[var(--shadow-neon)]">
                   <CardContent className="p-6 md:p-8">

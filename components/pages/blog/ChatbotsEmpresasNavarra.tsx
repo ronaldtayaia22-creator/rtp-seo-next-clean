@@ -8,9 +8,6 @@ import { ArrowRight } from 'lucide-react';
 interface ArticleProps {
   language: Language;
 }
-
-
-const LOVABLE = '';
 const ChatbotsEmpresasNavarra = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
@@ -127,7 +124,7 @@ const ChatbotsEmpresasNavarra = ({ language }: ArticleProps) => {
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
               <li>{isEs ? <><strong>Disponibilidad 24/7:</strong> los clientes pueden obtener respuestas en cualquier momento, incluso fuera del horario laboral, fines de semana y festivos.</> : <><strong>24/7 availability:</strong> customers can get answers at any time, even outside business hours, weekends and holidays.</>}</li>
               <li>{isEs ? <><strong>ReducciÃ³n de llamadas:</strong> al resolver automÃ¡ticamente las consultas mÃ¡s comunes, el volumen de llamadas telefÃ³nicas se reduce significativamente.</> : <><strong>Fewer phone calls:</strong> by automatically resolving the most common inquiries, the volume of phone calls is significantly reduced.</>}</li>
-              <li>{isEs ? <><strong>Respuestas inmediatas:</strong> los clientes no tienen que esperar en cola ni aguardar a que un agente humano estÃ© disponible.</> : <><strong>Immediate responses:</strong> customers don't have to wait in line or wait for a human agent to become available.</>}</li>
+              <li>{isEs ? <><strong>Respuestas inmediatas:</strong> los clientes no tienen que esperar en cola ni aguardar a que un agente humano estÃ© disponible.</> : <><strong>Immediate responses:</strong> customers don&apos;t have to wait in line or wait for a human agent to become available.</>}</li>
               <li>{isEs ? <><strong>Mejora de la experiencia del cliente:</strong> atenciÃ³n rÃ¡pida, personalizada y coherente que genera confianza y profesionalidad.</> : <><strong>Better customer experience:</strong> fast, personalized and consistent service that builds trust and professionalism.</>}</li>
               <li>{isEs ? <><strong>Ahorro de recursos:</strong> el equipo puede dedicar su tiempo a tareas de mayor valor en lugar de gestionar consultas repetitivas.</> : <><strong>Resource savings:</strong> the team can dedicate their time to higher-value tasks instead of managing repetitive inquiries.</>}</li>
             </ul>
@@ -161,6 +158,14 @@ const ChatbotsEmpresasNavarra = ({ language }: ArticleProps) => {
             </p>
           </section>
 
+          <section className="mb-12">
+            <p className="text-muted-foreground leading-relaxed">
+              {isEs
+                ? <>Si quieres decidir entre chatbot y agente avanzado, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios</Link>, la página de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> y empieza con un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico</Link>.</>
+                : <>If you want to choose between a chatbot and an advanced agent, review our <Link href="/servicios" className="text-primary hover:underline font-medium">services</Link>, the <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI for businesses in Navarra</Link> page, and start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">strategic diagnosis</Link>.</>}
+            </p>
+          </section>
+
           {/* CTA Section */}
           <section className="mt-16 p-4 sm:p-8 md:p-12 rounded-2xl border border-primary/20 bg-primary/5 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
@@ -172,7 +177,7 @@ const ChatbotsEmpresasNavarra = ({ language }: ArticleProps) => {
                 : 'If you want to implement artificial intelligence in your business in Navarra, request a personalized strategic diagnosis.'}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto gap-2">
-              <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+              <Link href="/diagnostico-ia-navarra">
                 {isEs ? 'Solicitar diagnÃ³stico estratÃ©gico' : 'Request strategic diagnosis'} <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
