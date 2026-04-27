@@ -70,8 +70,8 @@ const IAEmpresasNavarra = ({ language }: Props) => {
 
           <p className="text-muted-foreground leading-relaxed">
             {isEs
-              ? <>Si buscas una vision completa de contratacion, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios de IA para empresas</Link>. Si ya tienes claro el objetivo, podemos empezar por una <Link href="/servicios" className="text-primary hover:underline font-medium">automatizacion con inteligencia artificial</Link> concreta y escalar despues. Tambien puedes ver el enfoque para <Link href="/servicios" className="text-primary hover:underline font-medium">implantar sistemas de IA</Link> sin frenar la operativa diaria.</>
-              : <>If you need the complete hiring view, check our <Link href="/servicios" className="text-primary hover:underline font-medium">AI services for businesses</Link>. If your objective is clear, we can start with a specific <Link href="/servicios" className="text-primary hover:underline font-medium">artificial intelligence automation</Link> and scale later. You can also review our approach to <Link href="/servicios" className="text-primary hover:underline font-medium">deploy AI systems</Link> without disrupting day-to-day operations.</>}
+              ? <>Si buscas una vision completa de contratacion, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios de IA para empresas</Link>. Si ya tienes claro el objetivo, podemos empezar por una <Link href="/servicios" className="text-primary hover:underline font-medium">automatizacion con inteligencia artificial</Link> concreta y escalar despues.</>
+              : <>If you need the complete hiring view, check our <Link href="/servicios" className="text-primary hover:underline font-medium">AI services for businesses</Link>. If your objective is clear, we can start with a specific <Link href="/servicios" className="text-primary hover:underline font-medium">artificial intelligence automation</Link> and scale later.</>}
           </p>
         </header>
 
@@ -121,8 +121,8 @@ const IAEmpresasNavarra = ({ language }: Props) => {
             </p>
             <p>
               {isEs
-                ? 'Este enfoque encaja especialmente bien en pymes navarras que necesitan resultados medibles y acompanamiento cercano.'
-                : 'This approach fits especially well for Navarra SMEs needing measurable results and close support.'}
+                ? <>Este enfoque encaja especialmente bien en pymes navarras que necesitan resultados medibles y acompanamiento cercano, y permite <Link href="/servicios" className="text-primary hover:underline font-medium">implantar sistemas de IA</Link> sin frenar la operativa diaria.</>
+                : <>This approach fits especially well for Navarra SMEs needing measurable results and close support, and helps <Link href="/servicios" className="text-primary hover:underline font-medium">deploy AI systems</Link> without disrupting day-to-day operations.</>}
             </p>
           </div>
         </section>

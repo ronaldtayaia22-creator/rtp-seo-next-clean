@@ -93,8 +93,8 @@ const InteligenciaArtificialNavarra = ({ language }: Props) => {
             </p>
             <p>
               {isEs
-                ? 'Cuando se diseña como sistema, la IA reduce friccion operativa y mejora la velocidad de respuesta en puntos criticos del negocio.'
-                : 'When designed as a system, AI reduces operational friction and improves response speed in critical business points.'}
+                ? <>Cuando se diseña como sistema, la IA reduce friccion operativa y mejora la velocidad de respuesta en puntos criticos del negocio. El siguiente paso suele ser <Link href="/servicios" className="text-primary hover:underline font-medium">implantar sistemas de IA en empresa</Link> con alcance y prioridades claras.</>
+                : <>When designed as a system, AI reduces operational friction and improves response speed in critical business points. The next step is usually to <Link href="/servicios" className="text-primary hover:underline font-medium">deploy AI systems in business operations</Link> with clear scope and priorities.</>}
             </p>
           </div>
         </section>
@@ -146,6 +146,11 @@ const InteligenciaArtificialNavarra = ({ language }: Props) => {
               </article>
             ))}
           </div>
+          <p className="text-sm text-muted-foreground">
+            {isEs
+              ? <>Si necesitas bajar esta hoja de ruta a ejecucion, revisa los <Link href="/servicios" className="text-primary hover:underline font-medium">servicios de IA para empresas</Link>.</>
+              : <>If you need to turn this roadmap into execution, review our <Link href="/servicios" className="text-primary hover:underline font-medium">AI services for businesses</Link>.</>}
+          </p>
         </section>
 
         <section className="p-8 rounded-2xl border border-primary/20 bg-primary/5 text-center space-y-4 animate-fade-in-up" style={{ animationDelay: '0.24s' }}>
