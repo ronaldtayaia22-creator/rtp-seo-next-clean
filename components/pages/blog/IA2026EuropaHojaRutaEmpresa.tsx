@@ -72,11 +72,18 @@ const IA2026EuropaHojaRutaEmpresa = ({ language }: ArticleProps) => {
                 </Link>
                 {isEs ? '.' : '.'}
               </p>
-              <p className="mt-4">
-                {isEs ? 'Si estás comparando enfoques, te puede ayudar esta guía de ' : 'If you are comparing approaches, this guide on '}
-                <Link href="/blog/chatbot-vs-agente-ia" className="text-primary hover:underline font-medium">
-                  {isEs ? 'chatbot vs agente de IA' : 'chatbot vs AI agent'}
-                </Link>
+            <p className="mt-4">
+              {isEs ? 'Si estás comparando enfoques, te puede ayudar esta guía de ' : 'If you are comparing approaches, this guide on '}
+              <Link href="/blog/chatbot-vs-agente-ia" className="text-primary hover:underline font-medium">
+                {isEs ? 'chatbot vs agente de IA' : 'chatbot vs AI agent'}
+              </Link>
+              {isEs ? '.' : '.'}
+            </p>
+            <p className="mt-4">
+              {isEs ? 'Si prefieres ir directo a una propuesta comercial, revisa la pagina de ' : 'If you prefer to go straight to a commercial proposal, review the '}
+              <Link href="/servicios" className="text-primary hover:underline font-medium">
+                {isEs ? 'servicios de IA para empresas en Navarra' : 'AI services for businesses in Navarra'}
+              </Link>
               {isEs ? '.' : '.'}
             </p>
           </section>
@@ -170,7 +177,9 @@ const IA2026EuropaHojaRutaEmpresa = ({ language }: ArticleProps) => {
                 : 'For businesses in Spain, the differentiator will not be who talks most about AI, but who integrates it better: focused on margin, operations, and customer experience.'}
             </p>
             <p className="mt-4">
-              {isEs ? 'En Navarra y Pamplona, las empresas que ejecuten esta hoja de ruta con disciplina tendrán ventaja clara en velocidad comercial y eficiencia operativa.' : 'In Navarra and Pamplona, companies that execute this roadmap with discipline will gain a clear advantage in commercial speed and operational efficiency.'}
+              {isEs
+                ? <>En Navarra y Pamplona, las empresas que activan primero su sistema de <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">IA para empresas en Navarra</Link> con esta hoja de ruta tendran ventaja clara en velocidad comercial y eficiencia operativa.</>
+                : <>In Navarra and Pamplona, companies that activate their <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI system for businesses in Navarra</Link> first using this roadmap will gain a clear advantage in commercial speed and operational efficiency.</>}
             </p>
           </section>
 

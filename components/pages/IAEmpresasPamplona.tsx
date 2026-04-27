@@ -9,8 +9,6 @@ interface Props {
   language: Language;
 }
 
-const LOVABLE = '';
-
 const IAEmpresasPamplona = ({ language }: Props) => {
   const isEs = language === 'es';
 
@@ -25,7 +23,11 @@ const IAEmpresasPamplona = ({ language }: Props) => {
 
   return (
     <>
-            <div className="pt-32 pb-20 px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
 
           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
@@ -33,8 +35,14 @@ const IAEmpresasPamplona = ({ language }: Props) => {
           </h1>
           <p className="text-lg text-muted-foreground mb-16 max-w-2xl">
             {isEs
-              ? <>Automatiza procesos, mejora la atención al cliente y aumenta la eficiencia de tu empresa en Pamplona con nuestras <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial en Navarra</Link>.</>
+              ? <>Automatiza procesos, activa estrategias de <strong>marketing automation Pamplona</strong> y mejora la atencion al cliente para captar mas oportunidades en tu empresa. Descubre como lo aplicamos en nuestras <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial en Navarra</Link>.</>
               : <>Automate processes, improve customer service and increase your business efficiency in Pamplona with our <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions in Navarra</Link>.</>}
+          </p>
+
+          <p className="text-muted-foreground leading-relaxed mb-16">
+            {isEs
+              ? <>Si buscas implementar ya, revisa la <Link href="/servicios" className="text-primary hover:underline font-medium">pagina de servicios de IA para empresas en Navarra</Link>, donde explicamos alcance, metodologia y siguientes pasos.</>
+              : <>If you are ready to implement now, review the <Link href="/servicios" className="text-primary hover:underline font-medium">AI services page for businesses in Navarra</Link>, where we explain scope, methodology and next steps.</>}
           </p>
 
           {/* Section 1 */}
@@ -62,17 +70,22 @@ const IAEmpresasPamplona = ({ language }: Props) => {
           {/* Section 2 */}
           <section className="mb-16">
             <h2 className="text-2xl font-semibold mb-4 text-foreground">
-              {isEs ? 'Soluciones de inteligencia artificial para empresas' : 'Artificial intelligence solutions for businesses'}
+              {isEs ? 'Soluciones de inteligencia artificial y marketing automation en Pamplona' : 'Artificial intelligence and marketing automation solutions in Pamplona'}
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               {isEs
                 ? 'Existen diferentes soluciones de IA que se adaptan a las necesidades de cada empresa en Pamplona:'
                 : 'There are different AI solutions that adapt to the needs of each business in Pamplona:'}
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              {isEs
+                ? 'Una linea prioritaria para muchas pymes locales es el marketing automation Pamplona: seguimiento automatico de leads, recuperacion de oportunidades y nutricion comercial sin depender de tareas manuales.'
+                : 'A priority line for many local SMBs is marketing automation in Pamplona: automatic lead follow-up, opportunity recovery, and commercial nurturing without relying on manual tasks.'}
+            </p>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
               <li>{isEs ? <><strong>Agentes de IA:</strong> asistentes inteligentes que interactúan con clientes de forma autónoma, resolviendo consultas, gestionando solicitudes y derivando casos complejos al equipo humano.</> : <><strong>AI agents:</strong> intelligent assistants that interact with customers autonomously, resolving queries, managing requests and routing complex cases to the human team.</>}</li>
               <li>{isEs ? <><strong>Automatización de procesos:</strong> sistemas que ejecutan tareas repetitivas como gestión de correos, programación de citas, generación de informes o procesamiento de documentos.</> : <><strong>Process automation:</strong> systems that execute repetitive tasks such as email management, appointment scheduling, report generation or document processing.</>}</li>
-              <li>{isEs ? <><strong>Asistentes en páginas web:</strong> agentes de IA integrados en el sitio web de la empresa que atienden a los visitantes en tiempo real, gracias al <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">desarrollo web con inteligencia artificial</Link>.</> : <><strong>Website assistants:</strong> AI agents integrated into the company's website that serve visitors in real time, thanks to <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">web development with artificial intelligence</Link>.</>}</li>
+              <li>{isEs ? <><strong>Asistentes en páginas web:</strong> agentes de IA integrados en el sitio web de la empresa que atienden a los visitantes en tiempo real, gracias al <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">desarrollo web con inteligencia artificial</Link>.</> : <><strong>Website assistants:</strong> AI agents integrated into the company website that serve visitors in real time, thanks to <Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">web development with artificial intelligence</Link>.</>}</li>
               <li>{isEs ? <><strong>Sistemas de conocimiento con IA:</strong> bases de datos inteligentes que centralizan toda la información de la empresa y permiten a los agentes responder con precisión y contexto.</> : <><strong>AI knowledge systems:</strong> intelligent databases that centralize all company information and allow agents to respond with precision and context.</>}</li>
             </ul>
           </section>
@@ -107,9 +120,9 @@ const IAEmpresasPamplona = ({ language }: Props) => {
                 : 'Implementing AI in a business in Pamplona is a progressive and accessible process:'}
             </p>
             <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
-              <li>{isEs ? <><strong>Diagnóstico estratégico:</strong> identificar los procesos que más tiempo y recursos consumen. Puedes empezar con un <Link href={`${LOVABLE}/diagnostico-ia-navarra`} className="text-primary hover:underline font-medium">diagnóstico estratégico gratuito</Link>.</> : <><strong>Strategic diagnosis:</strong> identify the processes that consume the most time and resources. You can start with a <Link href={`${LOVABLE}/diagnostico-ia-navarra`} className="text-primary hover:underline font-medium">free strategic diagnosis</Link>.</>}</li>
+              <li>{isEs ? <><strong>Diagnóstico estratégico:</strong> identificar los procesos que más tiempo y recursos consumen. Puedes empezar con un <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">diagnóstico estratégico gratuito</Link>.</> : <><strong>Strategic diagnosis:</strong> identify the processes that consume the most time and resources. You can start with a <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">free strategic diagnosis</Link>.</>}</li>
               <li>{isEs ? <><strong>Diseño de la solución:</strong> seleccionar las herramientas de IA más adecuadas para cada necesidad específica de la empresa.</> : <><strong>Solution design:</strong> select the most appropriate AI tools for each specific business need.</>}</li>
-              <li>{isEs ? <><strong>Desarrollo e integración:</strong> construir los agentes o automatizaciones e integrarlos con los sistemas existentes de la empresa.</> : <><strong>Development and integration:</strong> build the agents or automations and integrate them with the company's existing systems.</>}</li>
+              <li>{isEs ? <><strong>Desarrollo e integración:</strong> construir los agentes o automatizaciones e integrarlos con los sistemas existentes de la empresa.</> : <><strong>Development and integration:</strong> build the agents or automations and integrate them with the existing company systems.</>}</li>
               <li>{isEs ? <><strong>Pruebas y ajustes:</strong> validar el funcionamiento con situaciones reales y ajustar los parámetros para optimizar los resultados.</> : <><strong>Testing and adjustments:</strong> validate operation with real situations and adjust parameters to optimize results.</>}</li>
               <li>{isEs ? <><strong>Escalado:</strong> una vez validada la solución, ampliarla a otros procesos y áreas del negocio.</> : <><strong>Scaling:</strong> once the solution is validated, extend it to other processes and business areas.</>}</li>
             </ol>
@@ -182,10 +195,10 @@ const IAEmpresasPamplona = ({ language }: Props) => {
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               {isEs
-                ? 'Solicita un diagnóstico estratégico gratuito y descubre qué soluciones de IA pueden transformar tu empresa.'
-                : 'Request a free strategic diagnosis and discover which AI solutions can transform your business.'}
+                ? 'Solicita un diagnóstico estratégico gratuito y descubre qué soluciones de IA y marketing automation pueden transformar tu empresa en Pamplona.'
+                : 'Request a free strategic diagnosis and discover which AI and marketing automation solutions can transform your business in Pamplona.'}
             </p>
-            <Link href={`${LOVABLE}/diagnostico-ia-navarra`}>
+            <Link href="/diagnostico-ia-navarra">
               <Button size="lg" className="gap-2">
                 {isEs ? 'Solicitar diagnóstico gratuito' : 'Request free diagnosis'} <ArrowRight className="w-4 h-4" />
               </Button>

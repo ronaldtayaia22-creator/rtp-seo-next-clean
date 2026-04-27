@@ -61,11 +61,11 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
   },
   '/servicios': {
     title: {
-      es: 'Servicios de IA para empresas en Navarra',
+      es: 'Servicios IA en Navarra para captar clientes',
       en: 'AI services for businesses in Navarra',
     },
     description: {
-      es: 'Pagina principal de contratacion: implantacion de sistemas de IA para empresas en Navarra con modelo de trabajo, alcance y FAQ comercial.',
+      es: 'Implementamos IA en Navarra para captar clientes y automatizar operaciones: agentes, flujos y sistemas con alcance comercial claro.',
       en: 'Main hiring page: AI system implementation for businesses in Navarra with working model, scope and commercial FAQ.',
     },
   },
@@ -81,11 +81,11 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
   },
   '/diagnostico-ia-navarra': {
     title: {
-      es: 'Diagnóstico estratégico de IA en Navarra',
+      es: 'Diagnostico IA en Navarra para crecer',
       en: 'Strategic AI diagnosis in Navarra',
     },
     description: {
-      es: 'Solicita un diagnóstico estratégico para definir qué automatizar y cómo implementar IA en tu empresa en Navarra.',
+      es: 'Solicita un diagnostico de IA en Navarra para priorizar que automatizar, definir tu implementacion y acelerar captacion de clientes con menos carga operativa.',
       en: 'Request a strategic diagnosis to define what to automate and how to implement AI in your business in Navarra.',
     },
   },
@@ -171,22 +171,22 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
   },
   '/ia-empresas-navarra': {
     title: {
-      es: 'IA para empresas en Navarra por sector local',
+      es: 'IA para empresas en Navarra: automatiza y crece',
       en: 'AI for businesses in Navarra by local sector',
     },
     description: {
-      es: 'Landing local para Pamplona y Navarra: casos por sector, ejemplos cercanos y enlace a la pagina principal de servicios.',
+      es: 'Soluciones de IA para empresas en Navarra: automatizacion, agentes y planes de implementacion para vender mas, ahorrar tiempo y crecer con metricas.',
       en: 'Local landing for Pamplona and Navarra: sector-specific cases, nearby examples and link to the main services page.',
     },
   },
   '/ia-empresas-pamplona': {
     title: {
-      es: 'IA para empresas en Pamplona',
-      en: 'AI for businesses in Pamplona',
+      es: 'IA y marketing automation en Pamplona',
+      en: 'AI and automation for businesses in Pamplona',
     },
     description: {
-      es: 'Aplicaciones de IA para empresas en Pamplona con enfoque en automatización y captación.',
-      en: 'AI applications for businesses in Pamplona focused on automation and customer capture.',
+      es: 'Ayudamos a empresas de Pamplona a captar clientes y automatizar ventas, atencion y operaciones con IA y marketing automation, con plan por fases.',
+      en: 'Implement AI agents, marketing automation and process automation in Pamplona with a phased plan and strategic diagnosis.',
     },
   },
   '/ia-restaurantes-navarra': {

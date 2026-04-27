@@ -40,8 +40,8 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
             </p>
             <p className="mt-4">
               {isEs
-                ? 'Esto afecta a pymes y medianas empresas por igual: no basta con probar herramientas sueltas. Hace falta un enfoque operativo que conecte tecnología con negocio, procesos y datos, como ya aplican las empresas que trabajan con una estrategia de inteligencia artificial bien definida.'
-                : 'This affects SMBs and mid-sized businesses alike: testing isolated tools is not enough. You need an operational approach that connects technology with business goals, processes, and data, as seen in companies working with a clear AI strategy.'}
+                ? <>Esto afecta a pymes y medianas empresas por igual: no basta con probar herramientas sueltas. Hace falta un enfoque operativo que conecte tecnologia con negocio, procesos y datos, como ya aplican las empresas que trabajan con una <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">estrategia de IA para empresas en Navarra</Link> bien definida.</>
+                : <>This affects SMBs and mid-sized businesses alike: testing isolated tools is not enough. You need an operational approach that connects technology with business goals, processes, and data, as seen in companies working with a clear <Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">AI strategy for businesses in Navarra</Link>.</>}
             </p>
           </section>
 
@@ -87,6 +87,13 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
               {isEs ? ' y en proyectos de ' : ' and in '}
               <Link href="/automatizacion-procesos-empresas-navarra" className="text-primary hover:underline font-medium">
                 {isEs ? 'automatización de procesos empresariales' : 'business process automation'}
+              </Link>
+              {isEs ? '.' : '.'}
+            </p>
+            <p className="mt-4">
+              {isEs ? 'Si necesitas una vision de implementacion comercial completa, revisa nuestros ' : 'If you need a complete commercial implementation view, review our '}
+              <Link href="/servicios" className="text-primary hover:underline font-medium">
+                {isEs ? 'servicios de IA para empresas en Navarra' : 'AI services for businesses in Navarra'}
               </Link>
               {isEs ? '.' : '.'}
             </p>
@@ -144,6 +151,13 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
               {isEs ? 'Si quieres pasar a la parte práctica, revisa la ' : 'If you want to move to the practical side, review the '}
               <Link href="/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta" className="text-primary hover:underline font-medium">
                 {isEs ? 'hoja de ruta IA 2026 para empresas' : 'AI 2026 business roadmap'}
+              </Link>
+              {isEs ? '.' : '.'}
+            </p>
+            <p className="mt-4">
+              {isEs ? 'Antes de invertir en nuevas herramientas, conviene cerrar prioridades con un ' : 'Before investing in new tools, it is worth defining priorities with a '}
+              <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">
+                {isEs ? 'diagnostico de IA en Navarra' : 'AI diagnosis in Navarra'}
               </Link>
               {isEs ? '.' : '.'}
             </p>
