@@ -5,6 +5,12 @@ const OPERATIONAL_ORIGIN = process.env.OPERATIONAL_ORIGIN || "https://rtp-ai-orb
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.rtpdigitalsolutions.es' }],
+        destination: 'https://rtpdigitalsolutions.es/:path*',
+        permanent: true,
+      },
       { source: '/en/diagnostico-ia-navarra', destination: '/en/diagnosis-ai-navarra', permanent: true },
       { source: '/en/automatizacion-ia-navarra', destination: '/en/ai-automation-navarra', permanent: true },
       { source: '/en/casos-ia-navarra', destination: '/en/ai-cases-navarra', permanent: true },
@@ -42,6 +48,12 @@ const nextConfig: NextConfig = {
       { source: '/en/blog/ai-2026-spain-europe-business-roadmap', destination: '/en/blog/ai-2026-business-navarra-spain-europe-roadmap', permanent: true },
       { source: '/category/ia-negocios', destination: '/inteligencia-artificial-navarra', permanent: true },
       { source: '/category/ia-negocios/', destination: '/inteligencia-artificial-navarra', permanent: true },
+      { source: '/contact', destination: '/diagnostico-ia-navarra', permanent: true },
+      { source: '/contact/', destination: '/diagnostico-ia-navarra', permanent: true },
+      { source: '/en/contact', destination: '/en/diagnosis-ai-navarra', permanent: true },
+      { source: '/en/contact/', destination: '/en/diagnosis-ai-navarra', permanent: true },
+      { source: '/author/:path*', destination: '/blog', permanent: true },
+      { source: '/en/author/:path*', destination: '/en/blog', permanent: true },
     ];
   },
 
