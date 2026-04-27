@@ -2,7 +2,7 @@
 
 import { Language } from '@/lib/i18n';
 import Link from '@/components/shared/LocalizedLink';
-import { Building2, UserCheck, ShoppingCart, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Workflow, Layers3, LineChart, Wallet, HelpCircle } from 'lucide-react';
 
 interface ServicesProps {
   language: Language;
@@ -11,138 +11,91 @@ interface ServicesProps {
 const Services = ({ language }: ServicesProps) => {
   const isEs = language === 'es';
 
-  const systems = [
+  const process = [
     {
-      icon: Building2,
-      titleEs: 'Sistema 1 — Sistemas para negocios de servicios',
-      titleEn: 'System 1 — Systems for service-based businesses',
-      summaryEs:
-        'Diseñado para empresas que venden servicios y necesitan operar con reservas, atención automatizada y seguimiento continuo.',
-      summaryEn:
-        'Designed for businesses that sell services and need bookings, automated support and continuous follow-up.',
-      includesEs: [
-        'Gestión de reservas y citas',
-        'Atención automática al cliente',
-        'CRM y seguimiento de conversaciones',
-        'Operación interna conectada',
-        'Mensajería, recordatorios, reputación y campañas',
-      ],
-      includesEn: [
-        'Booking and appointment management',
-        'Automated customer support',
-        'CRM and conversation follow-up',
-        'Connected internal operations',
-        'Messaging, reminders, reputation and campaigns',
-      ],
-      fitEs:
-        'Aplicación típica: clínicas, restauración, comercios con atención al cliente y empresas de servicios profesionales.',
-      fitEn:
-        'Typical use case: clinics, restaurants, retail with customer support and professional service businesses.',
-      related: [
-        {
-          path: '/agentes-ia-atencion-cliente-navarra',
-          labelEs: 'Agentes IA para atención al cliente',
-          labelEn: 'AI customer service agents',
-        },
-        {
-          path: '/automatizacion-procesos-empresas-navarra',
-          labelEs: 'Automatización de procesos empresariales',
-          labelEn: 'Business process automation',
-        },
-        {
-          path: '/ia-empresas-navarra',
-          labelEs: 'Soluciones para empresas en Navarra',
-          labelEn: 'Business solutions in Navarra',
-        },
-      ],
+      titleEs: '1) Diagnóstico de negocio y priorización',
+      titleEn: '1) Business diagnosis and prioritization',
+      descEs: 'Analizamos objetivo comercial, procesos críticos y coste operativo actual para decidir qué implantar primero.',
+      descEn: 'We assess commercial goals, critical workflows and current operating cost to decide what to implement first.',
     },
     {
-      icon: UserCheck,
-      titleEs: 'Sistema 2 — Captación y cualificación de leads',
-      titleEn: 'System 2 — Lead generation and qualification systems',
-      summaryEs:
-        'Sistema comercial para captar demanda, filtrarla con criterio y gestionar oportunidades hasta el cierre.',
-      summaryEn:
-        'Commercial system to capture demand, qualify it with clear criteria and manage opportunities to close.',
-      includesEs: [
-        'Captación de leads desde web y canales de entrada',
-        'Cualificación y filtrado automático',
-        'Matching de oportunidad y prioridad comercial',
-        'Gestión de pipeline y etapas de venta',
-        'Documentación y seguimiento comercial',
-      ],
-      includesEn: [
-        'Lead capture from website and inbound channels',
-        'Automatic qualification and filtering',
-        'Opportunity matching and sales priority',
-        'Pipeline and sales stage management',
-        'Document handling and sales follow-up',
-      ],
-      fitEs:
-        'Aplicación típica: empresas con equipo comercial que necesitan previsibilidad y velocidad en la gestión de oportunidades.',
-      fitEn:
-        'Typical use case: businesses with sales teams that need predictability and speed in opportunity handling.',
-      related: [
-        {
-          path: '/consultoria-inteligencia-artificial-navarra',
-          labelEs: 'Consultoría estratégica en IA',
-          labelEn: 'Strategic AI consulting',
-        },
-        {
-          path: '/agentes-ia-atencion-cliente-navarra',
-          labelEs: 'Captación y atención inicial automatizada',
-          labelEn: 'Automated first-contact capture and support',
-        },
-        {
-          path: '/ia-empresas-navarra',
-          labelEs: 'Implementación para empresas en Navarra',
-          labelEn: 'Implementation for Navarra businesses',
-        },
-      ],
+      titleEs: '2) Implementación por sprints',
+      titleEn: '2) Sprint-based implementation',
+      descEs: 'Construimos y conectamos automatizaciones, agentes y reglas de operación con un alcance cerrado en cada sprint.',
+      descEn: 'We build and connect automations, agents and operating rules with a fixed scope per sprint.',
     },
     {
-      icon: ShoppingCart,
-      titleEs: 'Sistema 3 — Ecommerce y operación digital',
-      titleEn: 'System 3 — Ecommerce and digital operation systems',
-      summaryEs:
-        'Arquitectura para tiendas online y operaciones digitales centrada en conversión, cuentas de usuario e integraciones.',
-      summaryEn:
-        'Architecture for ecommerce and digital operations focused on conversion, user accounts and integrations.',
-      includesEs: [
-        'Gestión de producto y catálogo',
-        'Optimización de checkout y conversión',
-        'Cuentas de usuario y experiencia postventa',
-        'Automatización alrededor de ventas',
-        'Integraciones y procesos de backend',
-      ],
-      includesEn: [
-        'Product and catalog management',
-        'Checkout and conversion optimization',
-        'User accounts and post-sale experience',
-        'Sales-related automations',
-        'Integrations and backend processes',
-      ],
-      fitEs:
-        'Aplicación típica: ecommerce y negocios digitales que necesitan escalar ventas sin aumentar fricción operativa.',
-      fitEn:
-        'Typical use case: ecommerce and digital businesses that need to scale sales without increasing operational friction.',
-      related: [
-        {
-          path: '/desarrollo-web-inteligencia-artificial',
-          labelEs: 'Desarrollo web con IA',
-          labelEn: 'Web development with AI',
-        },
-        {
-          path: '/rag-base-conocimiento-empresas',
-          labelEs: 'RAG y base de conocimiento',
-          labelEn: 'RAG and knowledge base',
-        },
-        {
-          path: '/automatizacion-procesos-empresas-navarra',
-          labelEs: 'Integraciones y automatización de procesos',
-          labelEn: 'Integrations and process automation',
-        },
-      ],
+      titleEs: '3) Medición y optimización continua',
+      titleEn: '3) Measurement and continuous optimization',
+      descEs: 'Revisamos métricas de conversión, tiempos y carga operativa para mejorar cada mes el sistema implantado.',
+      descEn: 'We review conversion metrics, response times and operational load to improve the implemented system every month.',
+    },
+  ];
+
+  const systemIncludes = isEs
+    ? [
+        'Captación y cualificación de oportunidades desde web, WhatsApp y formularios.',
+        'Atención automática con contexto de negocio y escalado a equipo humano cuando corresponde.',
+        'Automatización de operaciones internas: CRM, agenda, tareas, seguimiento y reporting.',
+        'Base de conocimiento operativa (RAG) para respuestas consistentes y decisiones rápidas.',
+        'Panel de control con indicadores de respuesta, productividad y oportunidad comercial.',
+      ]
+    : [
+        'Opportunity capture and qualification from website, WhatsApp and forms.',
+        'Automated support with business context and human handoff when needed.',
+        'Internal operations automation: CRM, calendar, tasks, follow-up and reporting.',
+        'Operational knowledge base (RAG) for consistent responses and faster decisions.',
+        'Control dashboard with response, productivity and pipeline indicators.',
+      ];
+
+  const expectedResults = isEs
+    ? [
+        'Clínicas y negocios de cita previa: menos huecos en agenda y menor carga administrativa.',
+        'Comercios y ecommerce: atención inmediata sobre producto, stock y estado de pedido.',
+        'Empresas de servicios: mayor velocidad en seguimiento comercial y menos tareas manuales.',
+      ]
+    : [
+        'Clinics and appointment-based businesses: fewer empty slots and lower admin load.',
+        'Retail and ecommerce: instant support on product, stock and order status.',
+        'Service companies: faster sales follow-up and fewer manual tasks.',
+      ];
+
+  const pricingModel = isEs
+    ? [
+        'Diagnóstico inicial: alcance, prioridad y hoja de ruta con entregable ejecutivo.',
+        'Implementación: trabajo por sprints con objetivos cerrados por fase.',
+        'Operación mensual: soporte, mejora continua y evolución del sistema.',
+      ]
+    : [
+        'Initial diagnosis: scope, priority and roadmap with executive deliverable.',
+        'Implementation: sprint-based work with fixed objectives by phase.',
+        'Monthly operations: support, continuous improvement and system evolution.',
+      ];
+
+  const faq = [
+    {
+      qEs: '¿Cuánto tarda en estar operativo el sistema?',
+      qEn: 'How long does it take to go live?',
+      aEs: 'Normalmente entre 3 y 8 semanas según el alcance del primer sprint.',
+      aEn: 'Usually between 3 and 8 weeks depending on first sprint scope.',
+    },
+    {
+      qEs: '¿Podemos empezar por una parte y escalar después?',
+      qEn: 'Can we start small and scale later?',
+      aEs: 'Sí. Definimos un primer caso de alto impacto y ampliamos por fases.',
+      aEn: 'Yes. We start with a high-impact use case and expand in phases.',
+    },
+    {
+      qEs: '¿Quién mantiene el sistema una vez implantado?',
+      qEn: 'Who maintains the system after implementation?',
+      aEs: 'Podemos operar nosotros o formar a tu equipo con un modelo mixto.',
+      aEn: 'We can run it or train your team under a hybrid model.',
+    },
+    {
+      qEs: '¿Qué necesito para contratar?',
+      qEn: 'What do I need to hire this service?',
+      aEs: 'Solo una sesión de diagnóstico para revisar procesos, datos y objetivos.',
+      aEn: 'Only a diagnosis session to review workflows, data and goals.',
     },
   ];
 
@@ -152,116 +105,138 @@ const Services = ({ language }: ServicesProps) => {
         <header className="max-w-4xl mx-auto text-center space-y-5 mb-14 animate-fade-in-up">
           <h1 className="text-3xl md:text-5xl font-bold text-glow-primary">
             {isEs
-              ? 'Servicios de inteligencia artificial en Navarra estructurados en 3 sistemas'
-              : 'Artificial intelligence services in Navarra structured in 3 systems'}
+              ? 'Servicios de IA para empresas en Navarra'
+              : 'AI services for businesses in Navarra'}
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             {isEs
-              ? 'Nuestro modelo de trabajo se organiza en tres sistemas reales: negocio de servicios, captación y cualificación de leads, y ecommerce con operación digital.'
-              : 'Our operating model is organized in three real systems: service business operations, lead generation and qualification, and ecommerce with digital operations.'}
+              ? 'Diseñamos e implantamos sistemas completos de inteligencia artificial orientados a conversión, operación y crecimiento sostenible.'
+              : 'We design and implement complete AI systems focused on conversion, operations and sustainable growth.'}
           </p>
           <p className="text-sm text-muted-foreground/90 max-w-2xl mx-auto">
             {isEs
-              ? 'Definimos el sistema prioritario para tu empresa y lo conectamos con tus procesos para generar resultados medibles.'
-              : 'We define the priority system for your business and connect it to your processes to generate measurable outcomes.'}
+              ? 'Si quieres contexto local, revisa la guía de '
+              : 'If you need local context, review the guide for '}
+            <Link href="/ia-empresas-navarra" className="text-primary hover:underline underline-offset-2 font-medium">
+              {isEs ? 'IA para empresas en Navarra' : 'AI for businesses in Navarra'}
+            </Link>
+            {isEs ? ' y la página informativa de ' : ' and the informational page on '}
+            <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline underline-offset-2 font-medium">
+              {isEs ? 'inteligencia artificial en Navarra' : 'artificial intelligence in Navarra'}
+            </Link>
+            .
           </p>
-          <a
-            href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
+          <Link
+            href="/diagnostico-ia-navarra"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
           >
-            {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
+            {isEs ? 'Solicitar propuesta y diagnóstico' : 'Request proposal and diagnosis'}
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </header>
 
-        <div className="max-w-6xl mx-auto space-y-10">
-          {systems.map((system, index) => {
-            const Icon = system.icon;
-            return (
-              <section
-                key={index}
-                className="holographic-border rounded-2xl p-7 md:p-10 space-y-7 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.08}s` }}
-              >
-                <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-bold">
-                    {isEs ? system.titleEs : system.titleEn}
-                  </h2>
-                  <p className="text-muted-foreground text-sm md:text-base">
-                    {isEs ? system.summaryEs : system.summaryEn}
-                  </p>
+        <div className="max-w-6xl mx-auto space-y-8">
+          <section className="holographic-border rounded-2xl p-7 md:p-10 space-y-6 animate-fade-in-up" style={{ animationDelay: '0.08s' }}>
+            <div className="flex items-center gap-3 text-primary">
+              <Workflow className="w-6 h-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                {isEs ? 'Como trabajamos' : 'How we work'}
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {process.map((step, index) => (
+                <div key={step.titleEs} className="rounded-xl border border-border/80 bg-card/40 p-5 space-y-3">
+                  <span className="text-xs font-semibold tracking-wide text-primary">{isEs ? `Paso ${index + 1}` : `Step ${index + 1}`}</span>
+                  <h3 className="font-semibold text-foreground">{isEs ? step.titleEs : step.titleEn}</h3>
+                  <p className="text-sm text-muted-foreground">{isEs ? step.descEs : step.descEn}</p>
                 </div>
+              ))}
+            </div>
+          </section>
 
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <h3 className="text-sm uppercase tracking-wider text-primary font-semibold">
-                      {isEs ? 'Qué incluye' : 'What it includes'}
-                    </h3>
-                    <ul className="space-y-2.5">
-                      {(isEs ? system.includesEs : system.includesEn).map((item, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          <section className="holographic-border rounded-2xl p-7 md:p-10 space-y-6 animate-fade-in-up" style={{ animationDelay: '0.12s' }}>
+            <div className="flex items-center gap-3 text-primary">
+              <Layers3 className="w-6 h-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                {isEs ? 'Que incluye el sistema' : 'What the system includes'}
+              </h2>
+            </div>
+            <ul className="grid md:grid-cols-2 gap-3">
+              {systemIncludes.map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground rounded-lg border border-border/70 p-4 bg-card/30">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-                  <div className="space-y-4">
-                    <h3 className="text-sm uppercase tracking-wider text-primary font-semibold">
-                      {isEs ? 'Aplicación práctica' : 'Practical application'}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {isEs ? system.fitEs : system.fitEn}
-                    </p>
-
-                    <div className="space-y-2 pt-1">
-                      {system.related.map((item) => (
-                        <Link
-                          key={item.path}
-                          href={item.path}
-                          className="flex items-center gap-2 text-sm text-primary hover:underline underline-offset-2 transition-colors"
-                        >
-                          <ArrowRight className="w-3.5 h-3.5" />
-                          {isEs ? item.labelEs : item.labelEn}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+          <section className="holographic-border rounded-2xl p-7 md:p-10 space-y-6 animate-fade-in-up" style={{ animationDelay: '0.16s' }}>
+            <div className="flex items-center gap-3 text-primary">
+              <LineChart className="w-6 h-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                {isEs ? 'Resultados esperados y casos tipo' : 'Expected results and typical cases'}
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {expectedResults.map((item) => (
+                <div key={item} className="rounded-xl border border-border/80 bg-card/40 p-5 text-sm text-muted-foreground">
+                  {item}
                 </div>
+              ))}
+            </div>
+          </section>
 
-                <div className="pt-2">
-                  <a
-                    href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
-                  >
-                    {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </section>
-            );
-          })}
+          <section className="holographic-border rounded-2xl p-7 md:p-10 space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex items-center gap-3 text-primary">
+              <Wallet className="w-6 h-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                {isEs ? 'Modelo de trabajo y pricing orientativo' : 'Working model and indicative pricing'}
+              </h2>
+            </div>
+            <ul className="space-y-3">
+              {pricingModel.map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="holographic-border rounded-2xl p-7 md:p-10 space-y-6 animate-fade-in-up" style={{ animationDelay: '0.24s' }}>
+            <div className="flex items-center gap-3 text-primary">
+              <HelpCircle className="w-6 h-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                {isEs ? 'FAQ de contratacion' : 'Hiring FAQ'}
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {faq.map((item) => (
+                <article key={item.qEs} className="rounded-lg border border-border/70 p-4 bg-card/30">
+                  <h3 className="font-semibold text-foreground text-sm md:text-base">{isEs ? item.qEs : item.qEn}</h3>
+                  <p className="text-sm text-muted-foreground mt-1">{isEs ? item.aEs : item.aEn}</p>
+                </article>
+              ))}
+            </div>
+          </section>
 
           <section className="text-center space-y-4 pt-2 animate-fade-in-up" style={{ animationDelay: '0.28s' }}>
             <h2 className="text-2xl md:text-3xl font-bold text-glow-primary">
-              {isEs ? '¿Qué sistema encaja mejor con tu negocio?' : 'Which system fits your business best?'}
+              {isEs ? 'Define el sistema de IA que tu negocio necesita' : 'Define the AI system your business needs'}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
               {isEs
-                ? 'En el diagnóstico estratégico definimos la prioridad correcta y la secuencia de implementación para tu empresa en Navarra.'
-                : 'In the strategic diagnosis we define the right priority and implementation sequence for your business in Navarra.'}
+                ? 'Trabajamos contigo para contratar e implantar una arquitectura completa, no herramientas sueltas.'
+                : 'We work with you to hire and deploy a complete architecture, not isolated tools.'}
             </p>
-            <a
-              href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
+            <Link
+              href="/diagnostico-ia-navarra"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
             >
-              {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
+              {isEs ? 'Solicitar propuesta y diagnostico' : 'Request proposal and diagnosis'}
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </section>
         </div>
       </div>

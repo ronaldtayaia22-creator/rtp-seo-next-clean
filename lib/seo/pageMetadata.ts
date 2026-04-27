@@ -61,22 +61,22 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
   },
   '/servicios': {
     title: {
-      es: 'Servicios de inteligencia artificial en Navarra',
-      en: 'AI services in Navarra',
+      es: 'Servicios de IA para empresas en Navarra',
+      en: 'AI services for businesses in Navarra',
     },
     description: {
-      es: 'Servicios de IA para empresas en Navarra: agentes conversacionales, automatización, voz, RAG y consultoría.',
-      en: 'AI services for businesses in Navarra: conversational agents, automation, voice, RAG and consulting.',
+      es: 'Pagina principal de contratacion: implantacion de sistemas de IA para empresas en Navarra con modelo de trabajo, alcance y FAQ comercial.',
+      en: 'Main hiring page: AI system implementation for businesses in Navarra with working model, scope and commercial FAQ.',
     },
   },
   '/inteligencia-artificial-navarra': {
     title: {
-      es: 'Inteligencia artificial en Navarra para empresas',
-      en: 'Artificial intelligence in Navarra for businesses',
+      es: 'Guia de inteligencia artificial para empresas en Navarra',
+      en: 'Artificial intelligence guide for businesses in Navarra',
     },
     description: {
-      es: 'Hub informativo sobre inteligencia artificial en Navarra con soluciones por servicios y sectores.',
-      en: 'Informational hub about artificial intelligence in Navarra with solutions by service and sector.',
+      es: 'Contenido informativo sobre IA aplicada a empresa: cuando implementarla, errores comunes y roadmap de adopcion en Navarra.',
+      en: 'Informational content about business AI: when to implement, common mistakes and adoption roadmap in Navarra.',
     },
   },
   '/diagnostico-ia-navarra': {
@@ -171,12 +171,12 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
   },
   '/ia-empresas-navarra': {
     title: {
-      es: 'IA para empresas en Navarra',
-      en: 'AI for businesses in Navarra',
+      es: 'IA para empresas en Navarra por sector local',
+      en: 'AI for businesses in Navarra by local sector',
     },
     description: {
-      es: 'Soluciones de inteligencia artificial para empresas en Navarra orientadas a crecimiento y eficiencia.',
-      en: 'Artificial intelligence solutions for businesses in Navarra focused on growth and efficiency.',
+      es: 'Landing local para Pamplona y Navarra: casos por sector, ejemplos cercanos y enlace a la pagina principal de servicios.',
+      en: 'Local landing for Pamplona and Navarra: sector-specific cases, nearby examples and link to the main services page.',
     },
   },
   '/ia-empresas-pamplona': {
