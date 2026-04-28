@@ -51,11 +51,11 @@ const HUMAN_LABELS: Record<string, { es: string; en: string }> = {
 export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
   '/': {
     title: {
-      es: 'Agentes de inteligencia artificial en Navarra',
+      es: 'Automatización y agentes IA en Navarra',
       en: 'AI agents in Navarra',
     },
     description: {
-      es: 'Arquitecturas de IA para empresas en Navarra: agentes, automatización de procesos e integración de sistemas.',
+      es: 'Implementamos automatización y agentes IA para empresas en Navarra: captación de clientes, atención 24/7 e integración de sistemas con foco en negocio.',
       en: 'AI architectures for businesses in Navarra: agents, process automation and systems integration.',
     },
   },
