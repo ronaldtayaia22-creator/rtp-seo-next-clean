@@ -13,11 +13,11 @@ const Hero = ({ language }: HeroProps) => {
     : 'AI agents and business automation in Navarra';
 
   const h1 = isEs
-    ? 'Agentes de Inteligencia Artificial en Navarra para automatizar empresas'
+    ? 'Automatización y agentes IA para empresas en Navarra'
     : 'AI Agents in Navarra to automate businesses';
 
   const subtitle = isEs
-    ? 'Diseñamos agentes de inteligencia artificial en Navarra integrados en tu web para captar oportunidades, responder consultas y automatizar tareas clave del negocio.'
+    ? 'Implementamos sistemas de IA en empresas de Navarra para captar clientes, automatizar la atención y reducir carga operativa. Diseñamos e integramos soluciones conectadas con objetivos claros de negocio.'
     : 'We design AI agents in Navarra integrated into your website to capture opportunities, answer queries and automate key business tasks.';
 
   const supportText = isEs
@@ -90,17 +90,17 @@ const Hero = ({ language }: HeroProps) => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
             <a
-              href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
+              href={isEs ? '/diagnostico-ia-navarra' : '/en/ai-automation-navarra'}
               className="group inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
             >
-              {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
+              {isEs ? 'Solicitar diagnóstico estratégico de IA en Navarra' : 'Request strategic AI diagnosis in Navarra'}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href={isEs ? '/servicios' : '/en/services'}
               className="inline-flex items-center px-5 py-3 rounded-lg font-bold text-sm border border-primary/30 text-primary hover:bg-primary/10 transition-all whitespace-nowrap"
             >
-              {isEs ? 'Ver servicios de IA' : 'View AI services'}
+              {isEs ? 'Ver servicios de IA para empresas en Navarra' : 'View AI services for businesses in Navarra'}
             </a>
           </div>
 

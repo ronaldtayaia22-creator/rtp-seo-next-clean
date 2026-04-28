@@ -47,16 +47,16 @@ const Index = ({ language }: IndexProps) => {
 
   const gptSupportBlock = isEs
     ? {
-        title: '¿Aún no sabes por dónde empezar?',
+        title: 'Si lo necesitas, puedes usar este apoyo adicional',
         description:
-          'Prueba también mi GPT en ChatGPT. Te ayudará a entender qué tipo de sistema de IA encaja mejor con tu negocio antes de solicitar un diagnóstico.',
-        cta: 'Probar GPT en ChatGPT',
+          'Este GPT es un recurso opcional para resolver dudas iniciales antes de solicitar tu diagnóstico.',
+        cta: 'Ver GPT de apoyo en ChatGPT',
       }
     : {
-        title: 'Not sure where to start yet?',
+        title: 'Optional extra support',
         description:
-          'Try my GPT on ChatGPT too. It helps you understand which AI system best fits your business before requesting a diagnosis.',
-        cta: 'Try GPT on ChatGPT',
+          'This GPT is an optional resource to clarify initial questions before requesting your diagnosis.',
+        cta: 'Open support GPT on ChatGPT',
       };
 
   const systems = [
@@ -85,8 +85,8 @@ const Index = ({ language }: IndexProps) => {
         { path: '/automatizacion-procesos-empresas-navarra', labelEs: 'Automatización operativa', labelEn: 'Operational automation' },
       ],
     },
-    {
-      icon: UserCheck,
+      {
+        icon: UserCheck,
       titleEs: 'Sistema 2 — Captación y cualificación de leads',
       titleEn: 'System 2 — Lead generation and qualification',
       descEs: 'Sistema comercial para captar oportunidades, filtrarlas y moverlas con orden hasta la venta.',
@@ -106,7 +106,7 @@ const Index = ({ language }: IndexProps) => {
         'Document handling and sales follow-up',
       ],
       links: [
-        { path: '/ia-empresas-navarra', labelEs: 'Sistema para empresas', labelEn: 'Business system' },
+        { path: '/ia-empresas-navarra', labelEs: 'Explorar IA por sector en Navarra', labelEn: 'Explore AI by sector in Navarra' },
         { path: '/consultoria-inteligencia-artificial-navarra', labelEs: 'Diseño estratégico', labelEn: 'Strategic design' },
       ],
     },
@@ -145,18 +145,18 @@ const Index = ({ language }: IndexProps) => {
       <section className="py-12 container mx-auto px-4">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-xl md:text-2xl font-bold text-foreground text-center">
-            {isEs ? 'Tres sistemas de IA para empresas en Navarra' : 'Three AI systems for businesses in Navarra'}
+            {isEs ? 'IA para empresas en Navarra con enfoque operativo' : 'AI for businesses in Navarra with an operational focus'}
           </h2>
           <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed text-center">
             <p>
               {isEs
-                ? 'Estructuramos nuestras soluciones en 3 sistemas claros: negocios de servicios, captación y cualificación de leads, y ecommerce con operación digital.'
-                : 'We structure our solutions in 3 clear systems: service businesses, lead generation and qualification, and ecommerce with digital operations.'}
+                ? 'Implementamos automatización y agentes IA conectados para captar clientes, atender mejor y mejorar la operativa diaria de tu empresa.'
+                : 'We implement connected automation and AI agents to capture customers, improve support and optimize daily operations.'}
             </p>
             <p>
               {isEs
-                ? 'Cada sistema integra automatización, seguimiento y ejecución para convertir tu operativa en un flujo continuo orientado a resultados.'
-                : 'Each system integrates automation, follow-up and execution to transform your operations into a continuous results-focused flow.'}
+                ? 'Trabajamos con un modelo claro de implementación y medimos resultados por impacto real en negocio.'
+                : 'We work with a clear implementation model and measure results by real business impact.'}
             </p>
             <p>
               {isEs
@@ -166,10 +166,10 @@ const Index = ({ language }: IndexProps) => {
           </div>
           <div className="flex justify-center pt-2">
             <a
-              href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
+              href={isEs ? '/diagnostico-ia-navarra' : '/en/ai-automation-navarra'}
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
             >
-              {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
+              {isEs ? 'Solicitar diagnóstico estratégico de IA en Navarra' : 'Request strategic diagnosis'}
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
