@@ -15,7 +15,6 @@ interface DiagnosticoIAProps {
 
 const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
   const isEs = language === 'es';
-  const operationsPath = isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra';
 
   return (
     <div className="min-h-screen">
@@ -48,7 +47,7 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button asChild size="lg" className="text-lg px-8">
-                <a href={operationsPath}>
+                <a href="#diagnostico-form">
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
@@ -345,7 +344,7 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
                   : 'Discover what to automate, how to do it, and how to turn your business into an efficient system in Navarra and Pamplona.'}
               </p>
               <Button asChild size="lg" className="text-lg px-8">
-                <a href={operationsPath}>
+                <a href="#diagnostico-form">
                   {isEs ? 'Solicitar Diagnóstico Estratégico' : 'Request Strategic Diagnosis'}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
