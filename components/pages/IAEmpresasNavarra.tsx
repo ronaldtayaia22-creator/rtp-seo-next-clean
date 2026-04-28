@@ -130,6 +130,11 @@ const IAEmpresasNavarra = ({ language }: Props) => {
                 ? <>Este enfoque encaja especialmente bien en pymes navarras que necesitan resultados medibles y acompanamiento cercano, y permite <Link href="/servicios" className="text-primary hover:underline font-medium">implantar sistemas de IA</Link> sin frenar la operativa diaria.</>
                 : <>This approach fits especially well for Navarra SMEs needing measurable results and close support, and helps <Link href="/servicios" className="text-primary hover:underline font-medium">deploy AI systems</Link> without disrupting day-to-day operations.</>}
             </p>
+            <p>
+              {isEs
+                ? <>Si quieres bajar esta estrategia a un plan concreto para tu caso, el siguiente paso es <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">Solicitar diagnóstico de IA para tu empresa en Navarra</Link>.</>
+                : <>If you want to turn this strategy into a concrete plan for your case, the next step is to request an AI diagnostic for your company in Navarra.</>}
+            </p>
           </div>
         </section>
 
