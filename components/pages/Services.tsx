@@ -99,8 +99,25 @@ const Services = ({ language }: ServicesProps) => {
     },
   ];
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: isEs ? item.qEs : item.qEn,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: isEs ? item.aEs : item.aEn,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen pt-32 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container mx-auto px-4">
         <header className="max-w-4xl mx-auto text-center space-y-5 mb-14 animate-fade-in-up">
           <h1 className="text-3xl md:text-5xl font-bold text-glow-primary">
