@@ -12,7 +12,34 @@ interface ArticleProps {
 const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": isEs
+      ? "IA en 2026 para empresas en Navarra: contexto en España y Europa"
+      : "AI in 2026 for businesses in Navarra: context in Spain and Europe",
+    "description": isEs
+      ? "Análisis del contexto de IA en 2026 para empresas en Navarra, España y Europa: regulación, integración operativa y decisiones clave para competir."
+      : "Analysis of the 2026 AI context for businesses in Navarra, Spain, and Europe: regulation, operational integration, and key decisions to stay competitive.",
+    "author": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "publisher": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": isEs
+        ? "https://rtpdigitalsolutions.es/blog/ia-2026-empresas-navarra-espana-europa-contexto"
+        : "https://rtpdigitalsolutions.es/en/blog/ai-2026-business-navarra-spain-europe-context"
+    },
+    "inLanguage": isEs ? "es" : "en"
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
     <article className="pt-32 pb-20 px-4">
       <div className="container mx-auto max-w-3xl">
         <Link
@@ -227,6 +254,7 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
         </div>
       </div>
     </article>
+    </>
   );
 };
 

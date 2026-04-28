@@ -12,7 +12,34 @@ interface ArticleProps {
 const ImpactoIAEmpleoEconomiaEspana = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": isEs
+      ? "El impacto de la inteligencia artificial en el empleo, la economía y el futuro del trabajo en España"
+      : "The impact of artificial intelligence on employment, the economy, and the future of work in Spain",
+    "description": isEs
+      ? "Análisis del impacto de la IA en empleo y economía en España: productividad, transición laboral y decisiones estratégicas para empresas."
+      : "Analysis of AI impact on employment and the economy in Spain: productivity, workforce transition, and strategic business decisions.",
+    "author": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "publisher": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": isEs
+        ? "https://rtpdigitalsolutions.es/blog/impacto-inteligencia-artificial-empleo-economia-espana"
+        : "https://rtpdigitalsolutions.es/en/blog/impact-artificial-intelligence-employment-economy-spain"
+    },
+    "inLanguage": isEs ? "es" : "en"
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
     <article className="pt-32 pb-20 px-4">
       <div className="container mx-auto max-w-3xl">
         <Link
@@ -184,6 +211,7 @@ const ImpactoIAEmpleoEconomiaEspana = ({ language }: ArticleProps) => {
         </div>
       </div>
     </article>
+    </>
   );
 };
 

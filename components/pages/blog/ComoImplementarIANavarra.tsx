@@ -26,6 +26,10 @@ const ComoImplementarIANavarra = ({ language }: ArticleProps) => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
             <article className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <Link href="/blog" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary mb-8 transition-colors">

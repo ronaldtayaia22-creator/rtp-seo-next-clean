@@ -30,6 +30,10 @@ const AutomatizacionEmpresasNavarra = ({ language }: ArticleProps) => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
             <article className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           {/* Breadcrumb */}

@@ -12,7 +12,34 @@ interface ArticleProps {
 const IA2026EuropaHojaRutaEmpresa = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": isEs
+      ? "Hoja de ruta IA 2026 para empresas en Navarra: de piloto a resultado"
+      : "AI 2026 roadmap for businesses in Navarra: from pilot to results",
+    "description": isEs
+      ? "Guía práctica para implantar IA en empresas en 2026 con un plan por fases, métricas claras y foco en resultados de negocio."
+      : "Practical guide to implementing AI in 2026 with a phased plan, clear metrics, and business-outcome focus.",
+    "author": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "publisher": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "datePublished": "2026-04-03",
+    "dateModified": "2026-04-03",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": isEs
+        ? "https://rtpdigitalsolutions.es/blog/ia-2026-empresas-navarra-espana-europa-hoja-ruta"
+        : "https://rtpdigitalsolutions.es/en/blog/ai-2026-business-navarra-spain-europe-roadmap"
+    },
+    "inLanguage": isEs ? "es" : "en"
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
     <article className="pt-32 pb-20 px-4">
       <div className="container mx-auto max-w-3xl">
         <Link
@@ -251,6 +278,7 @@ const IA2026EuropaHojaRutaEmpresa = ({ language }: ArticleProps) => {
         </div>
       </div>
     </article>
+    </>
   );
 };
 

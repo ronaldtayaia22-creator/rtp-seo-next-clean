@@ -12,7 +12,34 @@ interface ArticleProps {
 const TrabajosRiesgoIAYAdaptacion = ({ language }: ArticleProps) => {
   const isEs = language === 'es';
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": isEs
+      ? "Trabajos en riesgo por la IA en 2026 y cómo adaptarte sin quedarte atrás"
+      : "Jobs at risk from AI in 2026 and how to adapt without falling behind",
+    "description": isEs
+      ? "Qué trabajos están más expuestos a la IA en 2026 y plan práctico 30-60-90 para adaptarte con foco en empleabilidad y resultados."
+      : "Which jobs are most exposed to AI in 2026 and a practical 30-60-90 adaptation plan focused on employability and outcomes.",
+    "author": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "publisher": { "@type": "Organization", "name": "RTP Digital Solutions", "url": "https://rtpdigitalsolutions.es" },
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-17",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": isEs
+        ? "https://rtpdigitalsolutions.es/blog/trabajos-en-riesgo-por-ia-y-como-adaptarte"
+        : "https://rtpdigitalsolutions.es/en/blog/jobs-at-risk-from-ai-and-how-to-adapt"
+    },
+    "inLanguage": isEs ? "es" : "en"
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
     <article className="pt-32 pb-20 px-4">
       <div className="container mx-auto max-w-3xl">
         <Link
@@ -184,6 +211,7 @@ const TrabajosRiesgoIAYAdaptacion = ({ language }: ArticleProps) => {
         </div>
       </div>
     </article>
+    </>
   );
 };
 
