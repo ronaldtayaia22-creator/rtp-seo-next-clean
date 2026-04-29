@@ -410,6 +410,11 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
                 ? <>Descubre todas nuestras soluciones en la página principal de <Link href={`${LOVABLE}/inteligencia-artificial-navarra`} className="text-primary hover:underline font-medium">inteligencia artificial en Navarra</Link>.</>
                 : <>Discover all our solutions on the main <Link href={`${LOVABLE}/inteligencia-artificial-navarra`} className="text-primary hover:underline font-medium">artificial intelligence in Navarra</Link> page.</>}
             </p>
+            <p className="text-sm text-muted-foreground">
+              {isEs
+                ? <>Si quieres comparar enfoques antes de enviar el diagnóstico, revisa también nuestros <Link href={`${LOVABLE}/servicios`} className="text-primary hover:underline font-medium">servicios de IA para empresas</Link> y casos de <Link href={`${LOVABLE}/ia-empresas-navarra`} className="text-primary hover:underline font-medium">IA aplicada en Navarra</Link>.</>
+                : <>If you want to compare approaches before sending the diagnosis, also review our <Link href={`${LOVABLE}/servicios`} className="text-primary hover:underline font-medium">AI services for businesses</Link> and <Link href={`${LOVABLE}/ia-empresas-navarra`} className="text-primary hover:underline font-medium">applied AI in Navarra</Link> page.</>}
+            </p>
           </div>
         </div>
       </section>
