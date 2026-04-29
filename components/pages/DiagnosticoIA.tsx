@@ -15,9 +15,36 @@ interface DiagnosticoIAProps {
 
 const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
   const isEs = language === 'es';
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Diagnóstico Estratégico de IA en Navarra',
+    serviceType: 'Diagnóstico de inteligencia artificial para empresas',
+    provider: {
+      '@type': 'Organization',
+      name: 'RTP Digital Solutions',
+      url: 'https://rtpdigitalsolutions.es',
+    },
+    areaServed: [
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Navarra',
+      },
+      {
+        '@type': 'City',
+        name: 'Pamplona',
+      },
+    ],
+    url: 'https://rtpdigitalsolutions.es/diagnostico-ia-navarra',
+    mainEntityOfPage: 'https://rtpdigitalsolutions.es/diagnostico-ia-navarra',
+  };
 
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container relative z-10 mx-auto px-4">
