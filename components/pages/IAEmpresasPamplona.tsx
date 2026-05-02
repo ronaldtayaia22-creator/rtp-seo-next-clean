@@ -115,6 +115,28 @@ const IAEmpresasPamplona = ({ language }: Props) => {
             </ul>
           </section>
 
+          {/* Local proof block */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">
+              {isEs ? 'Cómo aplicamos IA en empresas de Pamplona' : 'How we apply AI in businesses in Pamplona'}
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              {isEs
+                ? 'Trabajamos con un enfoque operativo: priorizamos tareas que afectan ventas, atencion y tiempos de respuesta para que la IA impacte en resultados desde el inicio.'
+                : 'We work with an operational approach: we prioritize tasks that affect sales, support, and response times so AI impacts results from the start.'}
+            </p>
+            <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
+              <li>{isEs ? <><strong>Clinicas:</strong> gestion de citas, recordatorios y captacion de primeras consultas sin saturar recepcion.</> : <><strong>Clinics:</strong> appointment handling, reminders, and first-visit lead capture without overloading reception.</>}</li>
+              <li>{isEs ? <><strong>Comercios:</strong> atencion automatizada por web y WhatsApp para responder rapido y mejorar conversion en momentos de alta demanda.</> : <><strong>Retail:</strong> automated support on web and WhatsApp to respond quickly and improve conversion during peak demand.</>}</li>
+              <li>{isEs ? <><strong>Restaurantes:</strong> reservas y respuestas frecuentes automatizadas para reducir llamadas perdidas y errores de coordinacion.</> : <><strong>Restaurants:</strong> automated reservations and frequent responses to reduce missed calls and coordination errors.</>}</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              {isEs
+                ? 'En Pamplona esto es clave para negocio de barrio: competir mejor en un mercado con competencia local y sostener captacion constante en el entorno Pamplona sin depender de mas carga manual.'
+                : 'In Pamplona this is key for neighborhood businesses: competing better in a local market and sustaining lead capture in the Pamplona area without adding manual workload.'}
+            </p>
+          </section>
+
           {/* Section 4 */}
           <section className="mb-16">
             <h2 className="text-2xl font-semibold mb-4 text-foreground">
