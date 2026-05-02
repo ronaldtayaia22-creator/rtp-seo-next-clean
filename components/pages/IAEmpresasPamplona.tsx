@@ -165,53 +165,35 @@ const IAEmpresasPamplona = ({ language }: Props) => {
             <div className="space-y-6">
               <article className="rounded-xl border border-border bg-muted/30 p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  {isEs ? 'Plataforma inteligente de destino turístico en Pamplona' : 'Intelligent tourist destination platform in Pamplona'}
+                  {isEs ? 'Clínica en Pamplona' : 'Clinic in Pamplona'}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-3">
                   {isEs
-                    ? 'El Ayuntamiento de Pamplona ha adjudicado el contrato para diseñar una plataforma inteligente de destino (PAM-IRU DIG) que recopilará y analizará información sobre eficiencia, seguridad y calidad en la gestión turística mediante inteligencia artificial.'
-                    : 'Pamplona City Council has awarded the contract to design an intelligent destination platform (PAM-IRU DIG) that will collect and analyze information on efficiency, safety and quality in tourism management through artificial intelligence.'}
+                    ? 'Problema: pacientes que no confirman cita o no vuelven tras la primera visita. Solución: automatización de recordatorios, confirmación de asistencia y seguimiento post-consulta. Resultado esperado: más citas confirmadas, menos huecos en agenda y mayor recurrencia de pacientes.'
+                    : 'Problem: patients who do not confirm appointments or do not return after the first visit. Solution: automated reminders, attendance confirmation, and post-visit follow-up. Expected result: more confirmed appointments, fewer empty slots, and higher patient recurrence.'}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{isEs ? 'Fuente' : 'Source'}:</strong> Diario de Navarra
-                </p>
-                <a href="https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/02/18/adjudicado-contrato-disenar-plataforma-inteligente-destino-mejore-experiencia-turistica-pamplona-810615-16.html" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-primary hover:underline font-medium">
-                  {isEs ? 'Leer artículo original →' : 'Read original article →'}
-                </a>
               </article>
 
               <article className="rounded-xl border border-border bg-muted/30 p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  {isEs ? 'Proyecto TwIN: gemelos digitales en Navarra y Pamplona' : 'TwIN Project: digital twins in Navarra and Pamplona'}
+                  {isEs ? 'Comercio en Pamplona' : 'Retail business in Pamplona'}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-3">
                   {isEs
-                    ? 'El Gobierno foral y el Ayuntamiento de Pamplona han presentado el proyecto TwIN, que impulsa la innovación mediante gemelos digitales territoriales, combinando inteligencia artificial y datos para mejorar la toma de decisiones.'
-                    : 'The regional Government and Pamplona City Council have presented the TwIN project, which drives innovation through territorial digital twins, combining artificial intelligence and data to improve decision-making.'}
+                    ? 'Problema: consultas repetidas por WhatsApp y web sin respuesta rápida, con pérdida de oportunidades de venta. Solución: asistente IA para atención inmediata, clasificación de consultas y seguimiento automático de interesados. Resultado esperado: más conversiones, menos abandono y ahorro de tiempo del equipo.'
+                    : 'Problem: repeated WhatsApp and web inquiries without fast responses, causing lost sales opportunities. Solution: AI assistant for immediate support, inquiry classification, and automated follow-up for interested leads. Expected result: more conversions, less drop-off, and team time savings.'}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{isEs ? 'Fuente' : 'Source'}:</strong> Diario de Navarra
-                </p>
-                <a href="https://www.diariodenavarra.es/noticias/negocios/dn-management/retos/2025/05/26/navarra-pamplona-impulsan-futuro-el-proyecto-twin-gemelos-digitales-servicio-innovacion-el-emprendimiento-648650-3382.html" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-primary hover:underline font-medium">
-                  {isEs ? 'Leer artículo original →' : 'Read original article →'}
-                </a>
               </article>
 
               <article className="rounded-xl border border-border bg-muted/30 p-6">
                 <h3 className="font-semibold text-foreground mb-2">
-                  {isEs ? 'Irati: agente inteligente de la Cámara de Comercio de Navarra' : 'Irati: intelligent agent by the Chamber of Commerce of Navarra'}
+                  {isEs ? 'Restaurante en Pamplona' : 'Restaurant in Pamplona'}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-3">
                   {isEs
-                    ? 'La Cámara de Comercio de Navarra ha presentado Irati, un agente inteligente desarrollado con inteligencia artificial para impulsar el emprendimiento, ofreciendo información contrastada a partir del conocimiento acumulado durante 27 años.'
-                    : 'The Chamber of Commerce of Navarra has presented Irati, an intelligent agent developed with artificial intelligence to boost entrepreneurship, offering verified information based on 27 years of accumulated knowledge.'}
+                    ? 'Problema: llamadas perdidas en horas punta y reservas desordenadas en varios canales. Solución: automatización de reservas, respuestas frecuentes y confirmaciones previas al servicio. Resultado esperado: más mesas ocupadas, menos errores operativos y mejor experiencia del cliente.'
+                    : 'Problem: missed calls at peak times and disorganized reservations across multiple channels. Solution: reservation automation, frequent answer handling, and pre-service confirmations. Expected result: more occupied tables, fewer operational errors, and a better customer experience.'}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{isEs ? 'Fuente' : 'Source'}:</strong> {isEs ? 'Cámara de Comercio de Navarra' : 'Chamber of Commerce of Navarra'}
-                </p>
-                <a href="https://camaranavarra.com/category/digitalizacion/" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-primary hover:underline font-medium">
-                  {isEs ? 'Leer artículo original →' : 'Read original article →'}
-                </a>
               </article>
             </div>
           </section>
