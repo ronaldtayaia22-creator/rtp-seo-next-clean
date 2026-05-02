@@ -72,6 +72,36 @@ const Services = ({ language }: ServicesProps) => {
         'Monthly operations: support, continuous improvement and system evolution.',
       ];
 
+  const businessOutcomes = isEs
+    ? [
+        {
+          title: 'Más clientes cualificados',
+          desc: 'Automatización de captación y filtrado para reducir tiempo perdido en leads no válidos y priorizar oportunidades reales.',
+        },
+        {
+          title: 'Más citas y conversiones',
+          desc: 'Recordatorios, seguimiento automático y atención inmediata para aumentar cierres y mejorar la continuidad comercial.',
+        },
+        {
+          title: 'Menos carga operativa',
+          desc: 'Automatización de tareas repetitivas para liberar tiempo del equipo y centrar recursos en ventas y operación estratégica.',
+        },
+      ]
+    : [
+        {
+          title: 'More qualified leads',
+          desc: 'Automated lead capture and filtering to reduce time lost on low-quality contacts and prioritize real opportunities.',
+        },
+        {
+          title: 'More appointments and conversions',
+          desc: 'Automated reminders, follow-up, and immediate support to increase closes and improve commercial continuity.',
+        },
+        {
+          title: 'Less operational workload',
+          desc: 'Automation of repetitive tasks to free team time and focus resources on sales and strategic operations.',
+        },
+      ];
+
   const faq = [
     {
       qEs: '¿Cuánto tarda en estar operativo el sistema?',
@@ -200,6 +230,20 @@ const Services = ({ language }: ServicesProps) => {
                 <div key={item} className="rounded-xl border border-border/80 bg-card/40 p-5 text-sm text-muted-foreground">
                   {item}
                 </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="holographic-border rounded-2xl p-7 md:p-10 space-y-6 animate-fade-in-up" style={{ animationDelay: '0.18s' }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              {isEs ? 'Qué resultados puedes esperar al implementar IA' : 'What results you can expect when implementing AI'}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              {businessOutcomes.map((item) => (
+                <article key={item.title} className="rounded-xl border border-border/80 bg-card/40 p-5 space-y-2">
+                  <h3 className="font-semibold text-foreground text-base">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </article>
               ))}
             </div>
           </section>
