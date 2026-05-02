@@ -19,7 +19,7 @@ const StickyMobileCTA = ({ language }: StickyMobileCTAProps) => {
   const ctaHref =
     basePath === '/ia-empresas-pamplona'
       ? (language === 'es' ? '/diagnostico-ia-navarra' : '/en/diagnosis-ai-navarra')
-      : (language === 'es' ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra');
+      : (language === 'es' ? '/diagnostico-ia-navarra' : '/en/ai-automation-navarra');
 
   if (basePath === '/diagnostico-ia-navarra' || basePath === '/automatizacion-ia-navarra' || basePath === '/contact-success') {
     return null;

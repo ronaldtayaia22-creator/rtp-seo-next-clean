@@ -65,7 +65,7 @@ const TrustBanner = ({ language }: TrustBannerProps) => {
 
           <div className="text-center space-y-4">
             <a
-              href={isEs ? '/automatizacion-ia-navarra' : '/en/ai-automation-navarra'}
+              href={isEs ? '/diagnostico-ia-navarra' : '/en/ai-automation-navarra'}
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all whitespace-nowrap"
             >
               {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnosis'}
