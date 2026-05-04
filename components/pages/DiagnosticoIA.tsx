@@ -99,7 +99,7 @@ const DiagnosticoIA = ({ language }: DiagnosticoIAProps) => {
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
                 {isEs
-                  ? 'Activa el flujo real de diagnostico desde el entorno operativo para recibir la evaluacion inicial de tu caso.'
+                  ? 'Activa el flujo real de diagnóstico desde el entorno operativo para recibir la evaluación inicial de tu caso.'
                   : 'Trigger the real diagnosis flow from the operational environment to receive your initial case evaluation.'}
               </p>
             </div>

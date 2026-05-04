@@ -184,7 +184,7 @@ const IA2026EuropaContextoRegulatorio = ({ language }: ArticleProps) => {
             <p className="mt-4">
               {isEs ? 'Antes de invertir en nuevas herramientas, conviene cerrar prioridades con un ' : 'Before investing in new tools, it is worth defining priorities with a '}
               <Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">
-                {isEs ? 'diagnostico de IA en Navarra' : 'AI diagnosis in Navarra'}
+                {isEs ? 'diagnóstico de IA en Navarra' : 'AI diagnosis in Navarra'}
               </Link>
               {isEs ? '.' : '.'}
             </p>

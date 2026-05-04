@@ -269,7 +269,7 @@ const Services = ({ language }: ServicesProps) => {
             <div className="flex items-center gap-3 text-primary">
               <HelpCircle className="w-6 h-6" />
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                {isEs ? 'FAQ de contratacion' : 'Hiring FAQ'}
+                {isEs ? 'FAQ de contratación' : 'Hiring FAQ'}
               </h2>
             </div>
             <div className="space-y-4">
@@ -295,7 +295,7 @@ const Services = ({ language }: ServicesProps) => {
               href="/diagnostico-ia-navarra"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-bold text-sm hover:shadow-neon transition-all"
             >
-              {isEs ? 'Solicitar propuesta y diagnostico' : 'Request proposal and diagnosis'}
+              {isEs ? 'Solicitar propuesta y diagnóstico' : 'Request proposal and diagnosis'}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </section>

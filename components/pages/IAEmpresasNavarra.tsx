@@ -14,23 +14,23 @@ const IAEmpresasNavarra = ({ language }: Props) => {
   const sectors = [
     {
       icon: Stethoscope,
-      titleEs: 'Clinicas y centros de salud privados',
+      titleEs: 'Clínicas y centros de salud privados',
       titleEn: 'Clinics and private health centers',
-      detailEs: 'Confirmacion de citas, recordatorios y triaje inicial de consultas frecuentes.',
+      detailEs: 'Confirmación de citas, recordatorios y triaje inicial de consultas frecuentes.',
       detailEn: 'Appointment confirmations, reminders and first-line triage for frequent questions.',
     },
     {
       icon: UtensilsCrossed,
-      titleEs: 'Restauracion y hosteleria',
+      titleEs: 'Restauración y hostelería',
       titleEn: 'Restaurants and hospitality',
-      detailEs: 'Reservas, respuesta rapida por WhatsApp y soporte en picos de demanda.',
+      detailEs: 'Reservas, respuesta rápida por WhatsApp y soporte en picos de demanda.',
       detailEn: 'Bookings, fast WhatsApp responses and support during demand peaks.',
     },
     {
       icon: ShoppingBag,
       titleEs: 'Comercio y retail',
       titleEn: 'Retail and commerce',
-      detailEs: 'Atencion de producto y stock en tiempo real para no perder ventas locales.',
+      detailEs: 'Atención de producto y stock en tiempo real para no perder ventas locales.',
       detailEn: 'Real-time product and stock support to avoid losing local sales.',
     },
   ];
@@ -38,8 +38,8 @@ const IAEmpresasNavarra = ({ language }: Props) => {
   const localExamples = isEs
     ? [
         'Pamplona: empresas de servicios con carga alta de llamadas y seguimiento comercial irregular.',
-        'Comarca de Pamplona: negocios con equipos pequenos que necesitan responder fuera de horario.',
-        'Tudela y Ribera: comercios que quieren automatizar consultas repetitivas sin perder cercania.',
+        'Comarca de Pamplona: negocios con equipos pequeños que necesitan responder fuera de horario.',
+        'Tudela y Ribera: comercios que quieren automatizar consultas repetitivas sin perder cercanía.',
       ]
     : [
         'Pamplona: service companies with high call volume and inconsistent sales follow-up.',
@@ -64,26 +64,26 @@ const IAEmpresasNavarra = ({ language }: Props) => {
 
           <p className="text-lg text-muted-foreground leading-relaxed">
             {isEs
-              ? 'Trabajamos con empresas de Pamplona y Navarra que quieren mejorar atencion, operaciones y ventas con un enfoque realista, por fases y con lenguaje de negocio.'
+              ? 'Trabajamos con empresas de Pamplona y Navarra que quieren mejorar atención, operaciones y ventas con un enfoque realista, por fases y con lenguaje de negocio.'
               : 'We work with companies in Pamplona and Navarra that want to improve service, operations and sales with a realistic, phased and business-first approach.'}
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
             {isEs
-              ? <>Si buscas una vision completa de contratacion, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios de IA para empresas</Link>. Si ya tienes claro el objetivo, podemos empezar por una <Link href="/servicios" className="text-primary hover:underline font-medium">automatizacion con inteligencia artificial</Link> concreta y escalar despues.</>
+              ? <>Si buscas una visión completa de contratación, revisa nuestros <Link href="/servicios" className="text-primary hover:underline font-medium">servicios de IA para empresas</Link>. Si ya tienes claro el objetivo, podemos empezar por una <Link href="/servicios" className="text-primary hover:underline font-medium">automatización con inteligencia artificial</Link> concreta y escalar después.</>
               : <>If you need the complete hiring view, check our <Link href="/servicios" className="text-primary hover:underline font-medium">AI services for businesses</Link>. If your objective is clear, we can start with a specific <Link href="/servicios" className="text-primary hover:underline font-medium">artificial intelligence automation</Link> and scale later.</>}
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
             {isEs
-              ? 'Muchas empresas en Navarra prueban herramientas de inteligencia artificial de forma aislada. El problema es que eso no cambia realmente el negocio. Lo que funciona es implantar un sistema completo que conecte captacion, operaciones y seguimiento, adaptado a como trabaja tu empresa.'
+              ? 'Muchas empresas en Navarra prueban herramientas de inteligencia artificial de forma aislada. El problema es que eso no cambia realmente el negocio. Lo que funciona es implantar un sistema completo que conecte captación, operaciones y seguimiento, adaptado a cómo trabaja tu empresa.'
               : 'Many companies in Navarra try artificial intelligence tools in isolation. The problem is that this does not really change the business. What works is implementing a complete system that connects lead capture, operations and follow-up, adapted to how your company works.'}
           </p>
         </header>
 
         <section className="mb-14 animate-fade-in-up" style={{ animationDelay: '0.08s' }}>
           <h2 className="text-2xl font-semibold mb-4 text-foreground">
-            {isEs ? 'Sectores con mayor traccion en Navarra' : 'Sectors with strongest traction in Navarra'}
+            {isEs ? 'Sectores con mayor tracción en Navarra' : 'Sectors with strongest traction in Navarra'}
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
             {sectors.map((sector) => {
@@ -117,7 +117,7 @@ const IAEmpresasNavarra = ({ language }: Props) => {
 
         <section className="mb-14 animate-fade-in-up" style={{ animationDelay: '0.16s' }}>
           <h2 className="text-2xl font-semibold mb-4 text-foreground">
-            {isEs ? 'Como lo aterrizamos en empresa local' : 'How we operationalize it for local companies'}
+            {isEs ? 'Cómo lo aterrizamos en empresa local' : 'How we operationalize it for local companies'}
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
@@ -127,7 +127,7 @@ const IAEmpresasNavarra = ({ language }: Props) => {
             </p>
             <p>
               {isEs
-                ? <>Este enfoque encaja especialmente bien en pymes navarras que necesitan resultados medibles y acompanamiento cercano, y permite <Link href="/servicios" className="text-primary hover:underline font-medium">implantar sistemas de IA</Link> sin frenar la operativa diaria.</>
+                ? <>Este enfoque encaja especialmente bien en pymes navarras que necesitan resultados medibles y acompañamiento cercano, y permite <Link href="/servicios" className="text-primary hover:underline font-medium">implantar sistemas de IA</Link> sin frenar la operativa diaria.</>
                 : <>This approach fits especially well for Navarra SMEs needing measurable results and close support, and helps <Link href="/servicios" className="text-primary hover:underline font-medium">deploy AI systems</Link> without disrupting day-to-day operations.</>}
             </p>
             <p>
@@ -140,11 +140,11 @@ const IAEmpresasNavarra = ({ language }: Props) => {
 
         <section className="p-8 rounded-2xl border border-primary/20 bg-primary/5 text-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h2 className="text-2xl font-bold mb-3 text-foreground">
-            {isEs ? 'Ver servicios completos para contratacion' : 'See full services for hiring'}
+            {isEs ? 'Ver servicios completos para contratación' : 'See full services for hiring'}
           </h2>
           <p className="text-muted-foreground mb-5 max-w-2xl mx-auto">
             {isEs
-              ? 'Esta pagina te da el contexto local. La pagina de servicios concentra el alcance de implantacion, modelo de trabajo y propuesta de contratacion.'
+              ? 'Esta página te da el contexto local. La página de servicios concentra el alcance de implantación, modelo de trabajo y propuesta de contratación.'
               : 'This page gives you local context. The services page contains implementation scope, working model and hiring proposal.'}
           </p>
           <Link

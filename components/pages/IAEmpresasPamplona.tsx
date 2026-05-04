@@ -35,19 +35,19 @@ const IAEmpresasPamplona = ({ language }: Props) => {
           </h1>
           <p className="text-lg text-muted-foreground mb-16 max-w-2xl">
             {isEs
-              ? <>Automatiza procesos, activa estrategias de <strong>marketing automation Pamplona</strong> y mejora la atencion al cliente para captar mas oportunidades en tu empresa. Descubre como lo aplicamos en nuestras <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial en Navarra</Link>.</>
+              ? <>Automatiza procesos, activa estrategias de <strong>marketing automation Pamplona</strong> y mejora la atención al cliente para captar más oportunidades en tu empresa. Descubre cómo lo aplicamos en nuestras <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">soluciones de inteligencia artificial en Navarra</Link>.</>
               : <>Automate processes, improve customer service and increase your business efficiency in Pamplona with our <Link href="/inteligencia-artificial-navarra" className="text-primary hover:underline font-medium">artificial intelligence solutions in Navarra</Link>.</>}
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-16">
             {isEs
-              ? 'En la practica, no se trata solo de aplicar herramientas sueltas como automatizaciones o chatbots. Para que tenga impacto real en una empresa en Pamplona, es necesario implantar un sistema completo que conecte procesos, clientes y operaciones.'
+              ? 'En la práctica, no se trata solo de aplicar herramientas sueltas como automatizaciones o chatbots. Para que tenga impacto real en una empresa en Pamplona, es necesario implantar un sistema completo que conecte procesos, clientes y operaciones.'
               : 'In practice, it is not only about applying isolated tools such as automations or chatbots. For it to have real impact in a company in Pamplona, it is necessary to implement a complete system that connects processes, customers and operations.'}
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-16">
             {isEs
-              ? <>Si buscas implementar ya, revisa la <Link href="/servicios" className="text-primary hover:underline font-medium">pagina de servicios de IA para empresas en Navarra</Link>, donde explicamos alcance, metodologia y siguientes pasos.</>
+              ? <>Si buscas implementar ya, revisa la <Link href="/servicios" className="text-primary hover:underline font-medium">página de servicios de IA para empresas en Navarra</Link>, donde explicamos alcance, metodología y siguientes pasos.</>
               : <>If you are ready to implement now, review the <Link href="/servicios" className="text-primary hover:underline font-medium">AI services page for businesses in Navarra</Link>, where we explain scope, methodology and next steps.</>}
           </p>
 
@@ -85,7 +85,7 @@ const IAEmpresasPamplona = ({ language }: Props) => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               {isEs
-                ? 'Una linea prioritaria para muchas pymes locales es el marketing automation Pamplona: seguimiento automatico de leads, recuperacion de oportunidades y nutricion comercial sin depender de tareas manuales.'
+                ? 'Una línea prioritaria para muchas pymes locales es el marketing automation Pamplona: seguimiento automático de leads, recuperación de oportunidades y nutrición comercial sin depender de tareas manuales.'
                 : 'A priority line for many local SMBs is marketing automation in Pamplona: automatic lead follow-up, opportunity recovery, and commercial nurturing without relying on manual tasks.'}
             </p>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
@@ -122,17 +122,17 @@ const IAEmpresasPamplona = ({ language }: Props) => {
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               {isEs
-                ? 'Trabajamos con un enfoque operativo: priorizamos tareas que afectan ventas, atencion y tiempos de respuesta para que la IA impacte en resultados desde el inicio.'
+                ? 'Trabajamos con un enfoque operativo: priorizamos tareas que afectan ventas, atención y tiempos de respuesta para que la IA impacte en resultados desde el inicio.'
                 : 'We work with an operational approach: we prioritize tasks that affect sales, support, and response times so AI impacts results from the start.'}
             </p>
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
-              <li>{isEs ? <><strong>Clinicas:</strong> gestion de citas, recordatorios y captacion de primeras consultas sin saturar recepcion.</> : <><strong>Clinics:</strong> appointment handling, reminders, and first-visit lead capture without overloading reception.</>}</li>
-              <li>{isEs ? <><strong>Comercios:</strong> atencion automatizada por web y WhatsApp para responder rapido y mejorar conversion en momentos de alta demanda.</> : <><strong>Retail:</strong> automated support on web and WhatsApp to respond quickly and improve conversion during peak demand.</>}</li>
-              <li>{isEs ? <><strong>Restaurantes:</strong> reservas y respuestas frecuentes automatizadas para reducir llamadas perdidas y errores de coordinacion.</> : <><strong>Restaurants:</strong> automated reservations and frequent responses to reduce missed calls and coordination errors.</>}</li>
+              <li>{isEs ? <><strong>Clínicas:</strong> gestión de citas, recordatorios y captación de primeras consultas sin saturar recepción.</> : <><strong>Clinics:</strong> appointment handling, reminders, and first-visit lead capture without overloading reception.</>}</li>
+              <li>{isEs ? <><strong>Comercios:</strong> atención automatizada por web y WhatsApp para responder rápido y mejorar conversión en momentos de alta demanda.</> : <><strong>Retail:</strong> automated support on web and WhatsApp to respond quickly and improve conversion during peak demand.</>}</li>
+              <li>{isEs ? <><strong>Restaurantes:</strong> reservas y respuestas frecuentes automatizadas para reducir llamadas perdidas y errores de coordinación.</> : <><strong>Restaurants:</strong> automated reservations and frequent responses to reduce missed calls and coordination errors.</>}</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
               {isEs
-                ? 'En Pamplona esto es clave para negocio de barrio: competir mejor en un mercado con competencia local y sostener captacion constante en el entorno Pamplona sin depender de mas carga manual.'
+                ? 'En Pamplona esto es clave para negocio de barrio: competir mejor en un mercado con competencia local y sostener captación constante en el entorno Pamplona sin depender de más carga manual.'
                 : 'In Pamplona this is key for neighborhood businesses: competing better in a local market and sustaining lead capture in the Pamplona area without adding manual workload.'}
             </p>
           </section>
