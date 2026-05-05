@@ -31,19 +31,19 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
         </h1>
         <h2 className="text-xl md:text-2xl font-semibold mb-8 text-muted-foreground">
           {isEs
-            ? 'Automatiza captacion, seguimiento y cierre sin perder oportunidades por tiempos de respuesta'
+            ? 'Automatiza captación, seguimiento y cierre sin perder oportunidades por tiempos de respuesta'
             : 'Automate lead capture, follow-up, and closing without losing opportunities due to slow response times'}
         </h2>
 
         <section className="mb-16 text-lg text-muted-foreground max-w-3xl space-y-4">
           <p>
             {isEs
-              ? 'Una inmobiliaria no necesita otro chatbot aislado. Necesita un sistema comercial con IA conectado a su operativa diaria: entrada de leads, clasificacion, seguimiento y conversion.'
+              ? 'Una inmobiliaria no necesita otro chatbot aislado. Necesita un sistema comercial con IA conectado a su operativa diaria: entrada de leads, clasificación, seguimiento y conversión.'
               : 'A real estate agency does not need another isolated chatbot. It needs an AI sales system connected to daily operations: lead intake, qualification, follow-up, and conversion.'}
           </p>
           <p>
             {isEs
-              ? 'En Navarra y Pamplona, las agencias que responden primero, filtran mejor y mantienen seguimiento constante son las que convierten mas visitas en cierres.'
+              ? 'En Navarra y Pamplona, las agencias que responden primero, filtran mejor y mantienen seguimiento constante son las que convierten más visitas en cierres.'
               : 'In Navarra and Pamplona, agencies that respond first, qualify better, and maintain consistent follow-up convert more visits into closed deals.'}
           </p>
         </section>
@@ -54,7 +54,7 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
           </h2>
           <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
             <li>{isEs ? 'Leads de portales, web y WhatsApp sin respuesta en minutos.' : 'Leads from portals, website, and WhatsApp not answered within minutes.'}</li>
-            <li>{isEs ? 'Seguimiento irregular: se enfria el interes y se pierden operaciones.' : 'Inconsistent follow-up: interest cools down and deals are lost.'}</li>
+            <li>{isEs ? 'Seguimiento irregular: se enfría el interés y se pierden operaciones.' : 'Inconsistent follow-up: interest cools down and deals are lost.'}</li>
             <li>{isEs ? 'Agenda comercial reactiva, con visitas poco cualificadas.' : 'Reactive sales agenda with poorly qualified visits.'}</li>
             <li>{isEs ? 'Datos de clientes dispersos, sin trazabilidad clara del embudo.' : 'Customer data scattered, with no clear funnel traceability.'}</li>
             <li>{isEs ? 'Equipo ocupado en tareas repetitivas en vez de negociar y cerrar.' : 'Team busy with repetitive tasks instead of negotiating and closing.'}</li>
@@ -63,22 +63,22 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-4 text-foreground">
-            {isEs ? 'Que automatiza un sistema IA inmobiliario' : 'What an AI real estate system automates'}
+            {isEs ? 'Qué automatiza un sistema IA inmobiliario' : 'What an AI real estate system automates'}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold text-foreground mb-3">{isEs ? 'Captacion y clasificacion' : 'Capture and qualification'}</h3>
+              <h3 className="font-semibold text-foreground mb-3">{isEs ? 'Captación y clasificación' : 'Capture and qualification'}</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Respuesta automatica inmediata por canal.' : 'Immediate automated response by channel.'}</li>
+                <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Respuesta automática inmediata por canal.' : 'Immediate automated response by channel.'}</li>
                 <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Filtro por tipo de inmueble, presupuesto y urgencia.' : 'Filtering by property type, budget, and urgency.'}</li>
                 <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Prioridad comercial para leads calientes.' : 'Sales priority for hot leads.'}</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-foreground mb-3">{isEs ? 'Seguimiento y conversion' : 'Follow-up and conversion'}</h3>
+              <h3 className="font-semibold text-foreground mb-3">{isEs ? 'Seguimiento y conversión' : 'Follow-up and conversion'}</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Secuencias de seguimiento sin carga manual.' : 'Follow-up sequences without manual load.'}</li>
-                <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Recordatorios de visita, documentacion y proximos pasos.' : 'Visit reminders, documentation, and next steps.'}</li>
+                <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Recordatorios de visita, documentación y próximos pasos.' : 'Visit reminders, documentation, and next steps.'}</li>
                 <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>{isEs ? 'Registro en CRM para ver cada oportunidad en tiempo real.' : 'CRM logging to track every opportunity in real time.'}</li>
               </ul>
             </div>
@@ -104,9 +104,9 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
             {isEs ? 'Flujo recomendado en 5 pasos' : 'Recommended 5-step flow'}
           </h2>
           <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
-            <li>{isEs ? 'Entrada unificada de leads desde web, portales y mensajeria.' : 'Unified lead intake from website, portals, and messaging channels.'}</li>
-            <li>{isEs ? 'Respuesta inicial automatizada con informacion relevante.' : 'Automated first response with relevant information.'}</li>
-            <li>{isEs ? 'Clasificacion por potencial de cierre y asignacion comercial.' : 'Qualification by closing potential and sales assignment.'}</li>
+            <li>{isEs ? 'Entrada unificada de leads desde web, portales y mensajería.' : 'Unified lead intake from website, portals, and messaging channels.'}</li>
+            <li>{isEs ? 'Respuesta inicial automatizada con información relevante.' : 'Automated first response with relevant information.'}</li>
+            <li>{isEs ? 'Clasificación por potencial de cierre y asignación comercial.' : 'Qualification by closing potential and sales assignment.'}</li>
             <li>{isEs ? 'Seguimiento automatizado hasta visita, oferta o descarte.' : 'Automated follow-up until visit, offer, or discard.'}</li>
             <li>{isEs ? 'Medicion de conversion por canal para optimizar captacion.' : 'Channel conversion measurement to optimize acquisition.'}</li>
           </ol>
@@ -119,7 +119,7 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
           <div className="space-y-6">
             <article className="rounded-xl border border-border bg-muted/30 p-6">
               <h3 className="font-semibold text-foreground mb-2">
-                {isEs ? 'Captacion de propietarios para venta y alquiler' : 'Owner lead capture for sales and rentals'}
+                {isEs ? 'Captación de propietarios para venta y alquiler' : 'Owner lead capture for sales and rentals'}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {isEs
@@ -133,7 +133,7 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {isEs
-                  ? 'Los interesados reciben informacion clave al instante y solo llegan al equipo comercial los perfiles mejor cualificados para visita.'
+                  ? 'Los interesados reciben información clave al instante y solo llegan al equipo comercial los perfiles mejor cualificados para visita.'
                   : 'Prospects receive key information instantly, and only the best-qualified profiles reach the sales team for visits.'}
               </p>
             </article>
@@ -143,7 +143,7 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {isEs
-                  ? 'Recordatorios, objeciones frecuentes y proximos pasos automatizados para evitar que operaciones activas se enfrien.'
+                  ? 'Recordatorios, objeciones frecuentes y próximos pasos automatizados para evitar que operaciones activas se enfríen.'
                   : 'Automated reminders, common objections, and next-step prompts to prevent active deals from cooling down.'}
               </p>
             </article>
@@ -156,9 +156,9 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
           </h2>
           <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
             <li>{isEs ? 'Menos leads perdidos por falta de respuesta.' : 'Fewer lost leads due to delayed response.'}</li>
-            <li>{isEs ? 'Mas visitas con interesados mejor cualificados.' : 'More visits with better-qualified prospects.'}</li>
+            <li>{isEs ? 'Más visitas con interesados mejor cualificados.' : 'More visits with better-qualified prospects.'}</li>
             <li>{isEs ? 'Mayor disciplina de seguimiento sin ampliar plantilla.' : 'Stronger follow-up discipline without increasing headcount.'}</li>
-            <li>{isEs ? 'Mejor conversion del embudo comercial.' : 'Better sales funnel conversion.'}</li>
+            <li>{isEs ? 'Mejor conversión del embudo comercial.' : 'Better sales funnel conversion.'}</li>
           </ul>
         </section>
 
@@ -168,10 +168,10 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
           </h2>
           <ul className="space-y-2 text-muted-foreground">
             <li><Link href="/ia-empresas-navarra" className="text-primary hover:underline font-medium">{isEs ? 'IA para empresas en Navarra' : 'AI for businesses in Navarra'}</Link></li>
-            <li><Link href="/agentes-ia-atencion-cliente-navarra" className="text-primary hover:underline font-medium">{isEs ? 'Agentes IA para atencion al cliente' : 'AI agents for customer service'}</Link></li>
-            <li><Link href="/automatizacion-procesos-empresas-navarra" className="text-primary hover:underline font-medium">{isEs ? 'Automatizacion de procesos con IA' : 'AI process automation'}</Link></li>
+            <li><Link href="/agentes-ia-atencion-cliente-navarra" className="text-primary hover:underline font-medium">{isEs ? 'Agentes IA para atención al cliente' : 'AI agents for customer service'}</Link></li>
+            <li><Link href="/automatizacion-procesos-empresas-navarra" className="text-primary hover:underline font-medium">{isEs ? 'Automatización de procesos con IA' : 'AI process automation'}</Link></li>
             <li><Link href="/desarrollo-web-inteligencia-artificial" className="text-primary hover:underline font-medium">{isEs ? 'Desarrollo web con IA' : 'AI web development'}</Link></li>
-            <li><Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">{isEs ? 'Diagnostico IA en Navarra' : 'AI diagnostic in Navarra'}</Link></li>
+            <li><Link href="/diagnostico-ia-navarra" className="text-primary hover:underline font-medium">{isEs ? 'Diagnóstico IA en Navarra' : 'AI diagnostic in Navarra'}</Link></li>
           </ul>
         </section>
 
@@ -183,16 +183,16 @@ const IAInmobiliariasNavarra = ({ language }: Props) => {
           </h2>
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
             {isEs
-              ? 'Te ayudamos a disenar e implementar un sistema IA adaptado a tu proceso comercial en Navarra y Pamplona.'
+              ? 'Te ayudamos a diseñar e implementar un sistema IA adaptado a tu proceso comercial en Navarra y Pamplona.'
               : 'We help you design and implement an AI system tailored to your commercial process in Navarra and Pamplona.'}
           </p>
           <Link href="/diagnostico-ia-navarra">
             <Button size="lg" className="gap-2 w-full sm:w-auto">
-              {isEs ? 'Solicitar diagnostico estrategico' : 'Request strategic diagnostic'} <ArrowRight className="w-4 h-4" />
+              {isEs ? 'Solicitar diagnóstico estratégico' : 'Request strategic diagnostic'} <ArrowRight className="w-4 h-4" />
             </Button>
           </Link>
           <p className="text-sm text-muted-foreground mt-3">
-            {isEs ? 'Evaluacion inicial sin coste' : 'Free initial evaluation'}
+            {isEs ? 'Evaluación inicial sin coste' : 'Free initial evaluation'}
           </p>
         </section>
       </div>
