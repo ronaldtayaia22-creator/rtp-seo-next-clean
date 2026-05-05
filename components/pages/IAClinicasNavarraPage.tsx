@@ -4,6 +4,8 @@ import Link from '@/components/shared/LocalizedLink';
 import { Language } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import SectorVisualStory from '@/components/shared/SectorVisualStory';
+import { getSectorVisualStory } from '@/lib/content/sectorVisualStories';
 
 interface Props {
   language: Language;
@@ -13,6 +15,7 @@ const LOVABLE = '';
 
 const IAClinicasNavarraPage = ({ language }: Props) => {
   const isEs = language === 'es';
+  const clinicasStory = getSectorVisualStory('clinicas', isEs ? 'es' : 'en');
 
   const pageSchema = {
     "@context": "https://schema.org",
@@ -134,6 +137,20 @@ const IAClinicasNavarraPage = ({ language }: Props) => {
               <li>{isEs ? <><strong>Más ingresos sin aumentar el equipo:</strong> la automatización permite escalar sin contratar más personal.</> : <><strong>More revenue without growing the team:</strong> automation enables scaling without hiring more staff.</>}</li>
               <li>{isEs ? <><strong>Menos citas perdidas:</strong> gracias a recordatorios automáticos que reducen las ausencias de forma significativa.</> : <><strong>Fewer missed appointments:</strong> thanks to automatic reminders that significantly reduce no-shows.</>}</li>
              </ul>
+          </section>
+
+          <section className="mb-16">
+            <SectorVisualStory
+              title={clinicasStory.title}
+              sectorLabel={clinicasStory.sectorLabel}
+              slides={clinicasStory.slides}
+              problem={clinicasStory.problem}
+              solution={clinicasStory.solution}
+              result={clinicasStory.result}
+              ctaLabel={clinicasStory.ctaLabel}
+              ctaHref={clinicasStory.ctaHref}
+              autoplayMs={6000}
+            />
           </section>
 
           {/* Casos reales */}
