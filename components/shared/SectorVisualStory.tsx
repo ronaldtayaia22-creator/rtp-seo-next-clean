@@ -73,8 +73,8 @@ const SectorVisualStory = ({
   const next = () => goTo(normalizedActiveIndex + 1);
 
   return (
-    <section className={cn('grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-start', className)}>
-      <div>
+    <section className={cn('space-y-6', className)}>
+      <div className="w-full">
         <div className="mb-3 flex items-center justify-between gap-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-primary">{sectorLabel}</p>
             <p className="text-xs text-muted-foreground">
@@ -82,7 +82,7 @@ const SectorVisualStory = ({
             </p>
           </div>
 
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm aspect-[16/10]">
+        <div className="relative w-full overflow-hidden rounded-2xl border border-border bg-card shadow-sm aspect-[16/10]">
           {safeSlides.map((slide, index) => {
             const isActive = index === normalizedActiveIndex;
             return (
