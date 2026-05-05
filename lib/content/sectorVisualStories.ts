@@ -21,11 +21,11 @@ export type SectorVisualStoryContent = {
 export const sectorVisualStories: Record<SectorKey, SectorVisualStoryContent> = {
   clinicas: {
     title: {
-      es: 'IA para clinicas privadas: menos carga operativa, mas seguimiento',
+      es: 'IA para clínicas privadas: menos carga operativa, más seguimiento',
       en: 'AI for private clinics: less operational load, better follow-up',
     },
     sectorLabel: {
-      es: 'Clinicas y salud privada',
+      es: 'Clínicas y salud privada',
       en: 'Clinics and private healthcare',
     },
     problem: {
@@ -33,15 +33,15 @@ export const sectorVisualStories: Record<SectorKey, SectorVisualStoryContent> = 
       en: 'Repetitive questions, appointment gaps, and response times that affect patient experience.',
     },
     solution: {
-      es: 'Automatizar confirmaciones, recordatorios y respuestas frecuentes con derivacion al equipo cuando hay contexto clinico.',
+      es: 'Automatizar confirmaciones, recordatorios y respuestas frecuentes con derivación al equipo cuando hay contexto clínico.',
       en: 'Automate confirmations, reminders, and common questions while routing clinical context to the team.',
     },
     result: {
-      es: 'Mas citas atendidas, menos no-shows y mejor continuidad en la atencion sin saturar recepcion.',
+      es: 'Más citas atendidas, menos no-shows y mejor continuidad en la atención sin saturar recepción.',
       en: 'More attended appointments, fewer no-shows, and better continuity without overloading reception.',
     },
     ctaLabel: {
-      es: 'Solicitar diagnostico',
+      es: 'Solicitar diagnóstico',
       en: 'Request a diagnostic',
     },
     ctaHref: '/diagnostico-ia-navarra',

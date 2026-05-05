@@ -149,28 +149,28 @@ const SectorVisualStory = ({
         )}
       </div>
 
-      <div className="rounded-2xl border border-border bg-card/40 p-6 lg:p-7">
+      <div className="rounded-2xl border border-border bg-card/40 p-5 md:p-6">
         <h3 className="text-2xl font-bold leading-tight text-foreground">{title}</h3>
 
-        <div className="mt-6 space-y-5 text-sm leading-relaxed text-muted-foreground md:text-base">
-          <div>
+        <div className="mt-5 grid gap-3 md:grid-cols-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+          <article className="rounded-xl border border-border bg-background/70 p-4">
             <p className="mb-1 font-semibold text-foreground">{labels?.problem ?? 'Problema'}</p>
             <p>{problem}</p>
-          </div>
+          </article>
 
-          <div>
-            <p className="mb-1 font-semibold text-foreground">{labels?.solution ?? 'Solucion'}</p>
+          <article className="rounded-xl border border-border bg-background/70 p-4">
+            <p className="mb-1 font-semibold text-foreground">{labels?.solution ?? 'Solución'}</p>
             <p>{solution}</p>
-          </div>
+          </article>
 
-          <div>
+          <article className="rounded-xl border border-border bg-background/70 p-4">
             <p className="mb-1 font-semibold text-foreground">{labels?.result ?? 'Resultado esperado'}</p>
             <p>{result}</p>
-          </div>
+          </article>
         </div>
 
         {ctaLabel && ctaHref && (
-          <div className="mt-7">
+          <div className="mt-5 flex justify-center">
             <Link
               href={ctaHref}
               className="inline-flex items-center rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition hover:shadow-neon"
