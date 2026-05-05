@@ -209,6 +209,16 @@ export const PAGE_METADATA: Record<string, PageMetadataEntry> = {
       en: 'AI solutions for retail businesses in Navarra: automated service, recommendations and efficiency.',
     },
   },
+  '/ia-inmobiliarias-navarra': {
+    title: {
+      es: 'IA para inmobiliarias en Navarra',
+      en: 'AI for real estate agencies in Navarra',
+    },
+    description: {
+      es: 'Sistema IA para inmobiliarias en Navarra y Pamplona: captacion, clasificacion y seguimiento comercial automatizado para convertir mas operaciones.',
+      en: 'AI system for real estate agencies in Navarra and Pamplona: automated lead capture, qualification, and commercial follow-up to close more deals.',
+    },
+  },
   '/ia-clinicas-navarra': {
     title: {
       es: 'IA para clínicas en Navarra',
