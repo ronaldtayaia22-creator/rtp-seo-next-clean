@@ -1,7 +1,9 @@
 'use client';
 
 import Link from '@/components/shared/LocalizedLink';
+import SectorVisualStory from '@/components/shared/SectorVisualStory';
 import { Language } from '@/lib/i18n';
+import { getSectorVisualStory } from '@/lib/content/sectorVisualStories';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
@@ -13,6 +15,7 @@ const LOVABLE = '';
 
 const IARestaurantesNavarra = ({ language }: Props) => {
   const isEs = language === 'es';
+  const restaurantesStory = getSectorVisualStory('restaurantes', isEs ? 'es' : 'en');
 
   const pageSchema = {
     "@context": "https://schema.org",
@@ -142,6 +145,20 @@ const IARestaurantesNavarra = ({ language }: Props) => {
               <li>{isEs ? <><strong>Fidelización automática de clientes:</strong> campañas, descuentos y comunicaciones sin gestión manual.</> : <><strong>Automatic customer loyalty:</strong> campaigns, discounts and communications without manual management.</>}</li>
               <li>{isEs ? <><strong>Experiencia moderna que diferencia tu restaurante:</strong> atención inmediata, profesional y disponible 24/7.</> : <><strong>Modern experience that sets your restaurant apart:</strong> immediate, professional service available 24/7.</>}</li>
             </ul>
+          </section>
+
+          <section className="mb-16">
+            <SectorVisualStory
+              title={restaurantesStory.title}
+              sectorLabel={restaurantesStory.sectorLabel}
+              slides={restaurantesStory.slides}
+              problem={restaurantesStory.problem}
+              solution={restaurantesStory.solution}
+              result={restaurantesStory.result}
+              ctaLabel={restaurantesStory.ctaLabel}
+              ctaHref={restaurantesStory.ctaHref}
+              autoplayMs={6000}
+            />
           </section>
 
           {/* Casos reales */}

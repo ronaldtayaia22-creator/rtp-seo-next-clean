@@ -1,7 +1,9 @@
 'use client';
 
 import Link from '@/components/shared/LocalizedLink';
+import SectorVisualStory from '@/components/shared/SectorVisualStory';
 import { Language } from '@/lib/i18n';
+import { getSectorVisualStory } from '@/lib/content/sectorVisualStories';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
@@ -13,6 +15,7 @@ const LOVABLE = '';
 
 const IAComerciosNavarra = ({ language }: Props) => {
   const isEs = language === 'es';
+  const comerciosStory = getSectorVisualStory('comercios', isEs ? 'es' : 'en');
 
   const pageSchema = {
     "@context": "https://schema.org",
@@ -157,6 +160,20 @@ const IAComerciosNavarra = ({ language }: Props) => {
               <li>{isEs ? <><strong>Menos carga operativa en el equipo:</strong> las consultas repetitivas se resuelven sin intervención humana.</> : <><strong>Less operational burden on the team:</strong> repetitive inquiries are resolved without human intervention.</>}</li>
               <li>{isEs ? <><strong>Experiencia moderna que diferencia el negocio:</strong> atención profesional, inmediata y disponible 24/7.</> : <><strong>Modern experience that sets your business apart:</strong> professional, immediate service available 24/7.</>}</li>
             </ul>
+          </section>
+
+          <section className="mb-16">
+            <SectorVisualStory
+              title={comerciosStory.title}
+              sectorLabel={comerciosStory.sectorLabel}
+              slides={comerciosStory.slides}
+              problem={comerciosStory.problem}
+              solution={comerciosStory.solution}
+              result={comerciosStory.result}
+              ctaLabel={comerciosStory.ctaLabel}
+              ctaHref={comerciosStory.ctaHref}
+              autoplayMs={6000}
+            />
           </section>
 
           {/* Casos reales */}
