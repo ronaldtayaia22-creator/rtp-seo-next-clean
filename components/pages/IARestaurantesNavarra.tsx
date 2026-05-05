@@ -29,7 +29,7 @@ const IARestaurantesNavarra = ({ language }: Props) => {
   return (
     <>
             <div className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
 
           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
             {isEs ? 'Inteligencia artificial para restaurantes en Navarra' : 'Artificial intelligence for restaurants in Navarra'}

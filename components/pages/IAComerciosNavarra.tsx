@@ -29,7 +29,7 @@ const IAComerciosNavarra = ({ language }: Props) => {
   return (
     <>
             <div className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <nav className="mb-8 text-sm text-muted-foreground">
             <Link href="/ia-empresas-navarra" className="hover:text-primary transition-colors">
               ← {isEs ? 'IA para empresas en Navarra' : 'AI for businesses in Navarra'}
