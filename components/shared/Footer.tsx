@@ -23,6 +23,8 @@ const Footer = ({ language }: FooterProps) => {
 
   const sectorLinks = [
     { path: '/ia-inmobiliarias-navarra', label: isEs ? 'IA inmobiliarias Navarra' : 'AI real estate Navarra' },
+    { path: '/inteligencia-artificial-navarra', label: isEs ? 'Inteligencia artificial en Navarra' : 'AI in Navarra' },
+    { path: '/ia-empresas-navarra', label: isEs ? 'IA empresas Navarra' : 'AI businesses Navarra' },
     { path: '/ia-clinicas-navarra', label: isEs ? 'IA clínicas Navarra' : 'AI clinics Navarra' },
     { path: '/ia-restaurantes-navarra', label: isEs ? 'IA restaurantes Navarra' : 'AI restaurants Navarra' },
     { path: '/ia-comercios-navarra', label: isEs ? 'IA comercios Navarra' : 'AI retail Navarra' },
